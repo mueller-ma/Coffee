@@ -1,0 +1,11 @@
+<resources>
+    <style name="Coffee.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Coffee.AppTheme" parent="Coffee.Base">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

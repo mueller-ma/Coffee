@@ -18,4 +18,4 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
         
       - name: Build
-        run: ./gradlew build
+        run: bash gradlew build

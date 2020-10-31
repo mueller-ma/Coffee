@@ -1,10 +1,7 @@
 package com.github.muellerma.coffee
 
 import android.annotation.SuppressLint
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.app.Service
+import android.app.*
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -21,22 +18,20 @@ class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
     private var screenStateListener = ScreenStateChangedReceiver()
     private var isScreenStateListenerRegistered = false
-    private val handler: Handler = Handler()
 
     @SuppressLint("WakelockTimeout")
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
         if (intent?.action == STOP_ACTION) {
             Log.d(TAG, "Received stop action")
-            startOrStop(this, false)
+            startOrStop(application, this, false)
         }
         @Suppress("DEPRECATION")
         wakeLock = (getSystemService(Context.POWER_SERVICE) as PowerManager)
             .newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "Coffee::ForegroundService")
         wakeLock?.acquire()
-        handler.post {
-            CoffeeTile.requestTileStateUpdate(this)
-        }
+        (application as CoffeeApplication).isRunning = true
+        CoffeeTile.requestTileStateUpdate(this)
         if (!isScreenStateListenerRegistered) {
             val intentFilter = IntentFilter().apply {
                 addAction(Intent.ACTION_SCREEN_OFF)
@@ -83,9 +78,8 @@ class ForegroundService : Service() {
             .setPublicVersion(getBaseNotification().build())
             .build()
 
-        handler.post {
-            CoffeeTile.requestTileStateUpdate(this)
-        }
+        (application as CoffeeApplication).isRunning = true
+        CoffeeTile.requestTileStateUpdate(this)
         startForeground(NOTIFICATION_ID, notification)
     }
 
@@ -109,6 +103,7 @@ class ForegroundService : Service() {
             unregisterReceiver(screenStateListener)
             isScreenStateListenerRegistered = false
         }
+        (application as CoffeeApplication).isRunning = false
         CoffeeTile.requestTileStateUpdate(this)
     }
 
@@ -120,7 +115,7 @@ class ForegroundService : Service() {
                 return
             }
             Log.d(TAG, "Received screen off event: Stop service")
-            startOrStop(context, false)
+            startOrStop(null, context, false)
         }
     }
 
@@ -130,23 +125,15 @@ class ForegroundService : Service() {
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 
-        fun startOrStop(context: Context, start: Boolean) {
+        fun startOrStop(application: Application?, context: Context, start: Boolean) {
             Log.d(TAG, "startOrStop: start = $start")
+            (application as CoffeeApplication?)?.isRunning = start
             val intent = Intent(context, ForegroundService::class.java)
             if (start) {
                 ContextCompat.startForegroundService(context, intent)
             } else {
                 context.stopService(intent)
             }
-        }
-
-        fun isRunning(context: Context): Boolean {
-            val notificationManager = context.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-            val isRunning = notificationManager.activeNotifications.any { notification ->
-                notification.id == NOTIFICATION_ID
-            }
-            Log.d(TAG, "isRunning(): $isRunning")
-            return isRunning
         }
     }
 }

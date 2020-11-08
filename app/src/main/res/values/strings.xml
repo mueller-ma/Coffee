@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Coffee</string>
-    <string name="keep_display_on">Keep display on</string>
+    <string name="keep_display_on">Keeping display on</string>
     <string name="tap_to_turn_off">Tap to turn off</string>
-    <string name="hint_1">This app provides a tile in the quick settings (the place that holds the toggles for e.g. Wi-Fi and Bluetooth) that allows to keep the display awake without having to change the device settings.</string>
-    <string name="hint_2">Coffee can be stopped by clicking on the tile, the notification or when the screen is turned off manually.</string>
-    <string name="stop_now">Stop now</string>
-    <string name="start_now">Start now</string>
+    <string name="hint_1">This app provides a tile in the quick settings (the place that holds the toggles for e.g. Wi-Fi and Bluetooth) that allows you to keep the display awake without having to change the device settings.</string>
+    <string name="hint_2">Coffee can be stopped by clicking on the tile or the notification or when the screen is turned off manually.</string>
 </resources>

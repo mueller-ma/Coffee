@@ -4,6 +4,8 @@ This Android app provides a tile in the quick settings (the place that holds the
 
 Android 7 or higher is required.
 
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/de/packages/com.github.muellerma.coffee/)
+
 # Credits
 
 * Feature graphic by https://unsplash.com/@mukulwadhwa

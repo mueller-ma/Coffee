@@ -7,7 +7,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
-import android.os.Handler
 import android.os.IBinder
 import android.os.PowerManager
 import android.util.Log
@@ -24,7 +23,7 @@ class ForegroundService : Service() {
         Log.d(TAG, "onStartCommand()")
         if (intent?.action == STOP_ACTION) {
             Log.d(TAG, "Received stop action")
-            startOrStop(application, this, false)
+            startOrStop(this, false)
         }
         @Suppress("DEPRECATION")
         wakeLock = (getSystemService(Context.POWER_SERVICE) as PowerManager)
@@ -115,7 +114,7 @@ class ForegroundService : Service() {
                 return
             }
             Log.d(TAG, "Received screen off event: Stop service")
-            startOrStop(null, context, false)
+            startOrStop(context, false)
         }
     }
 
@@ -125,9 +124,9 @@ class ForegroundService : Service() {
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 
-        fun startOrStop(application: Application?, context: Context, start: Boolean) {
+        fun startOrStop(context: Context, start: Boolean) {
             Log.d(TAG, "startOrStop: start = $start")
-            (application as CoffeeApplication?)?.isRunning = start
+            (context.applicationContext as CoffeeApplication).isRunning = start
             val intent = Intent(context, ForegroundService::class.java)
             if (start) {
                 ContextCompat.startForegroundService(context, intent)

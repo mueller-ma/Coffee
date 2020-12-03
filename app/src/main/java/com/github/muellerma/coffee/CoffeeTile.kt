@@ -11,7 +11,7 @@ import android.util.Log
 class CoffeeTile : TileService() {
     override fun onClick() {
         Log.d(TAG, "onClick()")
-        ForegroundService.startOrStop(application, this, !(application as CoffeeApplication).isRunning)
+        ForegroundService.startOrStop(this, !(application as CoffeeApplication).isRunning)
     }
 
     override fun onStartListening() {

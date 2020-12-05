@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"قهوه"</string>
+    <string name="keep_display_on">"روشن نگه‌داشتن نمایشگر"</string>
+    <string name="tap_to_turn_off">"برای خاموشی بزنید"</string>
+    <string name="hint_1">"این برنامه یک خانه را در ساماندهی آنی (جایگاه پایندان؛ برای نمونه، جای وای‌فای و بلوتوث) فراهم می‌کند که توانایی بیدار نگه‌داشتن نمایشگر را بدون تغییر ساماندهی به شما می‌دهد."</string>
+    <string name="hint_2">"قهوه با کلیک بر روی خانه یا آگهداد یا هنگامی که نمایشگر به گونه دستی خاموش شود، می‌ایستد."</string>
+</resources>

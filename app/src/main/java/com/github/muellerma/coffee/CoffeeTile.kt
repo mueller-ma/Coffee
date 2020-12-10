@@ -38,12 +38,13 @@ class CoffeeTile : TileService() {
 
     override fun onTileAdded() {
         Log.d(TAG, "onTileAdded()")
-        super.onLowMemory()
+        setTileState()
+        super.onTileAdded()
     }
 
     override fun onTileRemoved() {
         Log.d(TAG, "onTileRemoved()")
-        super.onLowMemory()
+        super.onTileRemoved()
     }
 
     override fun onTrimMemory(level: Int) {

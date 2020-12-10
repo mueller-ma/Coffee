@@ -3,4 +3,6 @@
     <color name="colorPrimary">#4E342E</color>
     <color name="colorPrimaryDark">@android:color/white</color>
     <color name="colorAccent">@android:color/white</color>
+
+    <color name="home_screen_icon_background">@android:color/white</color>
 </resources>

@@ -1,7 +1,12 @@
-<resources>
+<resources
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:ignore="MissingTranslation">
     <string name="app_name">Coffee</string>
     <string name="keep_display_on">Keeping display on</string>
     <string name="tap_to_turn_off">Tap to turn off</string>
     <string name="hint_1">This app provides a tile in the quick settings (the place that holds the toggles for e.g. Wi-Fi and Bluetooth) that allows you to keep the display awake without having to change the device settings.</string>
     <string name="hint_2">Coffee can be stopped by clicking on the tile or the notification or when the screen is turned off manually.</string>
+    <string name="add_toggle_to_home">Add toggle to home screen</string>
+    <string name="add_toggle_to_home_success">Pinned to home</string>
+    <string name="add_toggle_to_home_no_success">Error pinning to home</string>
 </resources>

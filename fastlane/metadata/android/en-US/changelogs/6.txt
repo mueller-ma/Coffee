@@ -1,0 +1,1 @@
+* Lower required Android version to 5. Android 7 is still required for the quick tile.

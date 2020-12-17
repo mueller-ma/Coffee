@@ -16,6 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<Button>(R.id.toggle_coffee).apply {
+            setOnClickListener {
+                ForegroundService.startOrStop(this@MainActivity, !(application as CoffeeApplication).isRunning)
+            }
+        }
+
         val intent = Intent(this, CoffeeInvisibleActivity::class.java)
             .setAction(CoffeeInvisibleActivity.ACTION_TOGGLE)
         val toggleButton = ShortcutInfoCompat.Builder(this, "toggle")

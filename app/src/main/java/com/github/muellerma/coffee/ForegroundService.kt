@@ -30,7 +30,9 @@ class ForegroundService : Service() {
             .newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "Coffee::ForegroundService")
         wakeLock?.acquire()
         (application as CoffeeApplication).isRunning = true
-        CoffeeTile.requestTileStateUpdate(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            CoffeeTile.requestTileStateUpdate(this)
+        }
         if (!isScreenStateListenerRegistered) {
             val intentFilter = IntentFilter().apply {
                 addAction(Intent.ACTION_SCREEN_OFF)
@@ -78,7 +80,9 @@ class ForegroundService : Service() {
             .build()
 
         (application as CoffeeApplication).isRunning = true
-        CoffeeTile.requestTileStateUpdate(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            CoffeeTile.requestTileStateUpdate(this)
+        }
         startForeground(NOTIFICATION_ID, notification)
     }
 
@@ -103,7 +107,9 @@ class ForegroundService : Service() {
             isScreenStateListenerRegistered = false
         }
         (application as CoffeeApplication).isRunning = false
-        CoffeeTile.requestTileStateUpdate(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            CoffeeTile.requestTileStateUpdate(this)
+        }
     }
 
     override fun onBind(p0: Intent?): IBinder? = null

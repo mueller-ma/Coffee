@@ -3,11 +3,14 @@ package com.github.muellerma.coffee
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.service.quicksettings.Tile.STATE_ACTIVE
 import android.service.quicksettings.Tile.STATE_INACTIVE
 import android.service.quicksettings.TileService
 import android.util.Log
+import androidx.annotation.RequiresApi
 
+@RequiresApi(Build.VERSION_CODES.N)
 class CoffeeTile : TileService() {
     override fun onClick() {
         Log.d(TAG, "onClick()")
@@ -67,6 +70,7 @@ class CoffeeTile : TileService() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     companion object {
         private val TAG = CoffeeTile::class.java.simpleName
 

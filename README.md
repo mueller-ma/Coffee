@@ -1,9 +1,9 @@
 # Coffee
 
-This Android app provides a tile in the quick settings (the place that holds the toggles for e.g. Wi-Fi and Bluetooth) that allows you to keep the display awake without having to change the device settings.
-You can also open the app and pin a shortcut to your home screen.
-
-Android 7 or higher is required.
+This Android app allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
+* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7+.
+* A button in the app itself
+* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
 
 [<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/de/packages/com.github.muellerma.coffee/)
 

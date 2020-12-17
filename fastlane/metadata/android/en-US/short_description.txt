@@ -1,1 +1,1 @@
-Quick Tile To Keep Screen On
+Keep display awake

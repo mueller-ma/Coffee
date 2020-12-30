@@ -7,7 +7,7 @@
     </style>
 
     <style name="Coffee.AppTheme" parent="Coffee.Base">
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
     </style>
 
     <style name="Coffee.Dialog.Base" parent="@style/Theme.MaterialComponents.DayNight.Dialog.Alert">

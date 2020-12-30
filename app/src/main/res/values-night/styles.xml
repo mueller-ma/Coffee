@@ -3,4 +3,9 @@
     <style name="Coffee.AppTheme" parent="Coffee.Base">
         <item name="android:windowLightStatusBar">false</item>
     </style>
+
+    <style name="Coffee.Dialog.DayNight" parent="@style/Coffee.Dialog.Base">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorSecondary">@android:color/white</item>
+    </style>
 </resources>

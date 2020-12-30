@@ -3,9 +3,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/Coffee.Dialog.DayNight</item>
     </style>
 
     <style name="Coffee.AppTheme" parent="Coffee.Base">
         <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Coffee.Dialog.Base" parent="@style/Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="dialogCornerRadius">16dp</item>
+    </style>
+
+    <style name="Coffee.Dialog.DayNight" parent="@style/Coffee.Dialog.Base">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
     </style>
 </resources>

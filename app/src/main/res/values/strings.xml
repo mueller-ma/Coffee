@@ -10,4 +10,11 @@
     <string name="add_toggle_to_home_success">Pinned to home</string>
     <string name="add_toggle_to_home_no_success">Error pinning to home</string>
     <string name="toggle_coffee">Toggle Coffee</string>
+    <string name="help">Help</string>
+    <string name="close">Close</string>
+    <string name="help_dkma_message">If Coffee doesn\'t work on your device, it\'s most likely caused by a battery saver on your device. How can click the button below to find out how to disable it.</string>
+    <string name="help_dkma_button">Visit dontkillmyapp.com</string>
+    <string name="help_battery_optimization_message">You can also try to disable battery optimization.</string>
+    <string name="help_battery_optimization_button">Disable battery optimization</string>
+    <string name="help_battery_optimization_button_already_disabled">Already disabled</string>
 </resources>

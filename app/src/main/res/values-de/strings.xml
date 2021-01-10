@@ -10,4 +10,11 @@
     <string name="add_toggle_to_home_success">An Startbildschirm angepinnt</string>
     <string name="add_toggle_to_home_no_success">Fehler beim Anpinnen an Startbildschirm</string>
     <string name="toggle_coffee">Kaffee umschalten</string>
+    <string name="help">Hilfe</string>
+    <string name="close">Schließen</string>
+    <string name="help_dkma_message">Wenn Kaffee auf deinem Gerät nicht funktioniert, liegt das wahrscheinlich an einem Energiesparmodus deines Geräts. Durch Tippen auf den Knopf unten findest du heraus, wie du diesen deaktivieren kannst.</string>
+    <string name="help_dkma_button">dontkillmyapp.com öffnen</string>
+    <string name="help_battery_optimization_message">Du kannst auch versuchen, die Batterieoptimierung zu deaktivieren.</string>
+    <string name="help_battery_optimization_button">Batterieoptimierung deaktivieren</string>
+    <string name="help_battery_optimization_button_already_disabled">Bereits deaktiviert</string>
 </resources>

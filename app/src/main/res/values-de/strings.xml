@@ -1,13 +1,20 @@
 <resources
         xmlns:tools="http://schemas.android.com/tools"
         tools:ignore="MissingTranslation">
-        <string name="app_name">Kaffee</string>
-        <string name="keep_display_on">Bildschirm eingeschaltet lassen</string>
-        <string name="tap_to_turn_off">Tippen zum Ausschalten</string>
-        <string name="hint_1">Diese App stellt in den Schnelleinstellungen (der Ort, an dem die Schalter für z.B. WLAN und Bluetooth sind) eine Kachel zur Verfügung, welche es erlaubt, den Bildschirm eingeschaltet zu lassen, ohne die Geräteeinstellungen zu ändern</string>
-        <string name="hint_2">Kaffee kann durch Tippen auf die Kachel oder die Benachrichtigung oder durch das manuelle Ausschalten des Bildschirms gestoppt werden</string>
-        <string name="add_toggle_to_home">Zum Startbildschirm hinzufügen</string>
-        <string name="add_toggle_to_home_success">An Startbildschirm angepinnt</string>
-        <string name="add_toggle_to_home_no_success">Fehler beim Anpinnen an Startbildschirm</string>
-        <string name="toggle_coffee">Kaffee umschalten</string>
+    <string name="app_name">Kaffee</string>
+    <string name="keep_display_on">Bildschirm eingeschaltet lassen</string>
+    <string name="tap_to_turn_off">Tippen zum Ausschalten</string>
+    <string name="hint_1">Diese App stellt in den Schnelleinstellungen (der Ort, an dem die Schalter für z.B. WLAN und Bluetooth sind) eine Kachel zur Verfügung, welche es erlaubt, den Bildschirm eingeschaltet zu lassen, ohne die Geräteeinstellungen zu ändern</string>
+    <string name="hint_2">Kaffee kann durch Tippen auf die Kachel oder die Benachrichtigung oder durch das manuelle Ausschalten des Bildschirms gestoppt werden</string>
+    <string name="add_toggle_to_home">Zum Startbildschirm hinzufügen</string>
+    <string name="add_toggle_to_home_success">An Startbildschirm angepinnt</string>
+    <string name="add_toggle_to_home_no_success">Fehler beim Anpinnen an Startbildschirm</string>
+    <string name="toggle_coffee">Kaffee umschalten</string>
+    <string name="help">Hilfe</string>
+    <string name="close">Schließen</string>
+    <string name="help_dkma_message">Wenn Kaffee auf deinem Gerät nicht funktioniert, liegt das wahrscheinlich an einem Energiesparmodus deines Geräts. Durch Tippen auf den Knopf unten findest du heraus, wie du diesen deaktivieren kannst.</string>
+    <string name="help_dkma_button">dontkillmyapp.com öffnen</string>
+    <string name="help_battery_optimization_message">Du kannst auch versuchen, die Batterieoptimierung zu deaktivieren.</string>
+    <string name="help_battery_optimization_button">Batterieoptimierung deaktivieren</string>
+    <string name="help_battery_optimization_button_already_disabled">Bereits deaktiviert</string>
 </resources>

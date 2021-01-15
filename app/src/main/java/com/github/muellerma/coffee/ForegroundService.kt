@@ -15,6 +15,7 @@ import android.os.PowerManager
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.getSystemService
 
 class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
@@ -29,8 +30,10 @@ class ForegroundService : Service() {
             startOrStop(this, false)
         }
         @Suppress("DEPRECATION")
-        wakeLock = (getSystemService(Context.POWER_SERVICE) as PowerManager)
-            .newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "Coffee::ForegroundService")
+        wakeLock = getSystemService<PowerManager>()!!.newWakeLock(
+            PowerManager.SCREEN_BRIGHT_WAKE_LOCK,
+            "Coffee::ForegroundService"
+        )
         wakeLock?.acquire()
         (application as CoffeeApplication).isRunning = true
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -51,7 +54,7 @@ class ForegroundService : Service() {
         super.onCreate()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val nm = getSystemService(NotificationManager::class.java)!!
+            val nm = getSystemService<NotificationManager>()!!
 
             with(
                 NotificationChannel(

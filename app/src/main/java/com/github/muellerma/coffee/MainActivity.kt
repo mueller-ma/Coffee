@@ -1,7 +1,6 @@
 package com.github.muellerma.coffee
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +9,7 @@ import android.provider.Settings
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.getSystemService
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
 
         dialogLayout.findViewById<Button>(R.id.help_battery_optimization_button).apply {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
+                val pm = getSystemService<PowerManager>()!!
                 if (pm.isIgnoringBatteryOptimizations(packageName)) {
                     isEnabled = false
                     setText(R.string.help_battery_optimization_button_already_disabled)

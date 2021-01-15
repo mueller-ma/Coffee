@@ -7,7 +7,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.PowerManager
 import android.provider.Settings
-import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.getSystemService
@@ -16,16 +15,21 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
+import com.github.muellerma.coffee.databinding.ActivityMainBinding
+import com.github.muellerma.coffee.databinding.DialogHelpBinding
 import com.google.android.material.snackbar.Snackbar
 import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        findViewById<Button>(R.id.toggle_coffee).apply {
+        binding.toggleCoffee.apply {
             setOnClickListener {
                 ForegroundService.startOrStop(
                     this@MainActivity,
@@ -44,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             .setAlwaysBadged()
             .build()
 
-        findViewById<Button>(R.id.add_toggle_to_home).apply {
+        binding.addToggleToHome.apply {
             isVisible = ShortcutManagerCompat.isRequestPinShortcutSupported(this@MainActivity)
             setOnClickListener {
                 val success = ShortcutManagerCompat.requestPinShortcut(
@@ -66,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             ShortcutManagerCompat.addDynamicShortcuts(this, listOf(toggleShortcut))
         }
 
-        findViewById<Button>(R.id.help).apply {
+        binding.help.apply {
             setOnClickListener {
                 openHelp()
             }
@@ -75,9 +79,9 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("BatteryLife")
     private fun openHelp() {
-        val dialogLayout = layoutInflater.inflate(R.layout.dialog_help, null)
+        val helpBinding = DialogHelpBinding.inflate(layoutInflater)
 
-        dialogLayout.findViewById<Button>(R.id.help_dkma_button).apply {
+        helpBinding.helpDkmaButton.apply {
             setOnClickListener {
                 Intent(
                     Intent.ACTION_VIEW,
@@ -89,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        dialogLayout.findViewById<Button>(R.id.help_battery_optimization_button).apply {
+        helpBinding.helpBatteryOptimizationButton.apply {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 val pm = getSystemService<PowerManager>()!!
                 if (pm.isIgnoringBatteryOptimizations(packageName)) {
@@ -107,15 +111,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            dialogLayout.findViewById<Button>(R.id.help_battery_optimization_button).isVisible =
-                false
-            dialogLayout.findViewById<Button>(R.id.help_battery_optimization_message).isVisible =
-                false
+            helpBinding.helpBatteryOptimizationButton.isVisible = false
+            helpBinding.helpBatteryOptimizationMessage.isVisible = false
         }
 
         AlertDialog.Builder(this)
             .setPositiveButton(R.string.close, null)
-            .setView(dialogLayout)
+            .setView(helpBinding.root)
             .show()
     }
 }

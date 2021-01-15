@@ -1,6 +1,4 @@
-<resources
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:ignore="MissingTranslation">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">Kaffee</string>
     <string name="keep_display_on">Bildschirm eingeschaltet lassen</string>
     <string name="tap_to_turn_off">Tippen zum Ausschalten</string>

@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity() {
                     toggleButton,
                     null
                 )
-                val message = if (success) R.string.add_toggle_to_home_success else R.string.add_toggle_to_home_no_success
+                val message =
+                    if (success) R.string.add_toggle_to_home_success else R.string.add_toggle_to_home_no_success
                 Snackbar.make(
                     this@MainActivity.findViewById(android.R.id.content),
                     message,
@@ -72,7 +73,15 @@ class MainActivity : AppCompatActivity() {
 
         dialogLayout.findViewById<Button>(R.id.help_dkma_button).apply {
             setOnClickListener {
-                Intent(Intent.ACTION_VIEW, "https://dontkillmyapp.com/?app=${URLEncoder.encode(getString(R.string.app_name), "utf-8")}".toUri()).apply {
+                Intent(
+                    Intent.ACTION_VIEW,
+                    "https://dontkillmyapp.com/?app=${
+                        URLEncoder.encode(
+                            getString(R.string.app_name),
+                            "utf-8"
+                        )
+                    }".toUri()
+                ).apply {
                     startActivity(this)
                 }
             }
@@ -96,8 +105,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            dialogLayout.findViewById<Button>(R.id.help_battery_optimization_button).isVisible = false
-            dialogLayout.findViewById<Button>(R.id.help_battery_optimization_message).isVisible = false
+            dialogLayout.findViewById<Button>(R.id.help_battery_optimization_button).isVisible =
+                false
+            dialogLayout.findViewById<Button>(R.id.help_battery_optimization_message).isVisible =
+                false
         }
 
         AlertDialog.Builder(this)

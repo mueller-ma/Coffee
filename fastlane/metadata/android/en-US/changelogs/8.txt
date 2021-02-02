@@ -1,0 +1,2 @@
+* Add shortcut as long press option for home screen icon
+* Update translations

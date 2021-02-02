@@ -3,6 +3,7 @@ package com.github.muellerma.coffee
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ShortcutManager
 import android.os.Build
 import android.os.Bundle
 import android.os.PowerManager
@@ -10,6 +11,7 @@ import android.provider.Settings
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
@@ -35,9 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(this, CoffeeInvisibleActivity::class.java)
             .setAction(CoffeeInvisibleActivity.ACTION_TOGGLE)
-        val toggleButton = ShortcutInfoCompat.Builder(this, "toggle")
+        val toggleShortcut = ShortcutInfoCompat.Builder(this, "toggle")
             .setIntent(intent)
             .setShortLabel(getString(R.string.app_name))
+            .setLongLabel(getString(R.string.toggle_coffee))
             .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_toggle))
             .setAlwaysBadged()
             .build()
@@ -47,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             setOnClickListener {
                 val success = ShortcutManagerCompat.requestPinShortcut(
                     this@MainActivity,
-                    toggleButton,
+                    toggleShortcut,
                     null
                 )
                 val message = if (success) R.string.add_toggle_to_home_success else R.string.add_toggle_to_home_no_success
@@ -57,6 +60,10 @@ class MainActivity : AppCompatActivity() {
                     Snackbar.LENGTH_LONG
                 ).show()
             }
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+            ShortcutManagerCompat.addDynamicShortcuts(this, listOf(toggleShortcut))
         }
 
         findViewById<Button>(R.id.help).apply {

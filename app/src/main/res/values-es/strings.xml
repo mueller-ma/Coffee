@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">Café</string>
+    <string name="keep_display_on">Manteniendo pantalla encendida</string>
+    <string name="tap_to_turn_off">Pulse para desactivar</string>
+    <string name="hint_1">Esta aplicación ofrece un mosaico en los ajustes rápidos (el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth) que le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo</string>
+    <string name="hint_2">Café puede ser detenido pulsando el mosaico, la notificación o apagando la pantalla manualmente.</string>
+    <string name="add_toggle_to_home">Agregar interruptor a la pantalla principal</string>
+    <string name="add_toggle_to_home_success">Fijado a inicio</string>
+    <string name="add_toggle_to_home_no_success">Error al fijar a inicio</string>
+    <string name="toggle_coffee">Alternar Café</string>
+    <string name="help">Ayuda</string>
+    <string name="close">Cerrar</string>
+    <string name="help_dkma_message">Si Café no funciona en su dispositivo, es probablemente debido a un ahorrador de batería en este. Puede hacer clic en el botón de abajo para saber cómo desactivarlo.</string>
+    <string name="help_dkma_button">Visitar dontkillmyapp.com</string>
+    <string name="help_battery_optimization_message">También puede intentar desactivar la optimización de batería.</string>
+    <string name="help_battery_optimization_button">Desactivar optimización de batería</string>
+    <string name="help_battery_optimization_button_already_disabled">Ya desactivada</string>
+</resources>

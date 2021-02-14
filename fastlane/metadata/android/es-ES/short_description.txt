@@ -1,0 +1,1 @@
+Mantiene la pantalla encendida.

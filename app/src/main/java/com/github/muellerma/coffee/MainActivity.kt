@@ -20,7 +20,6 @@ import com.google.android.material.snackbar.Snackbar
 import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,22 +36,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val intent = Intent(this, CoffeeInvisibleActivity::class.java)
-            .setAction(CoffeeInvisibleActivity.ACTION_TOGGLE)
-        val toggleShortcut = ShortcutInfoCompat.Builder(this, "toggle")
-            .setIntent(intent)
-            .setShortLabel(getString(R.string.app_name))
-            .setLongLabel(getString(R.string.toggle_coffee))
-            .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_toggle))
-            .setAlwaysBadged()
-            .build()
-
         binding.addToggleToHome.apply {
             isVisible = ShortcutManagerCompat.isRequestPinShortcutSupported(this@MainActivity)
             setOnClickListener {
                 val success = ShortcutManagerCompat.requestPinShortcut(
                     this@MainActivity,
-                    toggleShortcut,
+                    getShortcutInfo(false),
                     null
                 )
                 val message = if (success) R.string.add_toggle_to_home_success else R.string.add_toggle_to_home_no_success
@@ -61,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            ShortcutManagerCompat.addDynamicShortcuts(this, listOf(toggleShortcut))
+            ShortcutManagerCompat.addDynamicShortcuts(this, listOf(getShortcutInfo(true)))
         }
 
         binding.help.apply {
@@ -113,5 +102,18 @@ class MainActivity : AppCompatActivity() {
             .setPositiveButton(R.string.close, null)
             .setView(helpBinding.root)
             .show()
+    }
+
+    private fun getShortcutInfo(stableId: Boolean): ShortcutInfoCompat {
+        val id = if (stableId) "toggle" else "toggle-${System.currentTimeMillis()}"
+        val intent = Intent(this, CoffeeInvisibleActivity::class.java)
+            .setAction(CoffeeInvisibleActivity.ACTION_TOGGLE)
+        return ShortcutInfoCompat.Builder(this, id)
+            .setIntent(intent)
+            .setShortLabel(getString(R.string.app_name))
+            .setLongLabel(getString(R.string.toggle_coffee))
+            .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_toggle))
+            .setAlwaysBadged()
+            .build()
     }
 }

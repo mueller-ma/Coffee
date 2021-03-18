@@ -1,0 +1,1 @@
+* Show message when using home screen widget

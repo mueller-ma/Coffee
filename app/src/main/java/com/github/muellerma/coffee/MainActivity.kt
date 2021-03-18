@@ -55,13 +55,8 @@ class MainActivity : AppCompatActivity() {
                     toggleShortcut,
                     null
                 )
-                val message =
-                    if (success) R.string.add_toggle_to_home_success else R.string.add_toggle_to_home_no_success
-                Snackbar.make(
-                    this@MainActivity.findViewById(android.R.id.content),
-                    message,
-                    Snackbar.LENGTH_LONG
-                ).show()
+                val message = if (success) R.string.add_toggle_to_home_success else R.string.add_toggle_to_home_no_success
+                showToast(message)
             }
         }
 

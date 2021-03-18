@@ -15,4 +15,6 @@
     <string name="help_battery_optimization_message">You can also try to disable battery optimization.</string>
     <string name="help_battery_optimization_button">Disable battery optimization</string>
     <string name="help_battery_optimization_button_already_disabled">Already disabled</string>
+    <string name="turned_on">Turned on</string>
+    <string name="turned_off">Turned off</string>
 </resources>

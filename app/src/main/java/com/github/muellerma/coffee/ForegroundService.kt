@@ -13,6 +13,7 @@ import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
@@ -52,34 +53,15 @@ class ForegroundService : Service() {
         super.onCreate()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val nm = getSystemService<NotificationManager>()!!
-
-            with(
-                NotificationChannel(
-                    NOTIFICATION_CHANNEL_ID,
-                    getString(R.string.app_name),
-                    NotificationManager.IMPORTANCE_MIN
-                )
-            ) {
-                setShowBadge(true)
-                enableVibration(false)
-                enableLights(false)
-                setSound(null, null)
-                nm.createNotificationChannel(this)
-            }
+            createNotificationChannel()
         }
 
         val stopIntent = Intent(this, ForegroundService::class.java)
         stopIntent.action = STOP_ACTION
-        val pendingStopIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            PendingIntent.getForegroundService(this, 0, stopIntent, 0)
-        } else {
-            PendingIntent.getService(this, 0, stopIntent, 0)
-        }
 
         val notification = getBaseNotification()
             .setContentText(getString(R.string.tap_to_turn_off))
-            .setContentIntent(pendingStopIntent)
+            .setContentIntent(getService(stopIntent))
             .setPublicVersion(getBaseNotification().build())
             .build()
 
@@ -88,6 +70,33 @@ class ForegroundService : Service() {
             CoffeeTile.requestTileStateUpdate(this)
         }
         startForeground(NOTIFICATION_ID, notification)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun createNotificationChannel() {
+        val nm = getSystemService<NotificationManager>()!!
+
+        with(
+            NotificationChannel(
+                NOTIFICATION_CHANNEL_ID,
+                getString(R.string.app_name),
+                NotificationManager.IMPORTANCE_MIN
+            )
+        ) {
+            setShowBadge(true)
+            enableVibration(false)
+            enableLights(false)
+            setSound(null, null)
+            nm.createNotificationChannel(this)
+        }
+    }
+
+    private fun getService(stopIntent: Intent): PendingIntent? {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            PendingIntent.getForegroundService(this, 0, stopIntent, 0)
+        } else {
+            PendingIntent.getService(this, 0, stopIntent, 0)
+        }
     }
 
     private fun getBaseNotification(): NotificationCompat.Builder {

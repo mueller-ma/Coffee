@@ -16,23 +16,21 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
+import kotlinx.coroutines.*
 
 class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
+    private var keepWakeLockOnJob: Job? = null
     private var screenStateListener = ScreenStateChangedReceiver()
     private var isScreenStateListenerRegistered = false
 
-    @SuppressLint("WakelockTimeout")
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
         if (intent?.action == STOP_ACTION) {
             Log.d(TAG, "Received stop action")
             startOrStop(this, false)
         }
-        @Suppress("DEPRECATION")
-        wakeLock = getSystemService<PowerManager>()!!
-            .newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "Coffee::ForegroundService")
-        wakeLock?.acquire()
+        ensureWakeLockIsRunning()
         (application as CoffeeApplication).isRunning = true
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             CoffeeTile.requestTileStateUpdate(this)
@@ -45,6 +43,25 @@ class ForegroundService : Service() {
             isScreenStateListenerRegistered = true
         }
         return START_STICKY
+    }
+
+    @SuppressLint("WakelockTimeout")
+    private fun ensureWakeLockIsRunning() {
+        keepWakeLockOnJob = CoroutineScope(Dispatchers.Main + Job()).launch {
+            Log.d(TAG, "Check if wakelock is held")
+            if (wakeLock?.isHeld != true) {
+                Log.i(TAG, "Wakelock isn't held: acquire it")
+                @Suppress("DEPRECATION")
+                wakeLock = getSystemService<PowerManager>()!!
+                    .newWakeLock(
+                        PowerManager.SCREEN_BRIGHT_WAKE_LOCK or PowerManager.ON_AFTER_RELEASE,
+                        "Coffee::ForegroundService"
+                    )
+                wakeLock?.acquire()
+            }
+            delay(5 * 1000)
+            ensureWakeLockIsRunning()
+        }
     }
 
     override fun onCreate() {
@@ -106,6 +123,7 @@ class ForegroundService : Service() {
         Log.d(TAG, "onDestroy()")
         super.onDestroy()
         wakeLock?.release()
+        keepWakeLockOnJob?.cancel("onDestroy()")
         if (isScreenStateListenerRegistered) {
             unregisterReceiver(screenStateListener)
             isScreenStateListenerRegistered = false

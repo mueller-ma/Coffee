@@ -10,10 +10,7 @@ class CoffeeInvisibleActivity : Activity() {
 
         if (intent?.action == ACTION_TOGGLE) {
             Log.d(TAG, "Received toggle")
-            val started =
-                ForegroundService.changeState(this, ForegroundService.Companion.STATE.TOGGLE)
-            val message = if (started) R.string.turned_on else R.string.turned_off
-            showToast(message)
+            ForegroundService.changeState(this, ForegroundService.Companion.STATE.TOGGLE, true)
         }
 
         finishAndRemoveTask()

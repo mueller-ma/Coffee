@@ -28,7 +28,7 @@ class ForegroundService : Service() {
         Log.d(TAG, "onStartCommand()")
         if (intent?.action == STOP_ACTION) {
             Log.d(TAG, "Received stop action")
-            changeState(this, STATE.STOP)
+            changeState(this, STATE.STOP, false)
         }
         ensureWakeLockIsRunning()
         (application as CoffeeApplication).isRunning = true
@@ -142,7 +142,7 @@ class ForegroundService : Service() {
                 return
             }
             Log.d(TAG, "Received screen off event: Stop service")
-            changeState(context, STATE.STOP)
+            changeState(context, STATE.STOP, false)
         }
     }
 
@@ -152,7 +152,7 @@ class ForegroundService : Service() {
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 
-        fun changeState(context: Context, newState: STATE): Boolean {
+        fun changeState(context: Context, newState: STATE, showToast: Boolean) {
             Log.d(TAG, "startOrStop($newState)")
             val start = when (newState) {
                 STATE.START -> true
@@ -160,13 +160,17 @@ class ForegroundService : Service() {
                 STATE.TOGGLE -> !(context.applicationContext as CoffeeApplication).isRunning
             }
             val intent = Intent(context, ForegroundService::class.java)
-            if (start) {
+            val message = if (start) {
                 ContextCompat.startForegroundService(context, intent)
+                R.string.turned_on
             } else {
                 context.stopService(intent)
+                R.string.turned_off
             }
 
-            return start
+            if (showToast) {
+                context.showToast(message)
+            }
         }
 
         enum class STATE {

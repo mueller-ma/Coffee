@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
             setOnClickListener {
                 ForegroundService.changeState(
                     this@MainActivity,
-                    ForegroundService.Companion.STATE.TOGGLE
+                    ForegroundService.Companion.STATE.TOGGLE,
+                    true
                 )
             }
         }

@@ -14,7 +14,7 @@ import androidx.annotation.RequiresApi
 class CoffeeTile : TileService() {
     override fun onClick() {
         Log.d(TAG, "onClick()")
-        ForegroundService.changeState(this, ForegroundService.Companion.STATE.TOGGLE)
+        ForegroundService.changeState(this, ForegroundService.Companion.STATE.TOGGLE, false)
     }
 
     override fun onStartListening() {

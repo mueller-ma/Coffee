@@ -16,7 +16,6 @@ import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import com.github.muellerma.coffee.databinding.ActivityMainBinding
 import com.github.muellerma.coffee.databinding.DialogHelpBinding
-import com.google.android.material.snackbar.Snackbar
 import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {
@@ -29,9 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.toggleCoffee.apply {
             setOnClickListener {
-                ForegroundService.startOrStop(
+                ForegroundService.changeState(
                     this@MainActivity,
-                    !(application as CoffeeApplication).isRunning
+                    ForegroundService.Companion.STATE.TOGGLE
                 )
             }
         }

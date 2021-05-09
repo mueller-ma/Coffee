@@ -5,6 +5,8 @@ This Android app allows you to keep the display awake without having to change t
 * A button in the app itself
 * A shortcut on your home screen. It can be created in the app, if your launcher supports it.
 
+Coffee can be set as assist app (Device settings => `Apps` => `Default apps` => `Assist app`) and changes it's state when assist is called.
+
 [<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/de/packages/com.github.muellerma.coffee/)
 
 ## Translations

@@ -46,6 +46,20 @@
                 android:name=".ForegroundService"
                 android:enabled="true"
                 android:exported="false" />
-    </application>
 
+        <service
+                android:name=".InteractionService"
+                android:permission="android.permission.BIND_VOICE_INTERACTION">
+            <meta-data
+                    android:name="android.voice_interaction"
+                    android:resource="@xml/voice_interaction_service" />
+
+            <intent-filter>
+                <action android:name="android.service.voice.VoiceInteractionService" />
+            </intent-filter>
+        </service>
+        <service
+                android:name=".InteractionSessionService"
+                android:permission="android.permission.BIND_VOICE_INTERACTION" />
+    </application>
 </manifest>

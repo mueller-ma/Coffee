@@ -16,7 +16,7 @@ jobs:
           java-version: 8
 
       - name: Validate Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v1
+        uses: gradle/wrapper-validation-action@v1.0.3
         
       - name: Build
         run: bash gradlew build

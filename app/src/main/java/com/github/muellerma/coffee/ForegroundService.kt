@@ -59,7 +59,7 @@ class ForegroundService : Service() {
                     )
                 wakeLock?.acquire()
             }
-            delay(5 * 1000)
+            delay(5000)
             ensureWakeLockIsRunning()
         }
     }

@@ -4,4 +4,17 @@
     <string name="tap_to_turn_off">Druk om uit te schakelen</string>
     <string name="hint_1">Deze app biedt een tegel voor de snelle instellingen (het menu met schakelaars voor o.a. wifi en bluetooth) om het scherm ingeschakeld te houden zonder daarvoor in de instellingenapp te hoeven duiken.</string>
     <string name="hint_2">Koffie kan worden gestopt door te drukken op de tegel of melding, of door het scherm handmatig uit te schakelen.</string>
+    <string name="add_toggle_to_home">Voeg schuifje toe aan home scherm</string>
+    <string name="add_toggle_to_home_success">Vastgemaakt aan home</string>
+    <string name="add_toggle_to_home_no_success">Error bij vastmaken aan home</string>
+    <string name="toggle_coffee">Zet Koffie aan/uit</string>
+    <string name="help">Help</string>
+    <string name="close">Sluit</string>
+    <string name="help_dkma_message">Als Koffie niet werkt op jouw apparaat, dan wordt het waarschijnlijk veroorzaakt door de batterijbesparing op jouw apparaat. Klik op de knop hieronder om te zien hoe je dit kan uitschakelen.</string>
+    <string name="help_dkma_button">Bezoek dontkillmyapp.com</string>
+    <string name="help_battery_optimization_message">Je zou ook kunnen proberen om de batterij optimalisatie uit te zetten.</string>
+    <string name="help_battery_optimization_button">Zet de batterij optimalisatie uit</string>
+    <string name="help_battery_optimization_button_already_disabled">Dit staat al uit</string>
+    <string name="turned_on">Zet Koffie aan</string>
+    <string name="turned_off">Zet Koffie uit</string>
 </resources>

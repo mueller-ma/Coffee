@@ -12,7 +12,9 @@
             android:label="@string/app_name"
             android:supportsRtl="true"
             android:theme="@style/Coffee.AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+                android:name=".MainActivity"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +35,8 @@
                 android:name=".CoffeeTile"
                 android:icon="@drawable/ic_twotone_free_breakfast_24"
                 android:label="@string/app_name"
-                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
@@ -49,7 +52,8 @@
 
         <service
                 android:name=".InteractionService"
-                android:permission="android.permission.BIND_VOICE_INTERACTION">
+                android:permission="android.permission.BIND_VOICE_INTERACTION"
+                android:exported="true">
             <meta-data
                     android:name="android.voice_interaction"
                     android:resource="@xml/voice_interaction_service" />

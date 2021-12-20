@@ -11,9 +11,10 @@ Coffee can be set as assist app (Device settings => `Apps` => `Default apps` => 
 
 ## Translations
 
-You can help translating this app by coping the file `app/src/main/res/values/strings.xml` to `app/src/main/res/values-xx/strings.xml` (`xx` stands for your language code), removing all entries marked with `translatable="false"` and translating the remaining entries. This file contains all strings used in the app.
+App strings and the app store description can be translated via Crowdin: https://crowdin.com/project/coffee-app
 
-The app store description can also be translated: Copy `fastlane/metadata/android/en-US/full_description.txt` and `fastlane/metadata/android/en-US/short_description.txt` to `fastlane/metadata/android/xx-YY/full_description.txt` (`xx` is the language code, `YY` is the country code) and translate the file.
+Translations have to be approved before being merged into the app. To become a translator with approval rights or to request a new language, please [poke me on Crowdin](https://crowdin.com/profile/mueller-ma) or open an issue here on GitHub. 
+
 
 ## Troubleshooting
 

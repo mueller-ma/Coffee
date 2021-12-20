@@ -1,5 +1,11 @@
 files:
   - source: /app/src/main/res/values/strings.xml
-    translation: /app/src/main/res/values-%android_code%/strings.xml
+    translation: /app/src/main/res/values-%two_letters_code%/strings.xml
+    languages_mapping:
+      two_letters_code:
+        pt-BR: pt-rBR
+        he: iw
+        id: in
+        yi: ji
   - source: /fastlane/metadata/android/en-US/*_description.txt
     translation: /fastlane/metadata/android/%locale%/%original_file_name%

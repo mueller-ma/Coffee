@@ -1,5 +1,6 @@
 Kaffee ermöglicht den Bildschirm eingeschaltet zu lassen, ohne dass man die Geräteeinstellungen ändern muss. Die App kann an verschiedenen Stellen umgeschaltet werden:
-
-* Über eine Kachel in den Schnelleinstellungen, dem Ort, wo Schalter für z.B. WLAN und Bluethooth sind. Benötigt Android 7 oder höher.
+* Über eine Kachel in den Schnelleinstellungen, dem Ort, wo Schalter für z.B. Benötigt Android 7 oder höher.
 * Über einen Button in der App selbst
 * Über eine Verknüpfung auf dem Startbildschirm. Diese kann in der App erstellt werden, wenn das der Launcher unterstützt.
+
+Kaffee kann als Assistent-App eingestellt werden (Geräteeinstellungen => Apps => Standard-Apps => Assistent-App) und ändert seinen Status beim Aufruf der Assistenz.

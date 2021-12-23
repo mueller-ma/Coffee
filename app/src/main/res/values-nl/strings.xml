@@ -10,7 +10,7 @@
     <string name="add_toggle_to_home_success">Vastgemaakt aan home</string>
     <string name="add_toggle_to_home_no_success">Error bij vastmaken aan home</string>
     <string name="toggle_coffee">Zet Koffie aan/uit</string>
-    <string name="help">foobar</string>
+    <string name="help">Hulp</string>
     <string name="close">Sluit</string>
     <string name="help_dkma_message">Als Koffie niet werkt op jouw apparaat, dan wordt het waarschijnlijk veroorzaakt door de batterijbesparing op jouw apparaat. Klik op de knop hieronder om te zien hoe je dit kan uitschakelen.</string>
     <string name="help_dkma_button">Bezoek dontkillmyapp.com</string>

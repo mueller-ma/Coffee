@@ -1,6 +1,6 @@
-Med Kaffe kan du hålla skärmen vaken utan att behöva ändra enhetsinställningar. Man kan växlas av och på på olika platser:
-* En bricka i snabbinställningarna, platsen som håller växlarna för t.ex. Wi-Fi och Bluetooth. Kräver Android 7 eller högre.
-* En knapp i själva applikationen
-* En genväg på startskärmen. Kan skapas i applikationen om din startprogram stöder det.
+Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
+* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
+* A button in the app itself
+* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
 
-Kaffe kan ställas in som digital assistent (Enhetsinställningar => Appar och aviseringar => Standardappar => Digital assistentapp) och ändrar tillstånd när den digitala assistentn anropas.
+Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.

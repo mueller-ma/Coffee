@@ -1,5 +1,5 @@
 Koffie zorgt ervoor dat jouw scherm aan blijft zonder dat de apparaatinstellingen veranderd hoeven te worden. Het kan aangezet worden op verschillende plekken:
-* Een tegel in de instellingen, de plek met de schuifjes voor de bijv. Dit vereist Android 7 of hoger.
+* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Dit vereist Android 7 of hoger.
 * Een knop in de app zelf
 * Een snelkoppeling op jouw home scherm. Het kan in de app gemaakt worden, mits jouw laucher dit ondersteunt.
 

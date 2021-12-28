@@ -1,5 +1,6 @@
-<resources>
-    <string name="app_name">Coffee</string>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Translation instructions can be found in the Readme -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <string name="keep_display_on">Mantendo a tela ligada</string>
     <string name="tap_to_turn_off">Toque para desligar</string>
     <string name="hint_1">Este aplicativo fornece um bloco nas configurações rápidas (o menu com os interruptores de, por exemplo, Wi-Fi e Bluetooth) que permite que você mantenha a tela ativa sem ter que alterar as configurações do dispositivo.</string>

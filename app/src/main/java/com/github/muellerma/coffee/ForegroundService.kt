@@ -78,10 +78,15 @@ class ForegroundService : Service() {
 
         val stopIntent = Intent(this, ForegroundService::class.java)
         stopIntent.action = STOP_ACTION
-        val pendingStopIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            PendingIntent.getForegroundService(this, 0, stopIntent, 0)
+        val pendingIntentFlags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PendingIntent.FLAG_IMMUTABLE
         } else {
-            PendingIntent.getService(this, 0, stopIntent, 0)
+            0
+        }
+        val pendingStopIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            PendingIntent.getForegroundService(this, 0, stopIntent, pendingIntentFlags)
+        } else {
+            PendingIntent.getService(this, 0, stopIntent, pendingIntentFlags)
         }
 
         val notification = getBaseNotification()
@@ -105,7 +110,7 @@ class ForegroundService : Service() {
             .setOngoing(true)
             .setShowWhen(true)
             .setWhen(System.currentTimeMillis())
-            .setColor(ContextCompat.getColor(applicationContext, R.color.colorPrimary))
+            .setColor(ContextCompat.getColor(applicationContext, R.color.coffeeBrown))
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
     }
 

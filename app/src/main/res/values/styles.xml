@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Coffee.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="Coffee.Base" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/coffeeBrown</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/coffeeBrown</item>
+        <item name="colorOnPrimaryContainer">#FFFFFF</item>
+
+        <item name="colorSecondary">@color/coffeeBrown</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">@color/coffeeBrown</item>
+        <item name="colorOnSecondaryContainer">#FFFFFF</item>
+
         <item name="alertDialogTheme">@style/Coffee.Dialog.DayNight</item>
     </style>
 
     <style name="Coffee.AppTheme" parent="Coffee.Base">
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <!-- Overridden for API 23 and 27 -->
+        <!-- minSdk doesn't support light modes for status bar and navigation bar -->
     </style>
 
-    <style name="Coffee.Dialog.Base" parent="@style/Theme.MaterialComponents.DayNight.Dialog.Alert">
+    <style name="Coffee.Dialog.DayNight" parent="@style/Theme.Material3.DayNight.Dialog.Alert">
         <item name="dialogCornerRadius">16dp</item>
-    </style>
-
-    <style name="Coffee.Dialog.DayNight" parent="@style/Coffee.Dialog.Base">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorPrimary">?colorOnBackground</item>
     </style>
 </resources>

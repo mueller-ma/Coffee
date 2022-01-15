@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Coffee.AppTheme" parent="Coffee.Base">
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar">?isLightTheme</item>
         <item name="android:statusBarColor">?android:windowBackground</item>
-        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightNavigationBar">?isLightTheme</item>
         <item name="android:navigationBarColor">?android:windowBackground</item>
     </style>
 </resources>

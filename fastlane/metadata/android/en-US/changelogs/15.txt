@@ -1,0 +1,2 @@
+* Fix crash on Android 12
+* Use Material 3 design

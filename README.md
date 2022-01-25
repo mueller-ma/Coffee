@@ -1,5 +1,9 @@
 # Coffee
 
+[![Build App](https://github.com/mueller-ma/Coffee/actions/workflows/build.yml/badge.svg)](https://github.com/mueller-ma/Coffee/actions/workflows/build.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/mueller-ma/coffee/badge)](https://www.codefactor.io/repository/github/mueller-ma/coffee)
+[![Crowdin](https://badges.crowdin.net/coffee-app/localized.svg)](https://crowdin.com/project/coffee-app)
+
 This Android app allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
 * A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
 * A button in the app itself

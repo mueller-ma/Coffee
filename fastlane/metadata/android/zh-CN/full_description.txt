@@ -1,6 +1,6 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+咖啡 Coffee允许您保持屏幕常亮，无需更改设备设置。 它可以在不同地方切换开关：
+* 在放置着例如Wi-Fi和蓝牙开关的快捷设置中提供了一个磁块。 需要Android 7或更高版本
+* 应用程序中的按钮
+* 您主屏幕上的快捷方式。 如果你的启动器支持它，它可以在应用程序中创建。
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+咖啡可以设置为辅助应用 (设备设置=> 应用=> 默认应用=> 辅助应用) 并在调用辅助时更改其状态。

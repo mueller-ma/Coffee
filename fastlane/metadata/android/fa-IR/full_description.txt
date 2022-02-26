@@ -1,6 +1,6 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+کافه شما را قادر می‌سازد تا صفحه‌نمایش را بدون انجام تغییری در تنظیمات افزاره‌تان بیدار نگه‌دارید. می‌توان آن را از مکان‌های مختلفی تغییر داد:
+* یک دکمه در تنظیمات سریع، مکانی که دکمه‌هایی برای تغییر حالت وای‌فای و بلوتوث و ... را دارد. نیاز به اندروید ۷ یا بالاتر دارد.
+* یک دکمه در درون خود کاره.
+* یک میان‌بر در صفحهٔ خانه. اگر راه‌انداز شما از آن پشتیبانی کند، می‌توان آن را در کاره ایجاد کرد.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+قهوه را می‌توان به‌عنوان برنامه کمکی تنظیم کرد (تنظیمات دستگاه => برنامه‌ها => برنامه‌های پیش‌فرض => برنامه کمکی) و هنگام فراخوانی کمک، وضعیت آن را تغییر می‌دهد.

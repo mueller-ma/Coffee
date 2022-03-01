@@ -4,3 +4,9 @@ Kaffee ermöglicht den Bildschirm eingeschaltet zu lassen, ohne dass man die Ger
 * Über eine Verknüpfung auf dem Startbildschirm. Diese kann in der App erstellt werden, wenn das der Launcher unterstützt.
 
 Kaffee kann als Assistent-App eingestellt werden (Geräteeinstellungen => Apps => Standard-Apps => Assistent-App) und ändert seinen Status beim Aufruf der Assistenz.
+
+If you have any issues with Coffee, please consult the help dialog of the app.
+Some OEMs implement an overly aggressive battery saver that makes this app unuseable. This issue has been reported on devices of the following OEMs:
+* Poco
+* Samsung
+* Xiaomi 

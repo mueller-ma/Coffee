@@ -4,3 +4,9 @@
 * 您主屏幕上的快捷方式。 如果你的启动器支持它，它可以在应用程序中创建。
 
 咖啡可以设置为辅助应用 (设备设置=> 应用=> 默认应用=> 辅助应用) 并在调用辅助时更改其状态。
+
+If you have any issues with Coffee, please consult the help dialog of the app.
+Some OEMs implement an overly aggressive battery saver that makes this app unuseable. This issue has been reported on devices of the following OEMs:
+* Poco
+* Samsung
+* Xiaomi 

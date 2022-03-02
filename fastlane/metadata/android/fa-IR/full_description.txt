@@ -4,3 +4,9 @@
 * یک میان‌بر در صفحهٔ خانه. اگر راه‌انداز شما از آن پشتیبانی کند، می‌توان آن را در کاره ایجاد کرد.
 
 قهوه را می‌توان به‌عنوان برنامه کمکی تنظیم کرد (تنظیمات دستگاه => برنامه‌ها => برنامه‌های پیش‌فرض => برنامه کمکی) و هنگام فراخوانی کمک، وضعیت آن را تغییر می‌دهد.
+
+If you have any issues with Coffee, please consult the help dialog of the app.
+Some OEMs implement an overly aggressive battery saver that makes this app unuseable. This issue has been reported on devices of the following OEMs:
+* Poco
+* Samsung
+* Xiaomi 

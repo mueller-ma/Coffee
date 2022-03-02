@@ -1,7 +1,7 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
+Coffee, cihaz ayarlarını değiştirmek zorunda kalmadan ekranı uyanık tutmanızı sağlar. Çeşitli yerlerde değiştirilebilir:
 * A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Android 7 veya üzeri gerektirir.
 * Uygulamanın kendi içinde bir düğme
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+* Ana ekranınızda bir kısayol. It can be created in the app, if your launcher supports it.
 
 Coffee, yardımcı uygulama olarak ayarlanabilir (Cihaz ayarları => Uygulamalar => Varsayılan uygulamalar => Asistan uygulaması) ve yardım istendiğinde durumunu değiştirir.
 

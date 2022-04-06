@@ -1,1 +1,1 @@
-Keep display awake
+ディスプレイの自動消灯を一時的に無効化

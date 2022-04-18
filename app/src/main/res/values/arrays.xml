@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timeout_values">
+        <item>0</item>
+        <item>5</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+    </string-array>
+
+    <string-array name="timeout_labels">
+        <item>@string/timeout_infinity</item>
+        <item>@string/timeout_5_minutes</item>
+        <item>@string/timeout_15_minutes</item>
+        <item>@string/timeout_30_minutes</item>
+        <item>@string/timeout_60_minutes</item>
+        <item>@string/timeout_120_minutes</item>
+    </string-array>
+</resources>

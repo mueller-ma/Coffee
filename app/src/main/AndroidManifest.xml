@@ -26,6 +26,10 @@
         </activity>
 
         <activity
+                android:name=".PreferenceActivity"
+                android:exported="false" />
+
+        <activity
                 android:name=".CoffeeInvisibleActivity"
                 android:launchMode="singleInstance"
                 android:noHistory="true"

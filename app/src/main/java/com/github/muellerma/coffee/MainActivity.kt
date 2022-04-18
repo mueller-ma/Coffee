@@ -58,6 +58,14 @@ class MainActivity : AppCompatActivity() {
                 openHelp()
             }
         }
+
+        binding.settings.apply {
+            setOnClickListener {
+                Intent(this@MainActivity, PreferenceActivity::class.java).apply {
+                    startActivity(this)
+                }
+            }
+        }
     }
 
     @SuppressLint("BatteryLife")

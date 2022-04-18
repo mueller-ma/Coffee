@@ -16,9 +16,13 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
+import kotlinx.coroutines.*
+import java.util.concurrent.CancellationException
+import kotlin.time.Duration.Companion.seconds
 
 class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
+    private var timeoutJob: Job? = null
     private var screenStateListener = ScreenStateChangedReceiver()
     private var isScreenStateListenerRegistered = false
 
@@ -39,6 +43,7 @@ class ForegroundService : Service() {
             )
         Log.d(TAG, "Acquire wakelock")
         wakeLock?.acquire()
+        startTimeoutJob()
 
         (application as CoffeeApplication).isRunning = true
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -102,10 +107,31 @@ class ForegroundService : Service() {
         startForeground(NOTIFICATION_ID, notification)
     }
 
+    private fun startTimeoutJob() {
+        val timeout = prefs().getTimeout()
+        if (timeout == 0) {
+            Log.d(TAG, "No timeout set")
+            return
+        }
+        timeoutJob = CoroutineScope(Dispatchers.Main + Job()).launch {
+            Log.d(TAG, "Schedule timeout for $timeout minutes")
+            delay(timeout.seconds)
+            Log.d(TAG, "Timeout reached, stop coffee")
+            changeState(this@ForegroundService, STATE.STOP, true)
+        }
+    }
+
     private fun getBaseNotification(): NotificationCompat.Builder {
+        val timeout = prefs().getTimeout()
+        val title = if (timeout == 0) {
+            getString(R.string.notification_title_no_timeout)
+        } else {
+            getString(R.string.notification_title_timeout, timeout)
+        }
+
         return NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
-            .setContentTitle(getString(R.string.keep_display_on))
-            .setTicker(getString(R.string.keep_display_on))
+            .setContentTitle(title)
+            .setTicker(title)
             .setSmallIcon(R.drawable.ic_twotone_free_breakfast_24)
             .setOngoing(true)
             .setShowWhen(true)
@@ -118,6 +144,7 @@ class ForegroundService : Service() {
         Log.d(TAG, "onDestroy()")
         super.onDestroy()
         wakeLock?.release()
+        timeoutJob?.cancel(CancellationException("Coffee was stopped"))
         if (isScreenStateListenerRegistered) {
             unregisterReceiver(screenStateListener)
             isScreenStateListenerRegistered = false

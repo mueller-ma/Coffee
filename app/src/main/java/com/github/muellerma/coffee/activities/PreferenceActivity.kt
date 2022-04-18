@@ -1,4 +1,4 @@
-package com.github.muellerma.coffee
+package com.github.muellerma.coffee.activities
 
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.github.muellerma.coffee.R
 import com.github.muellerma.coffee.databinding.ActivityPreferenceBinding
 
 class PreferenceActivity : AppCompatActivity() {

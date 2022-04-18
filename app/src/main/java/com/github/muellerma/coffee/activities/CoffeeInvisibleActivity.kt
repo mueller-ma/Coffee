@@ -1,8 +1,9 @@
-package com.github.muellerma.coffee
+package com.github.muellerma.coffee.activities
 
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import com.github.muellerma.coffee.ForegroundService
 
 class CoffeeInvisibleActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {

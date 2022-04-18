@@ -1,4 +1,4 @@
-package com.github.muellerma.coffee
+package com.github.muellerma.coffee.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -14,8 +14,11 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
+import com.github.muellerma.coffee.ForegroundService
+import com.github.muellerma.coffee.R
 import com.github.muellerma.coffee.databinding.ActivityMainBinding
 import com.github.muellerma.coffee.databinding.DialogHelpBinding
+import com.github.muellerma.coffee.showToast
 import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {

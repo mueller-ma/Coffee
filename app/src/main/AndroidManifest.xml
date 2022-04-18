@@ -13,7 +13,7 @@
             android:supportsRtl="true"
             android:theme="@style/Coffee.AppTheme">
         <activity
-                android:name=".MainActivity"
+                android:name=".activities.MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,11 +26,11 @@
         </activity>
 
         <activity
-                android:name=".PreferenceActivity"
+                android:name=".activities.PreferenceActivity"
                 android:exported="false" />
 
         <activity
-                android:name=".CoffeeInvisibleActivity"
+                android:name=".activities.CoffeeInvisibleActivity"
                 android:launchMode="singleInstance"
                 android:noHistory="true"
                 android:theme="@android:style/Theme.NoDisplay" />

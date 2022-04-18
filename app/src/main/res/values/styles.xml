@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Coffee.Base" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Coffee.Base" parent="Theme.Material3.DayNight">
         <item name="colorPrimary">@color/coffeeBrown</item>
         <item name="colorOnPrimary">#FFFFFF</item>
         <item name="colorPrimaryContainer">@color/coffeeBrown</item>

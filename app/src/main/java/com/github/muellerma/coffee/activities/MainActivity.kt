@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         binding.toggleCoffee.apply {
             setOnClickListener {
                 ForegroundService.changeState(

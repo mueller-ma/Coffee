@@ -2,7 +2,6 @@
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <string name="app_name">コーヒー</string>
-    <string name="keep_display_on">ディスプレイが消灯しないようにしています</string>
     <string name="tap_to_turn_off">タップしてオフにする</string>
     <string name="hint_1">このアプリはクイック設定（Wi-FiやBluetoothなどの切り替えボタンがある場所）に端末の設定を変えることなくディスプレイの自動消灯を一時的に無効化できるタイルを追加します。</string>
     <string name="hint_2">コーヒーはタイルをもう一度押す、通知をタップする、手動で画面をオフにするなどで止められます。</string>

@@ -19,7 +19,7 @@ import androidx.core.content.getSystemService
 import com.github.muellerma.coffee.activities.getTimeout
 import kotlinx.coroutines.*
 import java.util.concurrent.CancellationException
-import kotlin.time.Duration.Companion.seconds
+import kotlin.time.Duration.Companion.minutes
 
 class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
@@ -116,7 +116,7 @@ class ForegroundService : Service() {
         }
         timeoutJob = CoroutineScope(Dispatchers.Main + Job()).launch {
             Log.d(TAG, "Schedule timeout for $timeout minutes")
-            delay(timeout.seconds)
+            delay(timeout.minutes)
             Log.d(TAG, "Timeout reached, stop coffee")
             changeState(this@ForegroundService, STATE.STOP, true)
         }

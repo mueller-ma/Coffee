@@ -2,7 +2,6 @@
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <string name="app_name">Café</string>
-    <string name="keep_display_on">Manteniendo pantalla encendida</string>
     <string name="tap_to_turn_off">Pulse para desactivar</string>
     <string name="hint_1">Esta aplicación ofrece un mosaico en los ajustes rápidos (el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth) que le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo</string>
     <string name="hint_2">Café puede ser detenido pulsando el mosaico, la notificación o apagando la pantalla manualmente.</string>

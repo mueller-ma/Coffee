@@ -2,7 +2,6 @@
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <string name="app_name">Kopi</string>
-    <string name="keep_display_on">Menjaga layar tetap menyala</string>
     <string name="tap_to_turn_off">Ketuk untuk mematikan</string>
     <string name="hint_1">Aplikasi ini menyediakan ubin dalam pengaturan cepat (tempat beralih untuk mis. Wi-Fi dan Bluetooth) yang memungkinkan anda untuk menjaga tampilan tetap aktif tanpa harus mengubah pengaturan perangkat.</string>
     <string name="hint_2">Kopi bisa dihentikan dengan mengklik tile atau notifikasi atau saat layar dimatikan secara manual.</string>

@@ -2,7 +2,6 @@
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <string name="app_name">Koffie</string>
-    <string name="keep_display_on">Scherm ingeschakeld houden</string>
     <string name="tap_to_turn_off">Druk om uit te schakelen</string>
     <string name="hint_1">Deze app biedt een tegel voor de snelle instellingen (het menu met schakelaars voor o.a. wifi en bluetooth) om het scherm ingeschakeld te houden zonder daarvoor in de instellingenapp te hoeven duiken.</string>
     <string name="hint_2">Koffie kan worden gestopt door te drukken op de tegel of melding, of door het scherm handmatig uit te schakelen.</string>

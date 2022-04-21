@@ -2,7 +2,6 @@
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <string name="app_name">Kaffe</string>
-    <string name="keep_display_on">Håller skärmen påslagen</string>
     <string name="tap_to_turn_off">Tryck för att slå av</string>
     <string name="hint_1">Denna applikation ger en bricka i snabbinställningarna (platsen som håller växlarna för t.ex. Wi-Fi och Bluetooth) som låter dig hålla skärmen vaken utan att behöva ändra enhetsinställningarna.</string>
     <string name="hint_2">Kaffe kan stoppas genom att klicka på brickan, notifikationen eller när skärmen stängs av manuellt.</string>

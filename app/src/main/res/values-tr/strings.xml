@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
-    <string name="tap_to_turn_off">Kapatmak için dokunun</string>
+    <string name="turned_on">Coffee açıldı</string>
+    <string name="turned_off">Coffee kapatıldı</string>
+    <string name="toggle_coffee">Coffee\'yi Aç/Kapat</string>
+    <!-- MainActivity -->
     <string name="hint_1">Bu uygulama hızlı ayarlarda (Örneğin, Wi-Fi ve Bluetooth için geçişleri tutan yer) cihaz ayarlarını değiştirmek zorunda kalmadan ekranı uyanık tutmanıza izin veren bir kutucuk sağlar.</string>
     <string name="hint_2">Coffee, kutucuğa veya bildirime tıklanarak veya ekran el ile olarak kapatıldığında durdurulabilir.</string>
     <string name="add_toggle_to_home">Ana ekrana geçiş ekle</string>
     <string name="add_toggle_to_home_success">Ana ekrana sabitlenmiş</string>
     <string name="add_toggle_to_home_no_success">Ana ekrana sabitleme hatası</string>
-    <string name="toggle_coffee">Coffee\'yi Aç/Kapat</string>
-    <string name="help">Yardım</string>
-    <string name="close">Kapat</string>
-    <string name="help_dkma_message">Coffee cihazınızda çalışmıyorsa, bunun nedeni büyük olasılıkla cihazınızdaki pil tasarrufudur. Nasıl devre dışı bırakılacağını öğrenmek için aşağıdaki düğmeye tıklayabilirsiniz.</string>
-    <string name="help_dkma_button">dontkillmyapp.com\'u ziyaret et</string>
-    <string name="help_battery_optimization_message">Pil optimizasyonunu devre dışı bırakmayı da deneyebilirsiniz.</string>
-    <string name="help_battery_optimization_button">Pil optimizasyonunu devre dışı bırakın</string>
-    <string name="help_battery_optimization_button_already_disabled">Zaten devre dışı</string>
-    <string name="turned_on">Coffee açıldı</string>
-    <string name="turned_off">Coffee kapatıldı</string>
+    <!-- Notification -->
+    <string name="tap_to_turn_off">Kapatmak için dokunun</string>
+    <!-- Settings -->
 </resources>

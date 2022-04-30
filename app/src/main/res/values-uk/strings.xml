@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <!-- MainActivity -->
+    <!-- Notification -->
+    <!-- Settings -->
 </resources>

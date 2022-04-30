@@ -1,25 +1,17 @@
 package com.github.muellerma.coffee.activities
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.PowerManager
-import android.provider.Settings
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.getSystemService
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
-import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import com.github.muellerma.coffee.ForegroundService
 import com.github.muellerma.coffee.R
 import com.github.muellerma.coffee.databinding.ActivityMainBinding
-import com.github.muellerma.coffee.databinding.DialogHelpBinding
 import com.github.muellerma.coffee.showToast
-import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -58,12 +50,6 @@ class MainActivity : AppCompatActivity() {
             ShortcutManagerCompat.addDynamicShortcuts(this, listOf(getShortcutInfo(true)))
         }
 
-        binding.help.apply {
-            setOnClickListener {
-                openHelp()
-            }
-        }
-
         binding.settings.apply {
             setOnClickListener {
                 Intent(this@MainActivity, PreferenceActivity::class.java).apply {
@@ -71,50 +57,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    @SuppressLint("BatteryLife")
-    private fun openHelp() {
-        val helpBinding = DialogHelpBinding.inflate(layoutInflater)
-
-        helpBinding.helpDkmaButton.apply {
-            setOnClickListener {
-                Intent(
-                    Intent.ACTION_VIEW,
-                    "https://dontkillmyapp.com/?app=${URLEncoder.encode(getString(R.string.app_name), "utf-8")}"
-                        .toUri()
-                ).apply {
-                    startActivity(this)
-                }
-            }
-        }
-
-        helpBinding.helpBatteryOptimizationButton.apply {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                val pm = getSystemService<PowerManager>()!!
-                if (pm.isIgnoringBatteryOptimizations(packageName)) {
-                    isEnabled = false
-                    setText(R.string.help_battery_optimization_button_already_disabled)
-                }
-
-                setOnClickListener {
-                    Intent().apply {
-                        action = Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS
-                        context.startActivity(this)
-                    }
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            helpBinding.helpBatteryOptimizationButton.isVisible = false
-            helpBinding.helpBatteryOptimizationMessage.isVisible = false
-        }
-
-        AlertDialog.Builder(this)
-            .setPositiveButton(R.string.close, null)
-            .setView(helpBinding.root)
-            .show()
     }
 
     private fun getShortcutInfo(stableId: Boolean): ShortcutInfoCompat {

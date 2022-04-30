@@ -22,10 +22,8 @@ Translations have to be approved before being merged into the app. To become a t
 
 ## Troubleshooting
 
-Please consult the help dialog of the app if you have any issues with Coffee. It can help you with disabling battery saver.
-If the app still doesn't keep the display awake, it might be caused by these battery savers. There're some devices known not to work: https://github.com/mueller-ma/Coffee/issues?q=label%3A%22battery+saver%22
-
-Feel free to open an issue if your device isn't in the list of closed issues.
+Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
+In that case please enable "Alternate mode" in the settings.
 
 ## Credits
 

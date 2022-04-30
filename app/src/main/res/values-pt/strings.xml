@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
-    <string name="tap_to_turn_off">Toque para desligar</string>
+    <string name="toggle_coffee">Ativar/Desativar Coffee</string>
+    <!-- MainActivity -->
     <string name="hint_1">Este aplicativo fornece um bloco nas configurações rápidas (o menu com os interruptores de, por exemplo, Wi-Fi e Bluetooth) que permite que você mantenha a tela ativa sem ter que alterar as configurações do dispositivo.</string>
     <string name="hint_2">O Coffee pode ser interrompido tocando no bloco ou na notificação ou desligando a tela manualmente.</string>
     <string name="add_toggle_to_home">Adicionar botão à tela inicial</string>
     <string name="add_toggle_to_home_success">Fixado na tela inicial</string>
     <string name="add_toggle_to_home_no_success">Erro ao fixar na tela inicial</string>
-    <string name="toggle_coffee">Ativar/Desativar Coffee</string>
-    <string name="help">Ajuda</string>
-    <string name="close">Fechar</string>
-    <string name="help_dkma_message">Se o Coffee não funcionar em seu dispositivo, é provável que seja causado por uma economia de bateria em seu dispositivo.  Você pode clicar no botão abaixo para descobrir como desativá-lo.</string>
-    <string name="help_dkma_button">Visite dontkillmyapp.com</string>
-    <string name="help_battery_optimization_message">Você também pode tentar desativar a otimização da bateria.</string>
-    <string name="help_battery_optimization_button">Desativar a otimização de bateria</string>
-    <string name="help_battery_optimization_button_already_disabled">Já desativada</string>
+    <!-- Notification -->
+    <string name="tap_to_turn_off">Toque para desligar</string>
+    <!-- Settings -->
 </resources>

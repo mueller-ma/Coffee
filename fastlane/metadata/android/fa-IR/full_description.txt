@@ -5,8 +5,5 @@
 
 قهوه را می‌توان به‌عنوان برنامه کمکی تنظیم کرد (تنظیمات دستگاه => برنامه‌ها => برنامه‌های پیش‌فرض => برنامه کمکی) و هنگام فراخوانی کمک، وضعیت آن را تغییر می‌دهد.
 
-If you have any issues with Coffee, please consult the help dialog of the app.
-Some OEMs implement an overly aggressive battery saver that makes this app unuseable. This issue has been reported on devices of the following OEMs:
-* Poco
-* Samsung
-* Xiaomi 
+Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
+In that case please enable "Alternate mode" in the settings.

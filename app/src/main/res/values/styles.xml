@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Coffee.Base" parent="Theme.Material3.DayNight">
-        <item name="colorPrimary">@color/coffeeBrown</item>
+        <item name="colorPrimary">@color/coffee_brown</item>
         <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorPrimaryContainer">@color/coffeeBrown</item>
+        <item name="colorPrimaryContainer">@color/coffee_brown</item>
         <item name="colorOnPrimaryContainer">#FFFFFF</item>
 
-        <item name="colorSecondary">@color/coffeeBrown</item>
+        <item name="colorSecondary">@color/coffee_brown</item>
         <item name="colorOnSecondary">#FFFFFF</item>
-        <item name="colorSecondaryContainer">@color/coffeeBrown</item>
+        <item name="colorSecondaryContainer">@color/coffee_brown</item>
         <item name="colorOnSecondaryContainer">#FFFFFF</item>
 
         <item name="alertDialogTheme">@style/Coffee.Dialog.DayNight</item>

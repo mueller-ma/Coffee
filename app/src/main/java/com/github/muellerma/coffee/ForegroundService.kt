@@ -137,7 +137,7 @@ class ForegroundService : Service() {
             .setOngoing(true)
             .setShowWhen(true)
             .setWhen(System.currentTimeMillis())
-            .setColor(ContextCompat.getColor(applicationContext, R.color.coffeeBrown))
+            .setColor(ContextCompat.getColor(applicationContext, R.color.coffee_brown))
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
     }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Feel free to actually translate the title -->
     <string name="tap_to_turn_off">Toque para desligar</string>
     <string name="hint_1">Este aplicativo fornece um bloco nas configurações rápidas (o menu com os interruptores de, por exemplo, Wi-Fi e Bluetooth) que permite que você mantenha a tela ativa sem ter que alterar as configurações do dispositivo.</string>
     <string name="hint_2">O Coffee pode ser interrompido tocando no bloco ou na notificação ou desligando a tela manualmente.</string>

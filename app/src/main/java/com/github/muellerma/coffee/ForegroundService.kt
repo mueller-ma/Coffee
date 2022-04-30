@@ -16,7 +16,6 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import com.github.muellerma.coffee.activities.getTimeout
 import kotlinx.coroutines.*
 import java.util.concurrent.CancellationException
 import kotlin.time.Duration.Companion.minutes
@@ -109,7 +108,8 @@ class ForegroundService : Service() {
     }
 
     private fun startTimeoutJob() {
-        val timeout = prefs().getTimeout()
+        val prefs = Prefs(this)
+        val timeout = prefs.timeout
         if (timeout == 0) {
             Log.d(TAG, "No timeout set")
             return
@@ -123,7 +123,7 @@ class ForegroundService : Service() {
     }
 
     private fun getBaseNotification(): NotificationCompat.Builder {
-        val timeout = prefs().getTimeout()
+        val timeout = Prefs(this).timeout
         val title = if (timeout == 0) {
             getString(R.string.notification_title_no_timeout)
         } else {

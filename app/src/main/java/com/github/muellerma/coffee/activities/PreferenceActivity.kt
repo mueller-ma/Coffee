@@ -1,6 +1,5 @@
 package com.github.muellerma.coffee.activities
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -40,10 +39,6 @@ class PreferenceActivity : AppCompatActivity() {
             addPreferencesFromResource(R.xml.pref_main)
         }
     }
-}
-
-fun SharedPreferences.getTimeout() : Int {
-    return getString("timeout", "0")?.toInt() ?: 0
 }
 
 fun PreferenceFragmentCompat.getPreference(key: String) =

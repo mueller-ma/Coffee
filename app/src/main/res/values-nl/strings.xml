@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">Koffie</string>
     <string name="tap_to_turn_off">Druk om uit te schakelen</string>
     <string name="hint_1">Deze app biedt een tegel voor de snelle instellingen (het menu met schakelaars voor o.a. wifi en bluetooth) om het scherm ingeschakeld te houden zonder daarvoor in de instellingenapp te hoeven duiken.</string>

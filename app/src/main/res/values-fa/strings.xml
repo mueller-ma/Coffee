@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">قهوه</string>
     <string name="tap_to_turn_off">برای خاموشی بزنید</string>
     <string name="hint_1">این برنامه یک خانه را در ساماندهی آنی (جایگاه پایندان؛ برای نمونه، جای وای‌فای و بلوتوث) فراهم می‌کند که توانایی بیدار نگه‌داشتن نمایشگر را بدون تغییر ساماندهی به شما می‌دهد.</string>

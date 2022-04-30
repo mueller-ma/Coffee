@@ -5,8 +5,5 @@ Coffee vous permet de garder l'écran allumé sans avoir à modifier les paramè
 
 Coffee peut être défini comme application d'assistance (Paramètres de l'appareil => Applications => Applications par défaut => Application d'assistance) et modifie son état lorsque l'aide est appelée.
 
-Si vous rencontrez des problèmes avec Coffee, veuillez consulter la boîte de dialogue d'aide de l'application.
-Certains OEM implémentent un économiseur de batterie trop agressif qui rend cette application inutilisable. Ce problème a été signalé sur les appareils des OEM suivants:
-* Poco
-* Samsung
-* Xiaomi 
+Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
+In that case please enable "Alternate mode" in the settings.

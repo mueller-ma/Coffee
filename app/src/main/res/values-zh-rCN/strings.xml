@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">咖啡 Coffee</string>
     <string name="notification_title_timeout">咖啡Coffee将保持屏幕常亮 %d 分钟</string>
     <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>

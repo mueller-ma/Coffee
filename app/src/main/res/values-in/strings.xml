@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Kopi</string>
-    <string name="tap_to_turn_off">Ketuk untuk mematikan</string>
+    <string name="toggle_coffee">Beralih Kopi</string>
+    <!-- MainActivity -->
     <string name="hint_1">Aplikasi ini menyediakan ubin dalam pengaturan cepat (tempat beralih untuk mis. Wi-Fi dan Bluetooth) yang memungkinkan anda untuk menjaga tampilan tetap aktif tanpa harus mengubah pengaturan perangkat.</string>
     <string name="hint_2">Kopi bisa dihentikan dengan mengklik tile atau notifikasi atau saat layar dimatikan secara manual.</string>
     <string name="add_toggle_to_home">Tambahkan toggle ke layar beranda</string>
     <string name="add_toggle_to_home_success">Disematkan ke tampilan depan</string>
     <string name="add_toggle_to_home_no_success">Terjadi kesalahan saat menyematkan ke tampilan depan</string>
-    <string name="toggle_coffee">Beralih Kopi</string>
-    <string name="help">Bantuan</string>
-    <string name="close">Tutup</string>
-    <string name="help_dkma_message">Jika Kopi tidak berfungsi pada perangkat anda, kemungkinan besar disebabkan oleh penghemat baterai pada perangkat anda. Anda dapat mengklik tombol di bawah untuk mengetahui cara menonaktifkannya.</string>
-    <string name="help_dkma_button">Kunjungi dontkillmyapp.com</string>
-    <string name="help_battery_optimization_message">Anda juga dapat mencoba menonaktifkan pengoptimalan baterai.</string>
-    <string name="help_battery_optimization_button">Nonaktifkan pengoptimalan baterai</string>
-    <string name="help_battery_optimization_button_already_disabled">Sudah dinonaktifkan</string>
+    <!-- Notification -->
+    <string name="tap_to_turn_off">Ketuk untuk mematikan</string>
+    <!-- Settings -->
 </resources>

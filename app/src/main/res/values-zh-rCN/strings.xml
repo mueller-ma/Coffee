@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">咖啡 Coffee</string>
-    <string name="notification_title_timeout">咖啡Coffee将保持屏幕常亮 %d 分钟</string>
-    <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
-    <string name="tap_to_turn_off">点击关闭</string>
+    <string name="turned_on">打开咖啡 Coffee</string>
+    <string name="turned_off">关闭咖啡 Coffee</string>
+    <string name="toggle_coffee">开关咖啡Coffee</string>
+    <!-- MainActivity -->
     <string name="hint_1">此应用在快捷设置(放置着例如Wi-Fi和蓝牙开关的地方)中提供了一个磁块，允许您保持屏幕常亮，无需更改设备设置</string>
     <string name="hint_2">可以通过点击磁块、通知或手动关闭屏幕来停用咖啡 Coffee</string>
     <string name="add_toggle_to_home">添加开关到主屏幕</string>
     <string name="add_toggle_to_home_success">已固定到主页</string>
     <string name="add_toggle_to_home_no_success">固定到主屏幕时出错</string>
-    <string name="toggle_coffee">开关咖啡Coffee</string>
-    <string name="help">帮助</string>
+    <!-- Notification -->
+    <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
+    <string name="notification_title_timeout">咖啡Coffee将保持屏幕常亮 %d 分钟</string>
+    <string name="tap_to_turn_off">点击关闭</string>
+    <!-- Settings -->
     <string name="settings">设置</string>
     <string name="timeout">在咖啡Coffee结束后</string>
     <string name="timeout_infinity">不限时</string>
@@ -21,12 +26,7 @@
     <string name="timeout_30_minutes">30 分钟</string>
     <string name="timeout_60_minutes">60 分钟</string>
     <string name="timeout_120_minutes">120 分钟</string>
-    <string name="close">关闭</string>
-    <string name="help_dkma_message">如果咖啡 Coffee在你的设备上无法工作，它很有可能是设备上的省电程序造成的。你可以点击下方的按钮来查找如何禁用它。</string>
-    <string name="help_dkma_button">访问 dontkilmyapp.com</string>
-    <string name="help_battery_optimization_message">您也可以尝试禁用电池优化。</string>
-    <string name="help_battery_optimization_button">禁用电池优化</string>
-    <string name="help_battery_optimization_button_already_disabled">已禁用</string>
-    <string name="turned_on">打开咖啡 Coffee</string>
-    <string name="turned_off">关闭咖啡 Coffee</string>
+    <string name="alternate_mode_title">备用模式</string>
+    <string name="alternate_mode_permissions">备用模式需要此权限</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Coffee 咖啡无法设置之前的超时时间</string>
 </resources>

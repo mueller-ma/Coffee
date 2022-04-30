@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
     <string name="notification_title_timeout">Coffee gardera l\'affichage pendant %d minutes</string>
     <string name="notification_title_no_timeout">Coffee gardera l\'affichage allumé</string>

@@ -30,4 +30,8 @@
     <string name="help_battery_optimization_button_already_disabled">Already disabled</string>
     <string name="turned_on">Turned on Coffee</string>
     <string name="turned_off">Turned off Coffee</string>
+    <string name="alternate_mode_permissions">Alternate mode requires this permission</string>
+    <string name="alternate_mode_title">Alternate mode</string>
+    <string name="alternate_mode_summary">Turn on alternate mode only if Coffee doen\'t keep the screen on. The alternate mode will temporarily increase the system screen timeout.</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Coffee couldn\'t set the previous timeout</string>
 </resources>

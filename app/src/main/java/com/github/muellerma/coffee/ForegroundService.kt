@@ -26,7 +26,6 @@ class ForegroundService : Service() {
     private var screenStateListener = ScreenStateChangedReceiver()
     private var isScreenStateListenerRegistered = false
 
-    @SuppressLint("WakelockTimeout")
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
         if (intent?.action == STOP_ACTION) {
@@ -35,14 +34,7 @@ class ForegroundService : Service() {
             return START_STICKY
         }
 
-        @Suppress("DEPRECATION")
-        wakeLock = getSystemService<PowerManager>()!!
-            .newWakeLock(
-                PowerManager.SCREEN_BRIGHT_WAKE_LOCK or PowerManager.ON_AFTER_RELEASE,
-                "Coffee::ForegroundService"
-            )
-        Log.d(TAG, "Acquire wakelock")
-        wakeLock?.acquire()
+        startWakeLockOrAlternateMode()
         startTimeoutJob()
 
         (application as CoffeeApplication).isRunning = true
@@ -107,6 +99,43 @@ class ForegroundService : Service() {
         startForeground(NOTIFICATION_ID, notification)
     }
 
+    @SuppressLint("WakelockTimeout")
+    private fun startWakeLockOrAlternateMode() {
+        val prefs = Prefs(this)
+
+        if (prefs.useAlternateMode) {
+            prefs.alternateModeOldTimeout = contentResolver.getSystemScreenTimeout()
+            val success = contentResolver.setSystemScreenTimeout(Int.MAX_VALUE)
+            if (!success) {
+                openSystemScreenTimeoutPermissions()
+                changeState(this, STATE.STOP, false)
+            }
+        } else {
+            @Suppress("DEPRECATION")
+            wakeLock = getSystemService<PowerManager>()!!
+                .newWakeLock(
+                    PowerManager.SCREEN_BRIGHT_WAKE_LOCK or PowerManager.ON_AFTER_RELEASE,
+                    "Coffee::ForegroundService"
+                )
+            Log.d(TAG, "Acquire wakelock")
+            wakeLock?.acquire()
+        }
+    }
+
+    private fun stopWakeLockOrAlternateMode() {
+        try {
+            wakeLock?.release()
+        } catch (ignored: RuntimeException) {}
+
+        val prefs = Prefs(this)
+        if (prefs.useAlternateMode) {
+            val success = contentResolver.setSystemScreenTimeout(prefs.alternateModeOldTimeout)
+            if (!success) {
+                showToast(R.string.alternate_mode_unable_to_set_old_timeout)
+            }
+        }
+    }
+
     private fun startTimeoutJob() {
         val prefs = Prefs(this)
         val timeout = prefs.timeout
@@ -144,7 +173,8 @@ class ForegroundService : Service() {
     override fun onDestroy() {
         Log.d(TAG, "onDestroy()")
         super.onDestroy()
-        wakeLock?.release()
+
+        stopWakeLockOrAlternateMode()
         timeoutJob?.cancel(CancellationException("Coffee was stopped"))
         if (isScreenStateListenerRegistered) {
             unregisterReceiver(screenStateListener)

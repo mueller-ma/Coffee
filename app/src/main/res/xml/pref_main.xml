@@ -9,5 +9,9 @@
             android:entries="@array/timeout_labels"
             android:defaultValue="0"
             app:useSimpleSummaryProvider="true" />
-
+    <SwitchPreference
+            android:key="alternate_mode"
+            android:title="@string/alternate_mode_title"
+            android:summary="@string/alternate_mode_summary"
+            android:defaultValue="false" />
 </PreferenceScreen>

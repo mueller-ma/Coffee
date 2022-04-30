@@ -5,8 +5,5 @@ Coffee allows you to keep the display awake without having to change the device 
 
 Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
 
-If you have any issues with Coffee, please consult the help dialog of the app.
-Some OEMs implement an overly aggressive battery saver that makes this app unuseable. This issue has been reported on devices of the following OEMs:
-* Poco
-* Samsung
-* Xiaomi 
+Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
+In that case please enable "Alternate mode" in the settings.

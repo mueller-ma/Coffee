@@ -5,8 +5,5 @@ Coffee, cihaz ayarlarını değiştirmek zorunda kalmadan ekranı uyanık tutman
 
 Coffee, yardımcı uygulama olarak ayarlanabilir (Cihaz ayarları => Uygulamalar => Varsayılan uygulamalar => Asistan uygulaması) ve yardım istendiğinde durumunu değiştirir.
 
-If you have any issues with Coffee, please consult the help dialog of the app.
-Some OEMs implement an overly aggressive battery saver that makes this app unuseable. This issue has been reported on devices of the following OEMs:
-* Poco
-* Samsung
-* Xiaomi 
+Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
+In that case please enable "Alternate mode" in the settings.

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
-    <string name="notification_title_timeout">Coffee gardera l\'affichage pendant %d minutes</string>
-    <string name="notification_title_no_timeout">Coffee gardera l\'affichage allumé</string>
-    <string name="tap_to_turn_off">Appuyez pour désactiver</string>
+    <string name="turned_on">Allumer Coffee</string>
+    <string name="turned_off">Éteindre Coffee</string>
+    <string name="toggle_coffee">Activer Coffee</string>
+    <!-- MainActivity -->
     <string name="hint_1">Cette application fournit une tuile dans les widgets (l\'endroit où se trouvent les notifications, p. ex. Wi-Fi et Bluetooth) qui vous permet de garder l\'affichage allumé sans avoir à modifier les paramètres de l\'appareil.</string>
     <string name="hint_2">Coffee peut être arrêté en cliquant sur le widget ou sur la notification ou encore lorsque l\'écran est éteint manuellement.</string>
     <string name="add_toggle_to_home">Ajouter un raccourci à l\'écran d\'accueil</string>
     <string name="add_toggle_to_home_success">Ajouté à l\'écran d\'accueil</string>
     <string name="add_toggle_to_home_no_success">Erreur lors de l\'ajout à l\'écran d\'accueil</string>
-    <string name="toggle_coffee">Activer Coffee</string>
-    <string name="help">Aide</string>
+    <!-- Notification -->
+    <string name="notification_title_no_timeout">Coffee gardera l\'affichage allumé</string>
+    <string name="notification_title_timeout">Coffee gardera l\'affichage pendant %d minutes</string>
+    <string name="tap_to_turn_off">Appuyez pour désactiver</string>
+    <!-- Settings -->
     <string name="settings">Paramètres</string>
     <string name="timeout">Arrêter Coffee après</string>
     <string name="timeout_infinity">Aucun délai</string>
@@ -20,12 +26,4 @@
     <string name="timeout_30_minutes">30 minutes</string>
     <string name="timeout_60_minutes">60 minutes</string>
     <string name="timeout_120_minutes">120 minutes</string>
-    <string name="close">Fermer</string>
-    <string name="help_dkma_message">Si le café ne fonctionne pas sur votre appareil, c\'est probablement dû à un économiseur de batterie sur votre appareil. Vous pouvez cliquer sur le bouton ci-dessous pour savoir comment le désactiver.</string>
-    <string name="help_dkma_button">Visitez dontkillmyapp.com</string>
-    <string name="help_battery_optimization_message">Vous pouvez également essayer de désactiver l\'optimisation de la batterie.</string>
-    <string name="help_battery_optimization_button">Désactiver l\'optimisation de la batterie</string>
-    <string name="help_battery_optimization_button_already_disabled">Déjà désactivé</string>
-    <string name="turned_on">Allumer Coffee</string>
-    <string name="turned_off">Éteindre Coffee</string>
 </resources>

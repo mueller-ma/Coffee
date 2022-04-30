@@ -3,6 +3,7 @@
 <resources
         xmlns:tools="http://schemas.android.com/tools"
         tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
     <string name="notification_title_timeout">Coffee will keep the display on for %d minutes</string>
     <string name="notification_title_no_timeout">Coffee will keep the display on</string>

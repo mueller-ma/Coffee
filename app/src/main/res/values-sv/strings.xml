@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">Kaffe</string>
     <string name="tap_to_turn_off">Tryck för att slå av</string>
     <string name="hint_1">Denna applikation ger en bricka i snabbinställningarna (platsen som håller växlarna för t.ex. Wi-Fi och Bluetooth) som låter dig hålla skärmen vaken utan att behöva ändra enhetsinställningarna.</string>

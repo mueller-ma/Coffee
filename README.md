@@ -13,6 +13,8 @@ Coffee can be set as assist app (Device settings => `Apps` => `Default apps` => 
 
 [<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/de/packages/com.github.muellerma.coffee/)
 
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Screenshot" width=200px>
+
 ## Translations
 
 App strings and the app store description can be translated via Crowdin: https://crowdin.com/project/coffee-app

@@ -1,0 +1,1 @@
+Implement alternate mode to circumvent battery savers on Poco, Samsung, Xiaomi and others

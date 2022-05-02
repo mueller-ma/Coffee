@@ -3,7 +3,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Coffee</string>
     <!-- MainActivity -->
+    <string name="hint_1">Este aplicativo fornece um botão nas configurações rápidas (onde ficam os botões para o Wi-Fi e o Bluetooth, por exemplo) que permite que você deixe a tela ligada sem precisar alterar as configurações do dispositivo.</string>
     <!-- Notification -->
+    <string name="tap_to_turn_off">Toque para desativar</string>
     <!-- Settings -->
 </resources>

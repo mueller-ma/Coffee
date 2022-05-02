@@ -26,4 +26,8 @@
     <string name="timeout_30_minutes">30 minutes</string>
     <string name="timeout_60_minutes">60 minutes</string>
     <string name="timeout_120_minutes">120 minutes</string>
+    <string name="alternate_mode_title">Mode alternatif</string>
+    <string name="alternate_mode_summary">Activer le mode alternatif uniquement si Coffee ne garde pas allumé l\'écran. Le mode alternatif augmentera temporairement le délai de fermeture de l\'écran.</string>
+    <string name="alternate_mode_permissions">Le mode alternatif requiert cette autorisation</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Coffee n\'a pas pu définir le délai d\'attente précédent</string>
 </resources>

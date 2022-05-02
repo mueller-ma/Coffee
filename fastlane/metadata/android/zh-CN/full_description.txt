@@ -5,5 +5,5 @@
 
 咖啡可以设置为辅助应用 (设备设置=> 应用=> 默认应用=> 辅助应用) 并在调用辅助时更改其状态。
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+由于一些OEM厂商(包括Poco、三星和小米) 采用的省电策略过于激进，Coffee 咖啡可能无法正常工作。
+在这种情况下，请在设置中启用"备用模式"。

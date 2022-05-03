@@ -5,5 +5,5 @@
 
 コーヒーはアシストアプリとして設定できます（設定 → アプリ → デフォルトのアプリ → デジタル アシスタント アプリ）。アシストが呼ばれた際、コーヒーのオン・オフが切り替わります。
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+一部メーカー（Poco、Samsung、Xiaomiなど）の端末には、このアプリを壊してしまう過度に強力なバッテリー節約機能が搭載されていることがあります。
+その場合、設定で「代替モード」を有効にしてください。

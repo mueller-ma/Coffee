@@ -2,6 +2,6 @@
 <resources>
     <style name="Coffee.AppTheme" parent="Coffee.Base">
         <item name="android:windowLightStatusBar">?isLightTheme</item>
-        <item name="android:statusBarColor">?android:windowBackground</item>
+        <item name="android:statusBarColor">?android:windowBackgroundFallback</item>
     </style>
 </resources>

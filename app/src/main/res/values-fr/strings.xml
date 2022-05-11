@@ -4,30 +4,30 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
-    <string name="turned_on">Allumer Coffee</string>
-    <string name="turned_off">Éteindre Coffee</string>
-    <string name="toggle_coffee">Activer Coffee</string>
+    <string name="turned_on">Allumer Café</string>
+    <string name="turned_off">Éteindre Café</string>
+    <string name="toggle_coffee">Activer Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Cette application fournit une tuile dans les widgets (l\'endroit où se trouvent les notifications, p. ex. Wi-Fi et Bluetooth) qui vous permet de garder l\'affichage allumé sans avoir à modifier les paramètres de l\'appareil.</string>
-    <string name="hint_2">Coffee peut être arrêté en cliquant sur le widget ou sur la notification ou encore lorsque l\'écran est éteint manuellement.</string>
+    <string name="hint_2">Café peut être arrêté en cliquant sur le widget ou sur la notification ou encore lorsque l\'écran est éteint manuellement.</string>
     <string name="add_toggle_to_home">Ajouter un raccourci à l\'écran d\'accueil</string>
     <string name="add_toggle_to_home_success">Ajouté à l\'écran d\'accueil</string>
     <string name="add_toggle_to_home_no_success">Erreur lors de l\'ajout à l\'écran d\'accueil</string>
     <!-- Notification -->
-    <string name="notification_title_no_timeout">Coffee gardera l\'affichage allumé</string>
-    <string name="notification_title_timeout">Coffee gardera l\'affichage pendant %d minutes</string>
+    <string name="notification_title_no_timeout">Café gardera l\'affichage allumé</string>
+    <string name="notification_title_timeout">Café gardera l\'affichage pendant %d minutes</string>
     <string name="tap_to_turn_off">Appuyez pour désactiver</string>
     <!-- Settings -->
     <string name="settings">Paramètres</string>
-    <string name="timeout">Arrêter Coffee après</string>
+    <string name="timeout">Arrêter Café après</string>
     <string name="timeout_infinity">Aucun délai</string>
     <string name="timeout_5_minutes">5 minutes</string>
     <string name="timeout_15_minutes">15 minutes</string>
     <string name="timeout_30_minutes">30 minutes</string>
-    <string name="timeout_60_minutes">60 minutes</string>
-    <string name="timeout_120_minutes">120 minutes</string>
+    <string name="timeout_60_minutes">1 heure</string>
+    <string name="timeout_120_minutes">2 heures</string>
     <string name="alternate_mode_title">Mode alternatif</string>
-    <string name="alternate_mode_summary">Activer le mode alternatif uniquement si Coffee ne garde pas allumé l\'écran. Le mode alternatif augmentera temporairement le délai de fermeture de l\'écran.</string>
+    <string name="alternate_mode_summary">Activer le mode alternatif uniquement si Café ne garde pas allumé l\'écran. Le mode alternatif augmentera temporairement le délai de fermeture de l\'écran.</string>
     <string name="alternate_mode_permissions">Le mode alternatif requiert cette autorisation</string>
-    <string name="alternate_mode_unable_to_set_old_timeout">Coffee n\'a pas pu définir le délai d\'attente précédent</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Café n\'a pas pu définir le délai d\'attente précédent</string>
 </resources>

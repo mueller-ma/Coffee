@@ -24,8 +24,8 @@
     <string name="timeout_5_minutes">5 Minuten</string>
     <string name="timeout_15_minutes">15 Minuten</string>
     <string name="timeout_30_minutes">30 Minuten</string>
-    <string name="timeout_60_minutes">60 Minuten</string>
-    <string name="timeout_120_minutes">120 Minuten</string>
+    <string name="timeout_60_minutes">1 Stunde</string>
+    <string name="timeout_120_minutes">2 Stunden</string>
     <string name="alternate_mode_title">Alternativer Modus</string>
     <string name="alternate_mode_summary">Aktivieren Sie den alternativen Modus nur, wenn Kaffee den Bildschirm nicht eingeschaltet lässt. Der alternative Modus erhöht vorübergehend die Bildschirmsperre des Systems.</string>
     <string name="alternate_mode_permissions">Alternativer Modus benötigt diese Berechtigung</string>

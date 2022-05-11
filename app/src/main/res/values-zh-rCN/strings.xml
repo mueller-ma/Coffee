@@ -24,8 +24,8 @@
     <string name="timeout_5_minutes">5 分钟</string>
     <string name="timeout_15_minutes">15 分钟</string>
     <string name="timeout_30_minutes">30 分钟</string>
-    <string name="timeout_60_minutes">60 分钟</string>
-    <string name="timeout_120_minutes">120 分钟</string>
+    <string name="timeout_60_minutes">1 小时</string>
+    <string name="timeout_120_minutes">2 小时</string>
     <string name="alternate_mode_title">备用模式</string>
     <string name="alternate_mode_summary">仅在Coffee 咖啡无法保持屏幕常亮时启用备用模式。备用模式会暂时增加屏幕超时时间。</string>
     <string name="alternate_mode_permissions">备用模式需要此权限</string>

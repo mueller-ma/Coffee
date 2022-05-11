@@ -1,9 +1,9 @@
-Coffee vous permet de garder l'écran allumé sans avoir à modifier les paramètres de l'appareil. Il peut être activé à différents endroits :
+Café vous permet de garder l'écran allumé sans avoir à modifier les paramètres de l'appareil. Il peut être activé à différents endroits :
 * Une tuile dans les notifications, l'endroit où se trouvent les raccourcis, par exemple le Wi-Fi et le Bluetooth. Nécessite Android 7 ou supérieur.
 * Un bouton dans l'application elle-même
 * Un raccourci sur votre écran d'accueil. Il peut être créé dans l'application, si votre lanceur d'application le supporte.
 
-Coffee peut être défini comme application d'assistance (Paramètres de l'appareil => Applications => Applications par défaut => Application d'assistance) et modifie son état lorsque l'aide est appelée.
+Café peut être défini comme application d'assistance (Paramètres de l'appareil => Applications => Applications par défaut => Application d'assistance) et modifie son état lorsque l'aide est appelée.
 
-Coffee peut ne pas fonctionner à cause d'un économiseur de batterie trop agressif qui est mis en œuvre par certains OEMs (y compris Poco, Samsung et Xiaomi).
+Café peut ne pas fonctionner à cause d'un économiseur de batterie trop agressif qui est mis en œuvre par certains OEMs (y compris Poco, Samsung et Xiaomi).
 Dans ce cas, veuillez activer "Mode alternatif" dans les paramètres.

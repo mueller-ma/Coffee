@@ -112,12 +112,17 @@ class ForegroundService : Service() {
             }
         } else {
             @Suppress("DEPRECATION")
+            val wakeLockLevel = if (prefs.allowDimming) {
+                PowerManager.SCREEN_DIM_WAKE_LOCK
+            } else {
+                PowerManager.SCREEN_BRIGHT_WAKE_LOCK
+            }
             wakeLock = getSystemService<PowerManager>()!!
                 .newWakeLock(
-                    PowerManager.SCREEN_BRIGHT_WAKE_LOCK or PowerManager.ON_AFTER_RELEASE,
+                    wakeLockLevel or PowerManager.ON_AFTER_RELEASE,
                     "Coffee::ForegroundService"
                 )
-            Log.d(TAG, "Acquire wakelock")
+            Log.d(TAG, "Acquire wakelock with level $wakeLockLevel")
             wakeLock?.acquire()
         }
     }

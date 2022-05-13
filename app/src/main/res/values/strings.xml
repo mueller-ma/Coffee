@@ -32,8 +32,11 @@
     <string name="timeout_60_minutes">1 hour</string>
     <string name="timeout_120_minutes">2 hours</string>
 
+    <string name="allow_dimming_title">Allow screen dimming</string>
+    <string name="allow_dimming_summary">Screen will be dimmed based on the system screen timeout</string>
+
     <string name="alternate_mode_title">Alternate mode</string>
-    <string name="alternate_mode_summary">Turn on alternate mode only if Coffee don\'t keep the screen on. The alternate mode will temporarily increase the system screen timeout.</string>
+    <string name="alternate_mode_summary">Turn on alternate mode only if Coffee don\'t keep the screen on; other features may not work. The alternate mode will temporarily increase the system screen timeout.</string>
     <string name="alternate_mode_permissions">Alternate mode requires this permission</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee couldn\'t set the previous timeout</string>
 </resources>

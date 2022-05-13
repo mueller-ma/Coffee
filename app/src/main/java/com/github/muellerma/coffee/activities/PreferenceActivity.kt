@@ -1,7 +1,5 @@
 package com.github.muellerma.coffee.activities
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
@@ -13,7 +11,6 @@ import androidx.preference.PreferenceFragmentCompat
 import com.github.muellerma.coffee.R
 import com.github.muellerma.coffee.databinding.ActivityPreferenceBinding
 import com.github.muellerma.coffee.openSystemScreenTimeoutPermissions
-import com.github.muellerma.coffee.showToast
 
 
 class PreferenceActivity : AppCompatActivity() {
@@ -45,6 +42,7 @@ class PreferenceActivity : AppCompatActivity() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             addPreferencesFromResource(R.xml.pref_main)
 
+            val allowDimmingPref = getPreference("allow_dimming")
             val alternateModePref = getPreference("alternate_mode")
             alternateModePref.setOnPreferenceChangeListener { pref, newValue ->
                 val context = pref.context
@@ -55,6 +53,8 @@ class PreferenceActivity : AppCompatActivity() {
                     !Settings.System.canWrite(context)) {
                         context.openSystemScreenTimeoutPermissions()
                 }
+
+                allowDimmingPref.isEnabled = !enabled
 
                 return@setOnPreferenceChangeListener true
             }

@@ -10,6 +10,9 @@ class Prefs(context: Context) {
     val timeout: Int
         get() = prefs.getString("timeout", "0")?.toInt() ?: 0
 
+    val allowDimming: Boolean
+        get() = prefs.getBoolean("allow_dimming", false)
+
     val useAlternateMode: Boolean
         get() = prefs.getBoolean("alternate_mode", false)
 

@@ -1,5 +1,5 @@
 Café le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo. Puede ser activado en varios lugares:
-* Un mosaico en los ajustes rápidos, el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth. Requiere Android 7+.
+* Un mosaico en los ajustes rápidos, el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth. Requiere Android 7 o superior.
 * Un botón en la misma aplicación
 * Un acceso directo en su pantalla de inicio. Puede ser creado desde la aplicación, si su lanzador lo soporta.
 

@@ -25,5 +25,4 @@
     <string name="timeout_15_minutes">15分</string>
     <string name="timeout_30_minutes">30分</string>
     <string name="alternate_mode_title">代替モード</string>
-    <string name="alternate_mode_summary">コーヒーが画面の消灯を防げていない場合のみ代替モードをオンにしてください。代替モードでは、一時的にシステムの自動消灯設定を変更することにより画面の消灯を防止します。</string>
 </resources>

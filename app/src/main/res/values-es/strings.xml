@@ -4,14 +4,32 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
-    <string name="toggle_coffee">Alternar Café</string>
+    <string name="turned_on">Se ha activado Café</string>
+    <string name="turned_off">Se ha desactivado Café</string>
+    <string name="toggle_coffee">Activar o desactivar Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Esta aplicación ofrece un mosaico en los ajustes rápidos (el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth) que le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo</string>
-    <string name="hint_2">Café puede ser detenido pulsando el mosaico, la notificación o apagando la pantalla manualmente.</string>
-    <string name="add_toggle_to_home">Agregar interruptor a la pantalla principal</string>
-    <string name="add_toggle_to_home_success">Fijado a inicio</string>
-    <string name="add_toggle_to_home_no_success">Error al fijar a inicio</string>
+    <string name="hint_2">Puede detener Café pulsando el mosaico, la notificación o apagando la pantalla manualmente.</string>
+    <string name="add_toggle_to_home">Agregar interruptor a la pantalla de inicio</string>
+    <string name="add_toggle_to_home_success">Anclado a la pantalla de inicio</string>
+    <string name="add_toggle_to_home_no_success">Error al anclar a la pantalla de inicio</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Café mantendrá encendida la pantalla</string>
+    <string name="notification_title_timeout">Café mantendrá encendida la pantalla durante %d minutos</string>
     <string name="tap_to_turn_off">Pulse para desactivar</string>
     <!-- Settings -->
+    <string name="settings">Ajustes</string>
+    <string name="timeout">Detener Café después de</string>
+    <string name="timeout_infinity">Sin tiempo límite</string>
+    <string name="timeout_5_minutes">5 minutos</string>
+    <string name="timeout_15_minutes">15 minutos</string>
+    <string name="timeout_30_minutes">30 minutos</string>
+    <string name="timeout_60_minutes">1 hora</string>
+    <string name="timeout_120_minutes">2 horas</string>
+    <string name="allow_dimming_title">Permitir la atenuación de la pantalla</string>
+    <string name="allow_dimming_summary">La pantalla se atenuará en función del tiempo de espera de reposo del sistema</string>
+    <string name="alternate_mode_title">Modo alternativo</string>
+    <string name="alternate_mode_summary">Active el modo alternativo solo si Café no mantiene la pantalla encendida; es posible que otras características no funcionen. El modo alternativo aumentará temporalmente el tiempo de espera de reposo del sistema.</string>
+    <string name="alternate_mode_permissions">El modo alternativo requiere este permiso</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Café no pudo establecer el tiempo de espera anterior</string>
 </resources>

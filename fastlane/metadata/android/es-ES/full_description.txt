@@ -1,9 +1,9 @@
 Café le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo. Puede ser activado en varios lugares:
-* Un mosaico en los ajustes rápidos, el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth. Requiere Android 7+.
+* Un mosaico en los ajustes rápidos, el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth. Requiere Android 7 o superior.
 * Un botón en la misma aplicación
 * Un acceso directo en su pantalla de inicio. Puede ser creado desde la aplicación, si su lanzador lo soporta.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Se puede establecer Café como aplicación de asistencia (Configuración del dispositivo ⇒ Aplicaciones ⇒ Aplicaciones predeterminadas ⇒ Aplicación de asistencia) y así cambiar su estado cuando se llama al asistente.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Es posible que Café no funcione debido a la optimización de batería demasiado agresiva que algunos fabricantes (incluyendo a Poco, a Samsung y a Xiaomi) han aplicado.
+En ese caso, por favor, active "Modo alternativo" en los ajustes.

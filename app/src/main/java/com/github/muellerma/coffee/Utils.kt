@@ -1,5 +1,6 @@
 package com.github.muellerma.coffee
 
+import android.app.PendingIntent
 import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
@@ -45,4 +46,16 @@ fun Context.openSystemScreenTimeoutPermissions() {
             .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             .setData(Uri.parse("package:$packageName"))
     )
+}
+
+val PendingIntent_Immutable = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+    PendingIntent.FLAG_IMMUTABLE
+} else {
+    0
+}
+
+val PendingIntent_Mutable = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+    PendingIntent.FLAG_MUTABLE
+} else {
+    0
 }

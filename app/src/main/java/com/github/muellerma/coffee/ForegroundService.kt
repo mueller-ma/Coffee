@@ -9,6 +9,7 @@ import android.os.PowerManager
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.edit
 import androidx.core.content.getSystemService
 import kotlinx.coroutines.*
 import java.util.concurrent.CancellationException
@@ -23,10 +24,25 @@ class ForegroundService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
-        if (intent?.action == STOP_ACTION) {
-            Log.d(TAG, "Received stop action")
-            changeState(this, STATE.STOP, false)
-            return START_STICKY
+        when (intent?.action) {
+            ACTION_STOP -> {
+                Log.d(TAG, "Received stop action")
+                changeState(this, STATE.STOP, false)
+                return START_STICKY
+            }
+            ACTION_CHANGE_PREFS -> {
+                val key = intent.getStringExtra(EXTRA_CHANGE_PREFS_KEY)
+                val value = intent.extras?.get(EXTRA_CHANGE_PREFS_VALUE)
+                Log.d(TAG, "Change pref $key to $value")
+
+                Prefs(applicationContext).sharedPrefs.edit {
+                    when (value) {
+                        is String -> putString(key, value)
+                        is Boolean -> putBoolean(key, value)
+                        else -> throw IllegalArgumentException("Data type not allowed")
+                    }
+                }
+            }
         }
 
         startWakeLockOrAlternateMode()
@@ -148,17 +164,8 @@ class ForegroundService : Service() {
     }
 
     private fun getNotification(prefs: Prefs): Notification {
-        val stopIntent = Intent(this, ForegroundService::class.java)
-        stopIntent.action = STOP_ACTION
-        val pendingIntentFlags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            PendingIntent.FLAG_IMMUTABLE
-        } else {
-            0
-        }
-        val pendingStopIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            PendingIntent.getForegroundService(this, 0, stopIntent, pendingIntentFlags)
-        } else {
-            PendingIntent.getService(this, 0, stopIntent, pendingIntentFlags)
+        val stopIntent = Intent(this, ForegroundService::class.java).apply {
+            action = ACTION_STOP
         }
 
         val timeout = prefs.timeout
@@ -170,9 +177,52 @@ class ForegroundService : Service() {
 
         return getBaseNotification(title)
             .setContentText(getString(R.string.tap_to_turn_off))
-            .setContentIntent(pendingStopIntent)
+            .setContentIntent(getPendingIntentForService(stopIntent, PendingIntent_Immutable, 0))
+            .addAction(getTimeoutAction(prefs))
+            .addAction(getDimmingAction(prefs))
             .setPublicVersion(getBaseNotification(title).build())
             .build()
+    }
+
+    private fun getTimeoutAction(prefs: Prefs): NotificationCompat.Action {
+        val intent = Intent(this, ForegroundService::class.java).apply {
+            action = ACTION_CHANGE_PREFS
+            putExtra(EXTRA_CHANGE_PREFS_KEY, "timeout")
+
+            val allTimeouts = applicationContext.resources.getStringArray(R.array.timeout_values)
+            val currentIndex = allTimeouts.indexOf(prefs.timeout.toString())
+            val nextIndex = (currentIndex + 1).mod(allTimeouts.size)
+            val nextTimeout = allTimeouts[nextIndex]
+
+            putExtra(EXTRA_CHANGE_PREFS_VALUE, nextTimeout)
+        }
+        return NotificationCompat.Action(
+            R.drawable.ic_baseline_access_time_24,
+            getString(R.string.timeout_next),
+            getPendingIntentForService(intent, PendingIntent_Immutable or PendingIntent.FLAG_UPDATE_CURRENT, 1)
+        )
+    }
+
+    private fun getDimmingAction(prefs: Prefs): NotificationCompat.Action {
+        val intent = Intent(this, ForegroundService::class.java).apply {
+            action = ACTION_CHANGE_PREFS
+            putExtra(EXTRA_CHANGE_PREFS_KEY, "allow_dimming")
+            putExtra(EXTRA_CHANGE_PREFS_VALUE, !prefs.allowDimming)
+        }
+        val title = if (prefs.allowDimming) R.string.allow_dimming_disable else R.string.allow_dimming_enable
+        return NotificationCompat.Action(
+            R.drawable.ic_baseline_brightness_medium_24,
+            getString(title),
+            getPendingIntentForService(intent, PendingIntent_Immutable or PendingIntent.FLAG_UPDATE_CURRENT, 2)
+        )
+    }
+
+    private fun getPendingIntentForService(intent: Intent, flags: Int, requestCode: Int): PendingIntent {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            PendingIntent.getForegroundService(this, requestCode, intent, flags)
+        } else {
+            PendingIntent.getService(this, requestCode, intent, flags)
+        }
     }
 
     override fun onDestroy() {
@@ -224,7 +274,10 @@ class ForegroundService : Service() {
 
     companion object {
         private val TAG = ForegroundService::class.java.simpleName
-        private const val STOP_ACTION = "stop_action"
+        private const val ACTION_STOP = "stop_action"
+        private const val ACTION_CHANGE_PREFS = "change_prefs"
+        private const val EXTRA_CHANGE_PREFS_KEY = "change_prefs_key"
+        private const val EXTRA_CHANGE_PREFS_VALUE = "change_prefs_value"
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 

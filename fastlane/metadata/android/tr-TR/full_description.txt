@@ -1,9 +1,9 @@
 Coffee, cihaz ayarlarını değiştirmek zorunda kalmadan ekranı uyanık tutmanızı sağlar. Çeşitli yerlerde değiştirilebilir:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Android 7 veya üzeri gerektirir.
+* Hızlı ayarlardaki bir kutucuk, örneğin Wi-Fi ve Bluetooth için geçişlerin bulunduğu yer. Android 7 veya üzeri gerektirir.
 * Uygulamanın kendi içinde bir düğme
-* Ana ekranınızda bir kısayol. It can be created in the app, if your launcher supports it.
+* Ana ekranınızda bir kısayol. Başlatıcınız destekliyorsa, uygulama içinde oluşturulabilir.
 
 Coffee, yardımcı uygulama olarak ayarlanabilir (Cihaz ayarları => Uygulamalar => Varsayılan uygulamalar => Asistan uygulaması) ve yardım istendiğinde durumunu değiştirir.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Coffee, bazı OEM'ler (Poco, Samsung ve Xiaomi dahil) tarafından uygulanan aşırı agresif pil tasarrufu nedeniyle çalışmayabilir.
+Bu durumda lütfen ayarlardan "Alternatif modu" etkinleştirin.

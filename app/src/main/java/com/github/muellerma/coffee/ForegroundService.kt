@@ -1,14 +1,8 @@
 package com.github.muellerma.coffee
 
 import android.annotation.SuppressLint
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.app.Service
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.app.*
+import android.content.*
 import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
@@ -24,6 +18,7 @@ class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
     private var timeoutJob: Job? = null
     private var screenStateListener = ScreenStateChangedReceiver()
+    private var prefsChangeListener = PrefChangeListener()
     private var isScreenStateListenerRegistered = false
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -57,7 +52,6 @@ class ForegroundService : Service() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val nm = getSystemService<NotificationManager>()!!
-
             with(
                 NotificationChannel(
                     NOTIFICATION_CHANNEL_ID,
@@ -73,30 +67,15 @@ class ForegroundService : Service() {
             }
         }
 
-        val stopIntent = Intent(this, ForegroundService::class.java)
-        stopIntent.action = STOP_ACTION
-        val pendingIntentFlags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            PendingIntent.FLAG_IMMUTABLE
-        } else {
-            0
-        }
-        val pendingStopIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            PendingIntent.getForegroundService(this, 0, stopIntent, pendingIntentFlags)
-        } else {
-            PendingIntent.getService(this, 0, stopIntent, pendingIntentFlags)
-        }
-
-        val notification = getBaseNotification()
-            .setContentText(getString(R.string.tap_to_turn_off))
-            .setContentIntent(pendingStopIntent)
-            .setPublicVersion(getBaseNotification().build())
-            .build()
-
         (application as CoffeeApplication).isRunning = true
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             CoffeeTile.requestTileStateUpdate(this)
         }
-        startForeground(NOTIFICATION_ID, notification)
+
+        val prefs = Prefs(this)
+        prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsChangeListener)
+
+        startForeground(NOTIFICATION_ID, getNotification(prefs))
     }
 
     @SuppressLint("WakelockTimeout")
@@ -156,14 +135,7 @@ class ForegroundService : Service() {
         }
     }
 
-    private fun getBaseNotification(): NotificationCompat.Builder {
-        val timeout = Prefs(this).timeout
-        val title = if (timeout == 0) {
-            getString(R.string.notification_title_no_timeout)
-        } else {
-            getString(R.string.notification_title_timeout, timeout)
-        }
-
+    private fun getBaseNotification(title: String): NotificationCompat.Builder {
         return NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle(title)
             .setTicker(title)
@@ -175,12 +147,43 @@ class ForegroundService : Service() {
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
     }
 
+    private fun getNotification(prefs: Prefs): Notification {
+        val stopIntent = Intent(this, ForegroundService::class.java)
+        stopIntent.action = STOP_ACTION
+        val pendingIntentFlags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PendingIntent.FLAG_IMMUTABLE
+        } else {
+            0
+        }
+        val pendingStopIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            PendingIntent.getForegroundService(this, 0, stopIntent, pendingIntentFlags)
+        } else {
+            PendingIntent.getService(this, 0, stopIntent, pendingIntentFlags)
+        }
+
+        val timeout = prefs.timeout
+        val title = if (timeout == 0) {
+            getString(R.string.notification_title_no_timeout)
+        } else {
+            getString(R.string.notification_title_timeout, timeout)
+        }
+
+        return getBaseNotification(title)
+            .setContentText(getString(R.string.tap_to_turn_off))
+            .setContentIntent(pendingStopIntent)
+            .setPublicVersion(getBaseNotification(title).build())
+            .build()
+    }
+
     override fun onDestroy() {
         Log.d(TAG, "onDestroy()")
         super.onDestroy()
 
         stopWakeLockOrAlternateMode()
         timeoutJob?.cancel(CancellationException("Coffee was stopped"))
+        Prefs(applicationContext)
+            .sharedPrefs.
+            unregisterOnSharedPreferenceChangeListener(prefsChangeListener)
         if (isScreenStateListenerRegistered) {
             unregisterReceiver(screenStateListener)
             isScreenStateListenerRegistered = false
@@ -201,6 +204,22 @@ class ForegroundService : Service() {
             Log.d(TAG, "Received screen off event: Stop service")
             changeState(context, STATE.STOP, false)
         }
+    }
+
+    private inner class PrefChangeListener : SharedPreferences.OnSharedPreferenceChangeListener {
+        override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
+            Log.d(TAG, "Pref $key has been changed")
+
+            stopWakeLockOrAlternateMode()
+            timeoutJob?.cancel(CancellationException("Prefs have been changed"))
+
+            startWakeLockOrAlternateMode()
+            startTimeoutJob()
+
+            val nm = getSystemService<NotificationManager>()!!
+            nm.notify(NOTIFICATION_ID, getNotification(Prefs(applicationContext)))
+        }
+
     }
 
     companion object {

@@ -9,8 +9,8 @@ android {
         applicationId "com.github.muellerma.coffee"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 24
-        versionName "2.4"
+        versionCode 25
+        versionName "2.5"
     }
 
     buildTypes {

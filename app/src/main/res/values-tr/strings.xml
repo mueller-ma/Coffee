@@ -26,7 +26,6 @@
     <string name="timeout_30_minutes">30 dakika</string>
     <string name="timeout_60_minutes">1 saat</string>
     <string name="timeout_120_minutes">2 saat</string>
-    <string name="allow_dimming_title">Ekran karartmaya izin verin</string>
     <string name="allow_dimming_summary">Ekran, sistem ekran zaman aşımına bağlı olarak karartılacaktır</string>
     <string name="alternate_mode_title">Alternatif mod</string>
     <string name="alternate_mode_summary">Alternatif modu yalnızca Coffee ekranı açık tutmuyorsa açın; diğer özellikler çalışmayabilir. Alternatif mod, sistem ekranı zaman aşımını geçici olarak artıracaktır.</string>

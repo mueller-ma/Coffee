@@ -17,6 +17,9 @@
     <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
     <string name="notification_title_timeout">咖啡Coffee将保持屏幕常亮 %d 分钟</string>
     <string name="tap_to_turn_off">点击关闭</string>
+    <string name="allow_dimming_enable">允许屏幕变暗</string>
+    <string name="allow_dimming_disable">不允许屏幕变暗</string>
+    <string name="timeout_next">下一次超时</string>
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="timeout">在咖啡Coffee结束后</string>

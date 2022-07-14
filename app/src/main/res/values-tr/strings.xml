@@ -17,6 +17,9 @@
     <string name="notification_title_no_timeout">Coffee ekranı açık tutacaktır</string>
     <string name="notification_title_timeout">Coffee ekranı %d dakika boyunca açık tutacaktır</string>
     <string name="tap_to_turn_off">Kapatmak için dokunun</string>
+    <string name="allow_dimming_enable">Karartmayı etkinleştir</string>
+    <string name="allow_dimming_disable">Karartmayı devre dışı bırak</string>
+    <string name="timeout_next">Sonraki zaman aşımı</string>
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
     <string name="timeout">Sonra Coffee\'yi durdur</string>
@@ -26,6 +29,7 @@
     <string name="timeout_30_minutes">30 dakika</string>
     <string name="timeout_60_minutes">1 saat</string>
     <string name="timeout_120_minutes">2 saat</string>
+    <string name="allow_dimming_title">Ekran karartmaya izin ver</string>
     <string name="allow_dimming_summary">Ekran, sistem ekran zaman aşımına bağlı olarak karartılacaktır</string>
     <string name="alternate_mode_title">Alternatif mod</string>
     <string name="alternate_mode_summary">Alternatif modu yalnızca Coffee ekranı açık tutmuyorsa açın; diğer özellikler çalışmayabilir. Alternatif mod, sistem ekranı zaman aşımını geçici olarak artıracaktır.</string>

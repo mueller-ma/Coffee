@@ -3,7 +3,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Kaffe</string>
+    <string name="toggle_coffee">Slå Kaffe Til/Fra</string>
     <!-- MainActivity -->
     <!-- Notification -->
+    <string name="tap_to_turn_off">Tryk for at slukke</string>
+    <string name="allow_dimming_enable">Aktivér dæmpning</string>
+    <string name="allow_dimming_disable">Deaktivér dæmpning</string>
+    <string name="timeout_next">Næste timeout</string>
     <!-- Settings -->
+    <string name="settings">Indstillinger</string>
+    <string name="timeout_infinity">Ingen timeout</string>
+    <string name="timeout_5_minutes">5 minutter</string>
+    <string name="timeout_15_minutes">15 minutter</string>
+    <string name="timeout_30_minutes">30 minutter</string>
+    <string name="timeout_60_minutes">1 time</string>
+    <string name="timeout_120_minutes">2 timer</string>
+    <string name="alternate_mode_title">Alternativ tilstand</string>
 </resources>

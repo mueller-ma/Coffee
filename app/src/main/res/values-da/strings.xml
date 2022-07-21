@@ -20,4 +20,5 @@
     <string name="timeout_60_minutes">1 time</string>
     <string name="timeout_120_minutes">2 timer</string>
     <string name="alternate_mode_title">Alternativ tilstand</string>
+    <!-- About menu -->
 </resources>

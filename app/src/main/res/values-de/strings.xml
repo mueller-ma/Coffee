@@ -36,4 +36,6 @@
     <string name="alternate_mode_permissions">Alternativer Modus benötigt diese Berechtigung</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Kaffee konnte den vorherigen Timeout nicht setzen</string>
     <!-- About menu -->
+    <string name="about">Über Kaffee</string>
+    <string name="error_no_browser_found">Kein Browser gefunden</string>
 </resources>

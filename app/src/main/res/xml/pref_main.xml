@@ -2,21 +2,28 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ListPreference
-            android:key="timeout"
-            android:title="@string/timeout"
-            android:entryValues="@array/timeout_values"
-            android:entries="@array/timeout_labels"
-            android:defaultValue="0"
-            app:useSimpleSummaryProvider="true" />
-    <SwitchPreference
-            android:key="allow_dimming"
-            android:title="@string/allow_dimming_title"
-            android:summary="@string/allow_dimming_summary"
-            android:defaultValue="false" />
-    <SwitchPreference
-            android:key="alternate_mode"
-            android:title="@string/alternate_mode_title"
-            android:summary="@string/alternate_mode_summary"
-            android:defaultValue="false" />
+    <PreferenceCategory>
+        <ListPreference
+                android:key="timeout"
+                android:title="@string/timeout"
+                android:entryValues="@array/timeout_values"
+                android:entries="@array/timeout_labels"
+                android:defaultValue="0"
+                app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+                android:key="allow_dimming"
+                android:title="@string/allow_dimming_title"
+                android:summary="@string/allow_dimming_summary"
+                android:defaultValue="false" />
+        <SwitchPreference
+                android:key="alternate_mode"
+                android:title="@string/alternate_mode_title"
+                android:summary="@string/alternate_mode_summary"
+                android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <Preference
+                android:key="about"
+                android:title="@string/about" />
+    </PreferenceCategory>
 </PreferenceScreen>

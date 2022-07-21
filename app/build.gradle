@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
+apply plugin: "com.mikepenz.aboutlibraries.plugin"
 
 android {
     compileSdkVersion 31
@@ -54,4 +55,5 @@ dependencies {
     implementation "androidx.preference:preference-ktx:1.2.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+    implementation "com.mikepenz:aboutlibraries:$about_libraries_version"
 }

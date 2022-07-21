@@ -1,6 +1,7 @@
 package com.github.muellerma.coffee
 
 import android.app.PendingIntent
+import android.content.ActivityNotFoundException
 import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
@@ -46,6 +47,16 @@ fun Context.openSystemScreenTimeoutPermissions() {
             .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             .setData(Uri.parse("package:$packageName"))
     )
+}
+
+fun String.openInBrowser(context: Context) {
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(this))
+    try {
+        context.startActivity(intent)
+    } catch (e: ActivityNotFoundException) {
+        Log.d(TAG, "Unable to open url in browser: $intent")
+        context.showToast(R.string.error_no_browser_found)
+    }
 }
 
 val PendingIntent_Immutable = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

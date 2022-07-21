@@ -36,4 +36,6 @@
     <string name="alternate_mode_permissions">Le mode alternatif requiert cette autorisation</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Café n\'a pas pu définir le délai d\'attente précédent</string>
     <!-- About menu -->
+    <string name="about">À propos de Café</string>
+    <string name="error_no_browser_found">Aucun navigateur trouvé</string>
 </resources>

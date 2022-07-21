@@ -20,8 +20,7 @@ import com.mikepenz.aboutlibraries.util.SpecialButton
 
 
 class PreferenceActivity : AppCompatActivity() {
-    lateinit var binding: ActivityPreferenceBinding
-        private set
+    private lateinit var binding: ActivityPreferenceBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,7 +94,7 @@ class AboutButtonsListener : LibsConfiguration.LibsListener {
     override fun onExtraClicked(v: View, specialButton: SpecialButton): Boolean {
         val link = when (specialButton) {
             SpecialButton.SPECIAL1 -> "https://github.com/mueller-ma/Coffee/"
-            SpecialButton.SPECIAL2 -> "https://f-droid.org/de/packages/com.github.muellerma.coffee/"
+            SpecialButton.SPECIAL2 -> "https://f-droid.org/packages/com.github.muellerma.coffee/"
             SpecialButton.SPECIAL3 -> "https://crowdin.com/project/coffee-app"
         }
         link.openInBrowser(v.context)

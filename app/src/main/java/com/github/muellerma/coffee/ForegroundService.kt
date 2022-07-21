@@ -161,6 +161,7 @@ class ForegroundService : Service() {
             .setWhen(System.currentTimeMillis())
             .setColor(ContextCompat.getColor(applicationContext, R.color.coffee_brown))
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
+            .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
     }
 
     private fun getNotification(prefs: Prefs): Notification {

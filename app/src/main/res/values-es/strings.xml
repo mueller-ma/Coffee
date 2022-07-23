@@ -35,4 +35,5 @@
     <string name="alternate_mode_summary">Active el modo alternativo solo si Café no mantiene la pantalla encendida; es posible que otras características no funcionen. El modo alternativo aumentará temporalmente el tiempo de espera de reposo del sistema.</string>
     <string name="alternate_mode_permissions">El modo alternativo requiere este permiso</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Café no pudo establecer el tiempo de espera anterior</string>
+    <!-- About menu -->
 </resources>

@@ -17,6 +17,9 @@
     <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
     <string name="notification_title_timeout">咖啡Coffee将保持屏幕常亮 %d 分钟</string>
     <string name="tap_to_turn_off">点击关闭</string>
+    <string name="allow_dimming_enable">允许屏幕变暗</string>
+    <string name="allow_dimming_disable">不允许屏幕变暗</string>
+    <string name="timeout_next">下一次超时</string>
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="timeout">在咖啡Coffee结束后</string>
@@ -32,4 +35,7 @@
     <string name="alternate_mode_summary">仅在Coffee咖啡无法保持屏幕常亮时启用备用模式，其他功能可能无法正常工作。备用模式会暂时增加屏幕超时时间。</string>
     <string name="alternate_mode_permissions">备用模式需要此权限</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee 咖啡无法设置之前的超时时间</string>
+    <!-- About menu -->
+    <string name="about">关于咖啡 Coffee</string>
+    <string name="error_no_browser_found">未发现浏览器</string>
 </resources>

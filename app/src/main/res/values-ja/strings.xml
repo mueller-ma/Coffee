@@ -25,4 +25,5 @@
     <string name="timeout_15_minutes">15分</string>
     <string name="timeout_30_minutes">30分</string>
     <string name="alternate_mode_title">代替モード</string>
+    <!-- About menu -->
 </resources>

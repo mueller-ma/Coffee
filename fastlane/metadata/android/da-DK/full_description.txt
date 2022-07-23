@@ -1,4 +1,4 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
+Coffe giver dig mulighed for at holde skærmen vågen uden at skulle ændre enhedens indstillinger. Det kan aktiveres forskellige steder:
 * A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
 * A button in the app itself
 * A shortcut on your home screen. It can be created in the app, if your launcher supports it.

@@ -30,6 +30,12 @@
     <string name="timeout_60_minutes">1時間</string>
     <string name="timeout_120_minutes">2時間</string>
     <string name="allow_dimming_title">画面の調光を許可</string>
+    <string name="allow_dimming_summary">画面がシステムの自動消灯の時間に基づいて暗くなることを許可します。</string>
     <string name="alternate_mode_title">代替モード</string>
+    <string name="alternate_mode_summary">コーヒーが機能していない場合のみ代替モードをオンにしてください。代替モードでは一部の機能が使えなくなります。代替モードは、一時的にシステムの自動消灯設定を変更することにより画面の消灯を防止します。</string>
+    <string name="alternate_mode_permissions">代替モードにはこの権限が必要です</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">コーヒーは自動消灯の設定を元に戻すことができませんでした</string>
     <!-- About menu -->
+    <string name="about">コーヒーについて</string>
+    <string name="error_no_browser_found">ブラウザが見つかりませんでした</string>
 </resources>

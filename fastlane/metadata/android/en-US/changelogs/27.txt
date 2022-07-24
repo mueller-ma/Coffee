@@ -1,0 +1,1 @@
+Ensure timeout job and wakelock are released when Coffee is stopped

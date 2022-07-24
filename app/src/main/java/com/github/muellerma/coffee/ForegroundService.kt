@@ -14,7 +14,6 @@ import androidx.core.content.getSystemService
 import kotlinx.coroutines.*
 import java.util.concurrent.CancellationException
 import kotlin.time.Duration.Companion.minutes
-import kotlin.time.Duration.Companion.seconds
 
 class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null

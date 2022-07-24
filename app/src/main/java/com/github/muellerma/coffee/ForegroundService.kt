@@ -14,6 +14,7 @@ import androidx.core.content.getSystemService
 import kotlinx.coroutines.*
 import java.util.concurrent.CancellationException
 import kotlin.time.Duration.Companion.minutes
+import kotlin.time.Duration.Companion.seconds
 
 class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
@@ -112,6 +113,7 @@ class ForegroundService : Service() {
             } else {
                 PowerManager.SCREEN_BRIGHT_WAKE_LOCK
             }
+            wakeLock.safeRelease()
             wakeLock = getSystemService<PowerManager>()!!
                 .newWakeLock(
                     wakeLockLevel or PowerManager.ON_AFTER_RELEASE,
@@ -123,10 +125,7 @@ class ForegroundService : Service() {
     }
 
     private fun stopWakeLockOrAlternateMode() {
-        try {
-            wakeLock?.release()
-        } catch (ignored: RuntimeException) {}
-
+        wakeLock.safeRelease()
         val prefs = Prefs(this)
         if (prefs.useAlternateMode) {
             val success = contentResolver.setSystemScreenTimeout(prefs.alternateModeOldTimeout)
@@ -143,6 +142,7 @@ class ForegroundService : Service() {
             Log.d(TAG, "No timeout set")
             return
         }
+        timeoutJob?.cancel(CancellationException("Start new timeout job"))
         timeoutJob = CoroutineScope(Dispatchers.Main + Job()).launch {
             Log.d(TAG, "Schedule timeout for $timeout minutes")
             delay(timeout.minutes)
@@ -259,11 +259,9 @@ class ForegroundService : Service() {
 
     private inner class PrefChangeListener : SharedPreferences.OnSharedPreferenceChangeListener {
         override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
-            Log.d(TAG, "Pref $key has been changed")
+            Log.d(TAG, "Pref '$key' has been changed")
 
             stopWakeLockOrAlternateMode()
-            timeoutJob?.cancel(CancellationException("Prefs have been changed"))
-
             startWakeLockOrAlternateMode()
             startTimeoutJob()
 

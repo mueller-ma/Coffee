@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import android.os.PowerManager
 import android.provider.Settings
 import android.util.Log
 import android.widget.Toast
@@ -69,4 +70,12 @@ val PendingIntent_Mutable = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) 
     PendingIntent.FLAG_MUTABLE
 } else {
     0
+}
+
+fun PowerManager.WakeLock?.safeRelease() {
+    try {
+        this?.release()
+    } catch (e: RuntimeException) {
+        Log.d(TAG, "Couldn't release wakelock $this", e)
+    }
 }

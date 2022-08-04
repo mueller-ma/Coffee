@@ -4,8 +4,15 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
+    <string name="turned_on">Coffee включен</string>
+    <string name="turned_off">Coffee отключен</string>
+    <string name="toggle_coffee">Переключить Coffee</string>
     <!-- MainActivity -->
     <!-- Notification -->
     <!-- Settings -->
+    <string name="alternate_mode_summary">Включите альтернативный режим, только если Coffee не держит экран включенным; другие функции могут не работать. Альтернативный режим временно увеличит системное время ожидания экрана.</string>
+    <string name="alternate_mode_permissions">Для работы в альтернативном режиме требуется следующее разрешение</string>
     <!-- About menu -->
+    <string name="about">О Coffee</string>
+    <string name="error_no_browser_found">Браузер не найден</string>
 </resources>

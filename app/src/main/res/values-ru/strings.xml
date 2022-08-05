@@ -8,10 +8,13 @@
     <string name="turned_off">Coffee отключен</string>
     <string name="toggle_coffee">Переключить Coffee</string>
     <!-- MainActivity -->
+    <string name="hint_1">Это приложение предоставляет плитку в быстрых настройках (место, где находятся переключатели, например, Wi-Fi и Bluetooth), которая позволяет поддерживать дисплей в спящем режиме без необходимости изменения настроек устройства.</string>
+    <string name="add_toggle_to_home">Добавить на домашний экран</string>
     <!-- Notification -->
     <!-- Settings -->
     <string name="alternate_mode_summary">Включите альтернативный режим, только если Coffee не держит экран включенным; другие функции могут не работать. Альтернативный режим временно увеличит системное время ожидания экрана.</string>
     <string name="alternate_mode_permissions">Для работы в альтернативном режиме требуется следующее разрешение</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Coffee не удалось установить предыдущий таймаут</string>
     <!-- About menu -->
     <string name="about">О Coffee</string>
     <string name="error_no_browser_found">Браузер не найден</string>

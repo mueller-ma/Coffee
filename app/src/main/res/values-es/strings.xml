@@ -36,4 +36,6 @@
     <string name="alternate_mode_permissions">El modo alternativo requiere este permiso</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Café no pudo establecer el tiempo de espera anterior</string>
     <!-- About menu -->
+    <string name="about">Acerca de Café</string>
+    <string name="error_no_browser_found">No se encontró ningún navegador</string>
 </resources>

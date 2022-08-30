@@ -3,8 +3,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Kawa</string>
+    <string name="turned_on">Włączono Kawę</string>
+    <string name="turned_off">Wyłączono Kawę</string>
+    <string name="toggle_coffee">Przełącz Kawę</string>
     <!-- MainActivity -->
+    <string name="hint_1">Ta aplikacja dodaje kafelek w panelu szybkich ustawień (w miejscu, gdzie znajdują się przełączniki dla Wi-Fi, Bluetooth itp.), który umożliwia ciągłe pobudzanie ekranu bez zmieniania ustawień urządzenia.</string>
+    <string name="hint_2">Kawę można zatrzymać naciskając na kafelek lub powiadomienie oraz ręcznie wyłączając ekran.</string>
+    <string name="add_toggle_to_home">Dodaj przełącznik do ekranu głównego</string>
+    <string name="add_toggle_to_home_success">Przypięto do ekranu głównego</string>
+    <string name="add_toggle_to_home_no_success">Błąd przypinania</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Kawa zapobiegnie wygaszeniu ekranu</string>
+    <string name="notification_title_timeout">Kawa zapobiegnie wygaszeniu ekranu przez %d minut</string>
+    <string name="tap_to_turn_off">Naciśnij, aby wyłączyć</string>
+    <string name="allow_dimming_enable">Włącz przyciemnianie</string>
+    <string name="allow_dimming_disable">Wyłącz przyciemnianie</string>
     <!-- Settings -->
     <!-- About menu -->
 </resources>

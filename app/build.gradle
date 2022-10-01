@@ -13,6 +13,7 @@ android {
         versionCode 28
         versionName "2.8"
     }
+    namespace = "com.github.muellerma.coffee"
 
     buildTypes {
         release {

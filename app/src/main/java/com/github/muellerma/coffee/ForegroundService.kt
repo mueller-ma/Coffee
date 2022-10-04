@@ -32,7 +32,9 @@ class ForegroundService : Service() {
             }
             ACTION_CHANGE_PREFS -> {
                 val key = intent.getStringExtra(EXTRA_CHANGE_PREFS_KEY)
-                val value = intent.extras?.get(EXTRA_CHANGE_PREFS_VALUE)
+                val value = intent.extras?.getString(EXTRA_CHANGE_TIMEOUT_VALUE)
+                    ?: intent.extras?.getBoolean(EXTRA_CHANGE_TIMEOUT_VALUE)
+
                 Log.d(TAG, "Change pref $key to $value")
 
                 Prefs(applicationContext).sharedPrefs.edit {
@@ -185,6 +187,7 @@ class ForegroundService : Service() {
     }
 
     private fun getTimeoutAction(prefs: Prefs): NotificationCompat.Action {
+        Log.d(TAG, "changingTimeoutAction")
         val intent = Intent(this, ForegroundService::class.java).apply {
             action = ACTION_CHANGE_PREFS
             putExtra(EXTRA_CHANGE_PREFS_KEY, "timeout")
@@ -194,7 +197,7 @@ class ForegroundService : Service() {
             val nextIndex = (currentIndex + 1).mod(allTimeouts.size)
             val nextTimeout = allTimeouts[nextIndex]
 
-            putExtra(EXTRA_CHANGE_PREFS_VALUE, nextTimeout)
+            putExtra(EXTRA_CHANGE_TIMEOUT_VALUE, nextTimeout)
         }
         return NotificationCompat.Action(
             R.drawable.ic_baseline_access_time_24,
@@ -207,7 +210,7 @@ class ForegroundService : Service() {
         val intent = Intent(this, ForegroundService::class.java).apply {
             action = ACTION_CHANGE_PREFS
             putExtra(EXTRA_CHANGE_PREFS_KEY, "allow_dimming")
-            putExtra(EXTRA_CHANGE_PREFS_VALUE, !prefs.allowDimming)
+            putExtra(EXTRA_CHANGE_DIMMING_VALUE, !prefs.allowDimming)
         }
         val title = if (prefs.allowDimming) R.string.allow_dimming_disable else R.string.allow_dimming_enable
         return NotificationCompat.Action(
@@ -275,7 +278,8 @@ class ForegroundService : Service() {
         private const val ACTION_STOP = "stop_action"
         private const val ACTION_CHANGE_PREFS = "change_prefs"
         private const val EXTRA_CHANGE_PREFS_KEY = "change_prefs_key"
-        private const val EXTRA_CHANGE_PREFS_VALUE = "change_prefs_value"
+        private const val EXTRA_CHANGE_TIMEOUT_VALUE = "change_prefs_timeout_value"
+        private const val EXTRA_CHANGE_DIMMING_VALUE = "change_prefs_dimming_value"
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 

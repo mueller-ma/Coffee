@@ -3,13 +3,13 @@ apply plugin: "kotlin-android"
 apply plugin: "com.mikepenz.aboutlibraries.plugin"
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     buildToolsVersion "31.0.0"
 
     defaultConfig {
         applicationId "com.github.muellerma.coffee"
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 28
         versionName "2.8"
     }
@@ -50,7 +50,7 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:1.8.0"
-    implementation "androidx.appcompat:appcompat:1.4.2"
+    implementation "androidx.appcompat:appcompat:1.5.1"
     implementation "androidx.fragment:fragment-ktx:1.5.3"
     implementation "com.google.android.material:material:1.6.1"
     implementation "androidx.preference:preference-ktx:1.2.0"

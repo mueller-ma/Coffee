@@ -9,11 +9,13 @@ class Prefs(context: Context) {
     var sharedPrefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         private set
 
-    val timeout: Int
+    var timeout: Int
         get() = sharedPrefs.getString("timeout", "0")?.toInt() ?: 0
+        set(value) = sharedPrefs.edit { putString("timeout", value.toString()) }
 
-    val allowDimming: Boolean
+    var allowDimming: Boolean
         get() = sharedPrefs.getBoolean("allow_dimming", false)
+        set(value) = sharedPrefs.edit { putBoolean("allow_dimming", value) }
 
     val useAlternateMode: Boolean
         get() = sharedPrefs.getBoolean("alternate_mode", false)

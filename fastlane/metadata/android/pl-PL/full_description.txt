@@ -3,7 +3,7 @@ Coffee allows you to keep the display awake without having to change the device 
 * A button in the app itself
 * A shortcut on your home screen. It can be created in the app, if your launcher supports it.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Kawa może być ustawiona jako aplikacja asystująca (Ustawienia urządzenia => Aplikacje => Domyślne aplikacje => Aplikacje asystujące) i zmienia jej stan, gdy pomoc jest wywoływana.
 
 Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
 In that case please enable "Alternate mode" in the settings.

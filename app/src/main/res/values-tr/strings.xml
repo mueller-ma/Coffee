@@ -37,5 +37,5 @@
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee önceki zaman aşımını ayarlayamadı</string>
     <!-- About menu -->
     <string name="about">Coffee Hakkında</string>
-    <string name="error_no_browser_found">Tarayıcı bulunamadı</string>
+    <string name="error_no_browser_found">Web tarayıcısı bulunamadı</string>
 </resources>

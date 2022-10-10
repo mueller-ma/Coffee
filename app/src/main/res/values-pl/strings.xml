@@ -20,5 +20,12 @@
     <string name="allow_dimming_enable">Włącz przyciemnianie</string>
     <string name="allow_dimming_disable">Wyłącz przyciemnianie</string>
     <!-- Settings -->
+    <string name="timeout">Zatrzymaj działanie aplikacji po</string>
+    <string name="timeout_5_minutes">5 minutach</string>
+    <string name="timeout_60_minutes">1 godzinie</string>
+    <string name="timeout_120_minutes">2 godzinach</string>
+    <string name="allow_dimming_title">Zezwól na przyciemnianie ekranu</string>
+    <string name="allow_dimming_summary">Ekran zostanie przyciemniony na podstawie czasu wygaszania ekranu ustawionego w systemie</string>
+    <string name="alternate_mode_summary">Włącz tryb alternatywny tylko wtedy, gdy aplikacja nie pozostawia ekranu włączonym; inne funkcje mogą nie działać. Tryb alternatywny tymczasowo zwiększy czas wygaszania ekranu w systemie.</string>
     <!-- About menu -->
 </resources>

@@ -4,7 +4,7 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">咖啡 Coffee</string>
-    <string name="turned_on">打开咖啡 Coffee</string>
+    <string name="turned_on">开启咖啡</string>
     <string name="turned_off">关闭咖啡 Coffee</string>
     <string name="toggle_coffee">开关咖啡Coffee</string>
     <!-- MainActivity -->
@@ -36,6 +36,6 @@
     <string name="alternate_mode_permissions">备用模式需要此权限</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee 咖啡无法设置之前的超时时间</string>
     <!-- About menu -->
-    <string name="about">关于咖啡 Coffee</string>
+    <string name="about">关于咖啡</string>
     <string name="error_no_browser_found">未发现浏览器</string>
 </resources>

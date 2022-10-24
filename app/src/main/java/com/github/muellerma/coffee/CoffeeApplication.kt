@@ -2,6 +2,7 @@ package com.github.muellerma.coffee
 
 import android.app.Application
 import androidx.preference.PreferenceManager
+import com.google.android.material.color.DynamicColors
 
 class CoffeeApplication : Application() {
     var isRunning = false
@@ -10,5 +11,6 @@ class CoffeeApplication : Application() {
         super.onCreate()
 
         PreferenceManager.setDefaultValues(this, R.xml.pref_main, false)
+        DynamicColors.applyToActivitiesIfAvailable(this)
     }
 }

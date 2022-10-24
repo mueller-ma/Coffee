@@ -3,9 +3,12 @@ package com.github.muellerma.coffee
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 
 class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        CoffeeTile.requestTileStateUpdate(context)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            CoffeeTile.requestTileStateUpdate(context)
+        }
     }
 }

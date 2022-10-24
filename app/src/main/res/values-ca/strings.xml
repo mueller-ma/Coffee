@@ -13,6 +13,8 @@
     <string name="add_toggle_to_home">Afegeix commutador a la pantalla principal</string>
     <string name="add_toggle_to_home_success">Fixat a la pàgina principal</string>
     <string name="add_toggle_to_home_no_success">Error fixant a la pàgina principal</string>
+    <string name="notification_permission">Es requereix permís per a notificacions</string>
+    <string name="grant">Permetre</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Cafè mantindrà la pantalla encesa</string>
     <string name="notification_title_timeout">Cafè mantindrà la pantalla encesa durant %d minuts</string>

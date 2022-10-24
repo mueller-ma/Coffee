@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException
 import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.PowerManager
@@ -13,6 +14,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.annotation.CheckResult
 import androidx.annotation.StringRes
+import androidx.core.app.ActivityCompat
 
 private const val TAG = "Utils"
 
@@ -48,6 +50,12 @@ fun Context.openSystemScreenTimeoutPermissions() {
             .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             .setData(Uri.parse("package:$packageName"))
     )
+}
+
+fun Context.hasPermissions(vararg permissions: String): Boolean {
+    return permissions
+        .map { permission -> ActivityCompat.checkSelfPermission(this, permission) }
+        .all { result -> result == PackageManager.PERMISSION_GRANTED }
 }
 
 fun String.openInBrowser(context: Context) {

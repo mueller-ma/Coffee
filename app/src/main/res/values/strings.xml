@@ -16,6 +16,8 @@
     <string name="add_toggle_to_home">Add toggle to home screen</string>
     <string name="add_toggle_to_home_success">Pinned to home</string>
     <string name="add_toggle_to_home_no_success">Error pinning to home</string>
+    <string name="notification_permission">Permission to show notifications is required</string>
+    <string name="grant">Grant</string>
 
     <!-- Notification -->
     <string name="notification_title_no_timeout">Coffee will keep the display on</string>

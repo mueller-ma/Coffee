@@ -3,6 +3,8 @@ package com.github.muellerma.coffee.activities
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
@@ -11,12 +13,19 @@ import androidx.core.view.isVisible
 import com.github.muellerma.coffee.ForegroundService
 import com.github.muellerma.coffee.R
 import com.github.muellerma.coffee.databinding.ActivityMainBinding
+import com.github.muellerma.coffee.hasPermissions
 import com.github.muellerma.coffee.showToast
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val notificationPermission = registerForActivityResult(
+        ActivityResultContracts.RequestPermission(),
+        ::handleNotificationPermission
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onCreate()")
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -59,7 +68,40 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        Log.d(TAG, "onResume()")
+        super.onResume()
+        requestNotificationPermissionIfRequired()
+    }
+
+    private fun requestNotificationPermissionIfRequired() {
+        Log.d(TAG, "requestNotificationPermissionIfRequired()")
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+            return
+        }
+
+        val hasPermission = hasPermissions(android.Manifest.permission.POST_NOTIFICATIONS)
+
+        if (!hasPermission) {
+            MaterialAlertDialogBuilder(this)
+                .setMessage(R.string.notification_permission)
+                .setPositiveButton(R.string.grant) { _, _ ->
+                    notificationPermission.launch(android.Manifest.permission.POST_NOTIFICATIONS)
+                }
+                .setCancelable(false)
+                .show()
+        }
+    }
+
+    private fun handleNotificationPermission(granted: Boolean) {
+        Log.d(TAG, "handleNotificationPermission($granted)")
+        if (!granted) {
+            requestNotificationPermissionIfRequired()
+        }
+    }
+
     private fun getShortcutInfo(stableId: Boolean): ShortcutInfoCompat {
+        Log.d(TAG, "getShortcutInfo($stableId)")
         val id = if (stableId) "toggle" else "toggle-${System.currentTimeMillis()}"
         val intent = Intent(this, CoffeeInvisibleActivity::class.java)
             .setAction(CoffeeInvisibleActivity.ACTION_TOGGLE)
@@ -70,5 +112,9 @@ class MainActivity : AppCompatActivity() {
             .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_toggle))
             .setAlwaysBadged()
             .build()
+    }
+
+    companion object {
+        private val TAG = MainActivity::class.simpleName
     }
 }

@@ -4,10 +4,38 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
+    <string name="turned_on">Café ligado</string>
+    <string name="turned_off">Café desligado</string>
+    <string name="toggle_coffee">Lig./Deslig. Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Este aplicativo fornece um botão nas configurações rápidas (onde ficam os botões para o Wi-Fi e o Bluetooth, por exemplo) que permite que você deixe a tela ligada sem precisar alterar as configurações do dispositivo.</string>
+    <string name="hint_2">O café pode ser desligado via botão em ajustes rápidos, via notificação ou quando a tela for apagada manualmente.</string>
+    <string name="add_toggle_to_home">Adicionar botão à tela inicial</string>
+    <string name="add_toggle_to_home_success">Fixado na tela inicial</string>
+    <string name="add_toggle_to_home_no_success">Erro ao fixar na tela inicial</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Café manterá a tela ligada</string>
+    <string name="notification_title_timeout">Café manterá a tela ligada por %d minutos</string>
     <string name="tap_to_turn_off">Toque para desativar</string>
+    <string name="allow_dimming_enable">Ativar redução do brilho</string>
+    <string name="allow_dimming_disable">Desativar redução do brilho</string>
+    <string name="timeout_next">Próximo tempo limite</string>
     <!-- Settings -->
+    <string name="settings">Configurações</string>
+    <string name="timeout">Desligar café após</string>
+    <string name="timeout_infinity">Sem tempo limite</string>
+    <string name="timeout_5_minutes">5 minutos</string>
+    <string name="timeout_15_minutes">15 minutos</string>
+    <string name="timeout_30_minutes">30 minutos</string>
+    <string name="timeout_60_minutes">1 hora</string>
+    <string name="timeout_120_minutes">2 horas</string>
+    <string name="allow_dimming_title">Permitir redução do brilho</string>
+    <string name="allow_dimming_summary">O brilho da tela será reduzido baseado no tempo limite definido pelo sistema</string>
+    <string name="alternate_mode_title">Modo alternativo</string>
+    <string name="alternate_mode_summary">Ative o modo alternativo somente se Café não conseguir manter a tela ligada; outras funcionalidades podem não funcionar. O modo alternativo temporariamente aumentará o tempo limite para tela definido pelo sistema.</string>
+    <string name="alternate_mode_permissions">Modo alternativo precisa desta permissão</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Café não podia definir o tempo limite anterior</string>
     <!-- About menu -->
+    <string name="about">Sobre Café</string>
+    <string name="error_no_browser_found">Nenhum navegador encontrado</string>
 </resources>

@@ -3,8 +3,39 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Cafè</string>
+    <string name="turned_on">Cafè encès</string>
+    <string name="turned_off">Cafè apagat</string>
+    <string name="toggle_coffee">Commutar cafè</string>
     <!-- MainActivity -->
+    <string name="hint_1">Aquest aplicatiu proporciona un mosaic de configuració ràpida (el lloc on hi ha els commutadors, per exemple els de la Wi-Fi i el Bluetooth) que et permet mantenir la pantalla encesa sense haver de canviar la configuració de sistema.</string>
+    <string name="hint_2">Cafè pot ser aturat clicant al mosaic o a la notificació o quan la pantalla s\'apaga manualment.</string>
+    <string name="add_toggle_to_home">Afegeix commutador a la pantalla principal</string>
+    <string name="add_toggle_to_home_success">Fixat a la pàgina principal</string>
+    <string name="add_toggle_to_home_no_success">Error fixant a la pàgina principal</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Cafè mantindrà la pantalla encesa</string>
+    <string name="notification_title_timeout">Cafè mantindrà la pantalla encesa durant %d minuts</string>
+    <string name="tap_to_turn_off">Toqueu per desactivar</string>
+    <string name="allow_dimming_enable">Activar enfosquiment</string>
+    <string name="allow_dimming_disable">Desactivar enfosquiment</string>
+    <string name="timeout_next">Següent temps d\'espera</string>
     <!-- Settings -->
+    <string name="settings">Configuració</string>
+    <string name="timeout">Apaga cafè després de</string>
+    <string name="timeout_infinity">Sense temps d\'espera</string>
+    <string name="timeout_5_minutes">5 minuts</string>
+    <string name="timeout_15_minutes">15 minuts</string>
+    <string name="timeout_30_minutes">30 minuts</string>
+    <string name="timeout_60_minutes">1 hora</string>
+    <string name="timeout_120_minutes">2 hores</string>
+    <string name="allow_dimming_title">Permet enfosquiment de pantalla</string>
+    <string name="allow_dimming_summary">La pantalla s\'enfosquirà d\'acord amb la configuració de sistema</string>
+    <string name="alternate_mode_title">Alternar mode</string>
+    <string name="alternate_mode_summary">Activa el mode altern només si Cafè no manté la pantalla encesa; altres funcionalitats poden no funcionar. El mode altern incrementarà temporalment el temps d\'espera de la pantalla.</string>
+    <string name="alternate_mode_permissions">El mode altern requereix aquest permís</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Cafè no ha pogut restablir el temps d\'espera anterior</string>
     <!-- About menu -->
+    <string name="about">Sobre Cafè</string>
+    <string name="error_no_browser_found">No s\'ha trobat cap navegador</string>
 </resources>

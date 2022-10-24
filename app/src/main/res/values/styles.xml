@@ -12,6 +12,7 @@
         <item name="colorOnSecondaryContainer">#FFFFFF</item>
 
         <item name="alertDialogTheme">@style/Coffee.Dialog.DayNight</item>
+        <item name="switchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch</item>
     </style>
 
     <style name="Coffee.AppTheme" parent="Coffee.Base">

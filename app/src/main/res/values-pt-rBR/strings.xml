@@ -13,6 +13,8 @@
     <string name="add_toggle_to_home">Adicionar botão à tela inicial</string>
     <string name="add_toggle_to_home_success">Fixado na tela inicial</string>
     <string name="add_toggle_to_home_no_success">Erro ao fixar na tela inicial</string>
+    <string name="notification_permission">Exigida a permissão para mostrar notificações</string>
+    <string name="grant">Conceder</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Café manterá a tela ligada</string>
     <string name="notification_title_timeout">Café manterá a tela ligada por %d minutos</string>

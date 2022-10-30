@@ -13,6 +13,8 @@
     <string name="add_toggle_to_home">Ajouter un raccourci à l\'écran d\'accueil</string>
     <string name="add_toggle_to_home_success">Ajouté à l\'écran d\'accueil</string>
     <string name="add_toggle_to_home_no_success">Erreur lors de l\'ajout à l\'écran d\'accueil</string>
+    <string name="notification_permission">Permission d\'afficher les notifications est requise</string>
+    <string name="grant">Autoriser</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Café gardera l\'affichage allumé</string>
     <string name="notification_title_timeout">Café gardera l\'affichage pendant %d minutes</string>

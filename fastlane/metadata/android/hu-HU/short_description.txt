@@ -1,1 +1,1 @@
-Keep display awake
+A képernyő ébren tartása

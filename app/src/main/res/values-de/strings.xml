@@ -13,6 +13,8 @@
     <string name="add_toggle_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="add_toggle_to_home_success">An Startbildschirm angepinnt</string>
     <string name="add_toggle_to_home_no_success">Fehler beim Anpinnen an Startbildschirm</string>
+    <string name="notification_permission">Berechtigung zum Anzeigen von Benachrichtigungen ist erforderlich</string>
+    <string name="grant">Erlauben</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Kaffee lässt den Bildschirm eingeschaltet</string>
     <string name="notification_title_timeout">Kaffee lässt den Bildschirm eingeschaltet für %d Minuten</string>

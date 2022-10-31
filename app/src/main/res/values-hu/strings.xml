@@ -3,8 +3,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Coffee</string>
+    <string name="turned_on">Coffee bekapcsolva</string>
+    <string name="turned_off">Coffee kikapcsolva</string>
+    <string name="toggle_coffee">Coffee be/kikapcsolása</string>
     <!-- MainActivity -->
+    <string name="hint_1">Ez az alkalmazás egy olyan csempét biztosít a gyorsbeállításokban (a hely, ahol például a Wi-Fi és a Bluetooth kapcsolók vannak), amely lehetővé teszi, hogy a kijelzőt ébren tartsa anélkül, hogy a készülék beállításait meg kellene változtatnia.</string>
+    <string name="hint_2">A Coffee leállítható a csempére vagy az értesítésre kattintva, illetve a képernyő kézi kikapcsolásával.</string>
+    <string name="add_toggle_to_home">Kapcsoló hozzáadása a kezdőképernyőhöz</string>
+    <string name="add_toggle_to_home_success">Kitűzve a kezdőképernyőre</string>
+    <string name="add_toggle_to_home_no_success">Hiba a kezdőképernyőre kitűzésekor</string>
+    <string name="notification_permission">Az értesítések megjelenítéséhez való engedély szükséges</string>
+    <string name="grant">Engedélyez</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">A Coffee bekapcsolva tartja a kijelzőt</string>
+    <string name="notification_title_timeout">A Coffee bekapcsolva tartja a kijelzőt %d percig</string>
+    <string name="tap_to_turn_off">Érintse meg a kikapcsoláshoz</string>
+    <string name="allow_dimming_enable">Homályosítás engedélyezése</string>
+    <string name="allow_dimming_disable">Homályosítás letiltása</string>
+    <string name="timeout_next">Következő időkorlát</string>
     <!-- Settings -->
+    <string name="settings">Beállítások</string>
+    <string name="timeout">Coffe kikapcsolása ennyi idő után</string>
+    <string name="timeout_infinity">Nincs időkorlát</string>
+    <string name="timeout_5_minutes">5 perc</string>
+    <string name="timeout_15_minutes">15 perc</string>
+    <string name="timeout_30_minutes">30 perc</string>
+    <string name="timeout_60_minutes">1 óra</string>
+    <string name="timeout_120_minutes">2 óra</string>
+    <string name="allow_dimming_title">Képernyő homályosításának engedélyezése</string>
+    <string name="allow_dimming_summary">A képernyő el lesz homályosítva a rendszer képernyő időkorlátja alapján</string>
+    <string name="alternate_mode_title">Alternatív mód</string>
+    <string name="alternate_mode_summary">Csak akkor kapcsolja be a alternatív üzemmódot, ha a Coffee nem tartja bekapcsolva a képernyőt; más funkciók esetleg nem működnek. Az alternatív üzemmód átmenetileg megnöveli a rendszer képernyőjének időkorlátját.</string>
+    <string name="alternate_mode_permissions">Az alternatív mód megköveteli ezt az engedélyt</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">A Coffee nem tudta beállítani az előző időkorlátot</string>
     <!-- About menu -->
+    <string name="about">A Coffee-ról</string>
+    <string name="error_no_browser_found">Nem található böngésző</string>
 </resources>

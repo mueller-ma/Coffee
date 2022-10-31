@@ -1,9 +1,9 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+A Coffee lehetővé teszi, hogy a kijelzőt ébren tartsa anélkül, hogy a készülék beállításait megváltoztatná. Több különböző helyen is bekapcsolható:
+* Egy csempe a gyorsbeállításokban, a hely, ahol például a Wi-Fi és a Bluetooth kapcsolók vannak. Android 7, vagy újabb verzió szükséges.
+* Egy gomb magában az alkalmazásban
+* Egy parancsikon a kezdőképernyőjén. Létrehozhatja az alkalmazásban, ha a indítópultja támogatja.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+A Coffee beállítható asszisztens alkalmazásként (Készülékbeállítások => Alkalmazások => Alapértelmezett alkalmazások => Kisegítő alkalmazás), és az kisegítés hívásakor megváltoztatja az állapotát.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+A Coffee nem biztos, hogy működik, mert az egyes OEM-ek (köztük a Poco, a Samsung és a Xiaomi) túlságosan agresszív akkumulátorkímélési technológiát alkalmaznak.
+Abban az esetben, kérjük engedélyezze az "Alternatív üzemmód"-ot a beállításokban.

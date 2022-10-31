@@ -13,6 +13,8 @@
     <string name="add_toggle_to_home">添加开关到主屏幕</string>
     <string name="add_toggle_to_home_success">已固定到主页</string>
     <string name="add_toggle_to_home_no_success">固定到主屏幕时出错</string>
+    <string name="notification_permission">要求显示通知的权限</string>
+    <string name="grant">授权</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
     <string name="notification_title_timeout">咖啡Coffee将保持屏幕常亮 %d 分钟</string>

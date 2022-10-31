@@ -13,6 +13,8 @@
     <string name="add_toggle_to_home">Agregar interruptor a la pantalla de inicio</string>
     <string name="add_toggle_to_home_success">Anclado a la pantalla de inicio</string>
     <string name="add_toggle_to_home_no_success">Error al anclar a la pantalla de inicio</string>
+    <string name="notification_permission">Se requiere permiso para mostrar notificaciones</string>
+    <string name="grant">Permitir</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Café mantendrá encendida la pantalla</string>
     <string name="notification_title_timeout">Café mantendrá encendida la pantalla durante %d minutos</string>

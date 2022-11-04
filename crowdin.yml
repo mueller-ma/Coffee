@@ -10,5 +10,16 @@ files:
         he: iw
         id: in
         yi: ji
+  - source: /app/src/debug/res/values/strings.xml
+    translation: /app/src/debug/res/values-%two_letters_code%/strings.xml
+    translate_attributes: 0
+    content_segmentation: 0
+    languages_mapping:
+      two_letters_code:
+        pt-BR: pt-rBR
+        zh-CN: zh-rCN
+        he: iw
+        id: in
+        yi: ji
   - source: /fastlane/metadata/android/en-US/*.txt
     translation: /fastlane/metadata/android/%locale%/%original_file_name%

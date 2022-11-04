@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <voice-interaction-service
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:recognitionService="com.github.muellerma.coffee.InteractionService"
         android:sessionService="com.github.muellerma.coffee.InteractionSessionService"
-        android:supportsAssist="true" />
+        android:supportsAssist="true"
+        tools:ignore="UnusedAttribute" />

@@ -21,7 +21,10 @@
 
     <!-- Notification -->
     <string name="notification_title_no_timeout">Coffee will keep the display on</string>
-    <string name="notification_title_timeout">Coffee will keep the display on for %d minutes</string>
+    <plurals name="notification_title_timeout">
+        <item quantity="one">Coffee will keep the display on for %d minute</item>
+        <item quantity="other">Coffee will keep the display on for %d minutes</item>
+    </plurals>
     <string name="tap_to_turn_off">Tap to turn off</string>
     <string name="allow_dimming_enable">Enable dimming</string>
     <string name="allow_dimming_disable">Disable dimming</string>
@@ -48,7 +51,7 @@
     <!-- About menu -->
     <string name="about">About Coffee</string>
     <string name="error_no_browser_found">No browser found</string>
-    <string name="aboutLibraries_description_special1_name" translatable="false">GitHub</string>
-    <string name="aboutLibraries_description_special2_name" translatable="false">F-Droid</string>
-    <string name="aboutLibraries_description_special3_name" translatable="false">Crowdin</string>
+    <string name="aboutLibraries_description_special1_name" translatable="false" tools:ignore="UnusedResources">GitHub</string>
+    <string name="aboutLibraries_description_special2_name" translatable="false" tools:ignore="UnusedResources">F-Droid</string>
+    <string name="aboutLibraries_description_special3_name" translatable="false" tools:ignore="UnusedResources">Crowdin</string>
 </resources>

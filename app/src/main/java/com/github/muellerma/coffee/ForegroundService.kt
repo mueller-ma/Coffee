@@ -168,7 +168,7 @@ class ForegroundService : Service() {
         val title = if (timeout == 0) {
             getString(R.string.notification_title_no_timeout)
         } else {
-            getString(R.string.notification_title_timeout, timeout)
+            applicationContext.resources.getQuantityString(R.plurals.notification_title_timeout, timeout, timeout)
         }
 
         return getBaseNotification(title)

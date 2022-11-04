@@ -17,7 +17,6 @@
     <string name="grant">Permitir</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Café mantendrá encendida la pantalla</string>
-    <string name="notification_title_timeout">Café mantendrá encendida la pantalla durante %d minutos</string>
     <string name="tap_to_turn_off">Pulse para desactivar</string>
     <string name="allow_dimming_enable">Activar atenuación</string>
     <string name="allow_dimming_disable">Desactivar atenuación</string>

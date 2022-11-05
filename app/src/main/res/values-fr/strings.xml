@@ -17,6 +17,10 @@
     <string name="grant">Autoriser</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Café gardera l\'affichage allumé</string>
+    <plurals name="notification_title_timeout">
+        <item quantity="one">Café gardera l\'écran allumé durant %d minute</item>
+        <item quantity="other">Café gardera l\'écran allumé durant %d minutes</item>
+    </plurals>
     <string name="tap_to_turn_off">Appuyez pour désactiver</string>
     <string name="allow_dimming_enable">Modifier la luminosité</string>
     <string name="allow_dimming_disable">Désactiver la gradation de la luminosité</string>

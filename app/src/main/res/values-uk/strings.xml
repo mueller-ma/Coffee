@@ -4,11 +4,45 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
+    <string name="turned_on">Coffee увімкнено</string>
+    <string name="turned_off">Coffee вимкнено</string>
+    <string name="toggle_coffee">Вкл/Викл Coffee</string>
     <!-- MainActivity -->
     <string name="hint_1">Ця програма надає плитку у швидких налаштуваннях (місце, де знаходяться перемикачі, наприклад, для Wi-Fi та Bluetooth), яка дозволяє тримати дисплей увімкненим без необхідності змінювати налаштування пристрою.</string>
     <string name="hint_2">Coffee можна зупинити, натиснувши на плитку або повідомлення, або при ручному вимиканні екрану.</string>
     <string name="add_toggle_to_home">Додати на головний екран</string>
+    <string name="add_toggle_to_home_success">Додано на головний екран</string>
+    <string name="add_toggle_to_home_no_success">Помилка додавання на головний екран</string>
+    <string name="notification_permission">Потрібен дозвіл на показ повідомлень</string>
+    <string name="grant">Дозволити</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Coffee не дасть дисплею згаснути</string>
+    <plurals name="notification_title_timeout">
+        <item quantity="one">Coffee триматиме дисплей увімкненим протягом %d хвилини</item>
+        <item quantity="few">Coffee триматиме дисплей увімкненим протягом %d хвилин</item>
+        <item quantity="many">Coffee триматиме дисплей увімкненим протягом %d хвилин</item>
+        <item quantity="other">Coffee триматиме дисплей увімкненим протягом %d хвилин</item>
+    </plurals>
+    <string name="tap_to_turn_off">Натисніть, щоб вимкнути</string>
+    <string name="allow_dimming_enable">Увімкнути затемнення</string>
+    <string name="allow_dimming_disable">Вимкнути затемнення</string>
+    <string name="timeout_next">Наступний таймаут</string>
     <!-- Settings -->
+    <string name="settings">Налаштування</string>
+    <string name="timeout">Зупинка Coffee після</string>
+    <string name="timeout_infinity">Без таймауту</string>
+    <string name="timeout_5_minutes">5 хвилин</string>
+    <string name="timeout_15_minutes">15 хвилин</string>
+    <string name="timeout_30_minutes">30 хвилин</string>
+    <string name="timeout_60_minutes">1 година</string>
+    <string name="timeout_120_minutes">2 години</string>
+    <string name="allow_dimming_title">Дозволити затемнення екрана</string>
+    <string name="allow_dimming_summary">Екран буде затемнено відповідно до таймауту екрану системи</string>
+    <string name="alternate_mode_title">Альтернативний режим</string>
+    <string name="alternate_mode_summary">Увімкніть альтернативний режим, тільки якщо програма \"Кава\" не утримує екран увімкненим; інші функції можуть не працювати. Альтернативний режим тимчасово збільшує час очікування екрана системи.</string>
+    <string name="alternate_mode_permissions">Альтернативний режим вимагає цього дозволу</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Coffee не може встановити попередній таймаут</string>
     <!-- About menu -->
+    <string name="about">Про Coffee</string>
+    <string name="error_no_browser_found">Браузер не знайдено</string>
 </resources>

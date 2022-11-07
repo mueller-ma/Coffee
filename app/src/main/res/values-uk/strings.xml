@@ -3,7 +3,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Coffee</string>
     <!-- MainActivity -->
+    <string name="hint_1">Ця програма надає плитку у швидких налаштуваннях (місце, де знаходяться перемикачі, наприклад, для Wi-Fi та Bluetooth), яка дозволяє тримати дисплей увімкненим без необхідності змінювати налаштування пристрою.</string>
+    <string name="hint_2">Coffee можна зупинити, натиснувши на плитку або повідомлення, або при ручному вимиканні екрану.</string>
+    <string name="add_toggle_to_home">Додати на головний екран</string>
     <!-- Notification -->
     <!-- Settings -->
     <!-- About menu -->

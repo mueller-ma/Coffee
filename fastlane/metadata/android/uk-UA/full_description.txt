@@ -1,9 +1,9 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+Coffee дозволяє підтримувати дисплей в активному стані без необхідності змінювати налаштування пристрою. Можна перемикати в різних місцях:
+* Плитка в швидких налаштуваннях, місце, де знаходяться перемикачі для, наприклад, Wi-Fi та Bluetooth. Потрібна версія Android 7 або новіша.
+* Кнопка у самому додатку
+* Ярлик на головному екрані. Можна створити в додатку, якщо ваш лаунчер це підтримує.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Coffee може бути встановлена як додаток-помічник (Налаштування пристрою => Програми => Програми за замовчуванням => Додаток-помічник) і змінювати свій стан при виклику помічника.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Кава може не працювати через надто агресивний режим економії заряду батареї, який реалізований деякими виробниками (в тому числі Poco, Samsung і Xiaomi).
+У такому випадку, будь ласка, увімкніть "Альтернативний режим" у налаштуваннях.

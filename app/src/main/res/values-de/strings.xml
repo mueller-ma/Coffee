@@ -17,7 +17,10 @@
     <string name="grant">Erlauben</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Kaffee lässt den Bildschirm eingeschaltet</string>
-    <string name="notification_title_timeout">Kaffee lässt den Bildschirm eingeschaltet für %d Minuten</string>
+    <plurals name="notification_title_timeout">
+        <item quantity="one">Kaffee lässt den Bildschirm eingeschaltet für %d Minute</item>
+        <item quantity="other">Kaffee lässt den Bildschirm eingeschaltet für %d Minuten</item>
+    </plurals>
     <string name="tap_to_turn_off">Tippen zum Ausschalten</string>
     <string name="allow_dimming_enable">Dimmen aktivieren</string>
     <string name="allow_dimming_disable">Dimmen deaktivieren</string>

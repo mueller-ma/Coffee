@@ -15,7 +15,6 @@
     <string name="add_toggle_to_home_no_success">ホーム画面に追加できませんでした</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">ディスプレイが消灯しないようにしています</string>
-    <string name="notification_title_timeout">%d分間ディスプレイが消灯しないようにしています</string>
     <string name="tap_to_turn_off">タップしてオフにする</string>
     <string name="allow_dimming_enable">調光を有効にする</string>
     <string name="allow_dimming_disable">調光を無効にする</string>

@@ -184,7 +184,6 @@ class ForegroundService : Service() {
         Log.d(TAG, "getTimeoutAction()")
         val intent = Intent(this, ForegroundService::class.java).apply {
             action = ACTION_CHANGE_PREF_TIMEOUT
-            putExtra(EXTRA_CHANGE_PREF_VALUE, "timeout")
 
             val allTimeouts = applicationContext.resources.getStringArray(R.array.timeout_values)
             val currentIndex = allTimeouts.indexOf(prefs.timeout.toString())

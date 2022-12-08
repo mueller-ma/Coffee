@@ -2,4 +2,5 @@
 <!-- Translation instructions can be found in the Readme -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- App name for debug builds -->
+    <string name="app_name">Coffee Hibakereső</string>
 </resources>

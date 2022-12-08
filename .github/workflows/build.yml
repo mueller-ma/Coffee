@@ -1,6 +1,12 @@
 name: Build App
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '34 19 * * 6'
 
 jobs:
   build:

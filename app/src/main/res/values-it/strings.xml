@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Caffè</string>
-    <string name="turned_on">Caffè attivato</string>
-    <string name="turned_off">Caffè disattivato</string>
     <string name="toggle_coffee">Attiva/Disattiva Caffè</string>
     <!-- MainActivity -->
     <string name="hint_1">L’app può essere aggiunta nelle impostazioni rapide (ad esempio, il posto dove si trovano le icone dell\'Wi-Fi, Bluetooth, Modalità aerea) e consentirà di avere lo schermo sempre attivo senza dover modificare le impostazioni del dispositivo.</string>

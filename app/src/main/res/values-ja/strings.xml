@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">コーヒー</string>
-    <string name="turned_on">コーヒーをオンにしました</string>
-    <string name="turned_off">コーヒーをオフにしました</string>
     <string name="toggle_coffee">コーヒーを切り替え</string>
     <!-- MainActivity -->
     <string name="hint_1">このアプリはクイック設定（Wi-FiやBluetoothなどの切り替えボタンがある場所）に端末の設定を変えることなくディスプレイの自動消灯を一時的に無効化できるタイルを追加します。</string>

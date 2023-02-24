@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Koffie</string>
-    <string name="turned_on">Zet Koffie aan</string>
-    <string name="turned_off">Zet Koffie uit</string>
     <string name="toggle_coffee">Zet Koffie aan/uit</string>
     <!-- MainActivity -->
     <string name="hint_1">Deze app biedt een tegel voor de snelle instellingen (het menu met schakelaars voor o.a. wifi en bluetooth) om het scherm ingeschakeld te houden zonder daarvoor in de instellingenapp te hoeven duiken.</string>

@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
-    <string name="turned_on">Allumer Café</string>
-    <string name="turned_off">Éteindre Café</string>
     <string name="toggle_coffee">Activer Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Cette application fournit une tuile dans les widgets (l\'endroit où se trouvent les notifications, p. ex. Wi-Fi et Bluetooth) qui vous permet de garder l\'affichage allumé sans avoir à modifier les paramètres de l\'appareil.</string>

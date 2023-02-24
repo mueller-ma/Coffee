@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
-    <string name="turned_on">Se ha activado Café</string>
-    <string name="turned_off">Se ha desactivado Café</string>
     <string name="toggle_coffee">Activar o desactivar Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Esta aplicación ofrece un mosaico en los ajustes rápidos (el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth) que le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo</string>

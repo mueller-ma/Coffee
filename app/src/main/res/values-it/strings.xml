@@ -3,8 +3,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Caffè</string>
+    <string name="turned_on">Caffè attivato</string>
+    <string name="turned_off">Caffè disattivato</string>
+    <string name="toggle_coffee">Attiva/Disattiva Caffè</string>
     <!-- MainActivity -->
+    <string name="hint_1">L’app può essere aggiunta nelle impostazioni rapide (ad esempio, il posto dove si trovano le icone dell\'Wi-Fi, Bluetooth, Modalità aerea) e consentirà di avere lo schermo sempre attivo senza dover modificare le impostazioni del dispositivo.</string>
+    <string name="hint_2">Caffè può essere interrotto tramite l’icona nelle impostazioni rapide, dalle notifiche o quando lo schermo viene spento manualmente con il pulsante.</string>
+    <string name="add_toggle_to_home">Aggiungi pulsante sulla schermata principale</string>
+    <string name="add_toggle_to_home_success">Pulsante aggiunto nella schermata principale</string>
+    <string name="add_toggle_to_home_no_success">Errore durante l\'aggiunta alla schermata principale</string>
+    <string name="notification_permission">È necessaria l\'autorizzazione a ricevere le notifiche</string>
+    <string name="grant">Consenti</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Caffè manterrà lo schermo attivo</string>
+    <plurals name="notification_title_timeout">
+        <item quantity="one">Caffè manterrà lo schermo acceso %d per minuti</item>
+        <item quantity="other">Caffè manterrà lo schermo attivo per %d minuti</item>
+    </plurals>
+    <string name="tap_to_turn_off">Tocca per spegnere</string>
+    <string name="allow_dimming_enable">Abilita oscuramento</string>
+    <string name="allow_dimming_disable">Disabilita oscuramento</string>
+    <string name="timeout_next">Prossimo pausa</string>
     <!-- Settings -->
+    <string name="settings">Impostazioni</string>
+    <string name="timeout">Ferma Caffè dopo</string>
+    <string name="timeout_infinity">Nessuna pausa</string>
+    <string name="timeout_5_minutes">5 minuti</string>
+    <string name="timeout_15_minutes">15 minuti</string>
+    <string name="timeout_30_minutes">30 minuti</string>
+    <string name="timeout_60_minutes">1 ora</string>
+    <string name="timeout_120_minutes">2 ore</string>
+    <string name="allow_dimming_title">Consenti oscuramento dello schermo</string>
+    <string name="allow_dimming_summary">Lo schermo verrà oscurato in base alle impostazioni del sistema</string>
+    <string name="alternate_mode_title">Modalità alternativa</string>
+    <string name="alternate_mode_summary">Attivare la \"Modalità alternativa\" solo se Caffè non dovesse tenere lo schermo acceso; le altre funzioni potrebbero non funzionare. La modalità alternativa aumenta temporaneamente il timeout nelle impostazioni del sistema.</string>
+    <string name="alternate_mode_permissions">La \"Modalità alternativa\" richiede questa autorizzazione</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Caffè non è riuscito a impostare il timeout precedente</string>
     <!-- About menu -->
+    <string name="about">Riguardo Caffè</string>
+    <string name="error_no_browser_found">Nessun browser trovato</string>
 </resources>

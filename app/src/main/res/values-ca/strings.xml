@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Cafè</string>
-    <string name="turned_on">Cafè encès</string>
-    <string name="turned_off">Cafè apagat</string>
     <string name="toggle_coffee">Commutar cafè</string>
     <!-- MainActivity -->
     <string name="hint_1">Aquest aplicatiu proporciona un mosaic de configuració ràpida (el lloc on hi ha els commutadors, per exemple els de la Wi-Fi i el Bluetooth) que et permet mantenir la pantalla encesa sense haver de canviar la configuració de sistema.</string>

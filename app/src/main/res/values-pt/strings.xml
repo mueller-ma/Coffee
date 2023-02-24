@@ -4,6 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
+    <string name="turned_on">Ligado</string>
+    <string name="turned_on_remaining">Ligado: Faltam %s</string>
+    <string name="turned_off">Desligado</string>
     <string name="toggle_coffee">Ativar/Desativar Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Esta aplicação fornece um bloco nas definições rápidas (o menu com os blocos de, por exemplo, Wi-Fi e Bluetooth) que permite que manter o ecrã ativo sem ter que alterar as configurações do dispositivo.</string>

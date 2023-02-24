@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
-    <string name="turned_on">Café ligado</string>
-    <string name="turned_off">Café desligado</string>
     <string name="toggle_coffee">Lig./Deslig. Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Este aplicativo fornece um botão nas configurações rápidas (onde ficam os botões para o Wi-Fi e o Bluetooth, por exemplo) que permite que você deixe a tela ligada sem precisar alterar as configurações do dispositivo.</string>

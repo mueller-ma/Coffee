@@ -3,6 +3,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Cafea</string>
     <!-- MainActivity -->
     <!-- Notification -->
     <!-- Settings -->

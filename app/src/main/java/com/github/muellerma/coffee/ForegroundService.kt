@@ -11,8 +11,8 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import kotlinx.coroutines.*
-import java.util.concurrent.CancellationException
 import kotlin.time.Duration.Companion.minutes
+import kotlin.time.Duration.Companion.seconds
 
 class ForegroundService : Service() {
     private var wakeLock: PowerManager.WakeLock? = null
@@ -44,10 +44,7 @@ class ForegroundService : Service() {
         startWakeLockOrAlternateMode()
         startTimeoutJob()
 
-        (application as CoffeeApplication).isRunning = true
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            CoffeeTile.requestTileStateUpdate(this)
-        }
+        (application as CoffeeApplication).notifyObservers(ServiceStatus.Running(null))
         if (!isScreenStateListenerRegistered) {
             val intentFilter = IntentFilter().apply {
                 addAction(Intent.ACTION_SCREEN_OFF)
@@ -79,10 +76,7 @@ class ForegroundService : Service() {
             }
         }
 
-        (application as CoffeeApplication).isRunning = true
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            CoffeeTile.requestTileStateUpdate(this)
-        }
+        (application as CoffeeApplication).notifyObservers(ServiceStatus.Running(null))
 
         val prefs = Prefs(this)
         prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsChangeListener)
@@ -131,16 +125,23 @@ class ForegroundService : Service() {
     }
 
     private fun startTimeoutJob() {
+        timeoutJob?.cancel(CancellationException("startTimeoutJob() called"))
         val prefs = Prefs(this)
         val timeout = prefs.timeout
         if (timeout == 0) {
             Log.d(TAG, "No timeout set")
             return
         }
-        timeoutJob?.cancel(CancellationException("Start new timeout job"))
         timeoutJob = CoroutineScope(Dispatchers.Main + Job()).launch {
             Log.d(TAG, "Schedule timeout for $timeout minutes")
-            delay(timeout.minutes)
+            val application = application as CoffeeApplication
+            (timeout.minutes.inWholeSeconds downTo 0).forEach { remainingSeconds ->
+                Log.d(TAG, "Remaining seconds = $remainingSeconds")
+                application.notifyObservers(
+                    ServiceStatus.Running(remainingSeconds)
+                )
+                delay(1.seconds)
+            }
             Log.d(TAG, "Timeout reached, stop coffee")
             changeState(this@ForegroundService, STATE.STOP, true)
         }
@@ -233,10 +234,7 @@ class ForegroundService : Service() {
             unregisterReceiver(screenStateListener)
             isScreenStateListenerRegistered = false
         }
-        (application as CoffeeApplication).isRunning = false
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            CoffeeTile.requestTileStateUpdate(this)
-        }
+        (application as CoffeeApplication).notifyObservers(ServiceStatus.Stopped)
     }
 
     override fun onBind(p0: Intent?): IBinder? = null
@@ -279,7 +277,10 @@ class ForegroundService : Service() {
             val start = when (newState) {
                 STATE.START -> true
                 STATE.STOP -> false
-                STATE.TOGGLE -> !(context.applicationContext as CoffeeApplication).isRunning
+                STATE.TOGGLE -> {
+                    val app = context.applicationContext as CoffeeApplication
+                    app.lastStatusUpdate is ServiceStatus.Stopped
+                }
             }
             val intent = Intent(context, ForegroundService::class.java)
             val message = if (start) {

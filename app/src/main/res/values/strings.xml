@@ -6,8 +6,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
-    <string name="turned_on">Turned on Coffee</string>
-    <string name="turned_off">Turned off Coffee</string>
+    <string name="turned_on">Turned on</string>
+    <string name="turned_on_remaining">Turned on: %s remaining</string>
+    <string name="turned_off">Turned off</string>
     <string name="toggle_coffee">Toggle Coffee</string>
 
     <!-- MainActivity -->

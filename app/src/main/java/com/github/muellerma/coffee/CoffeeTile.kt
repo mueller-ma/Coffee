@@ -1,7 +1,5 @@
 package com.github.muellerma.coffee
 
-import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.service.quicksettings.Tile.STATE_ACTIVE
@@ -11,7 +9,7 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 
 @RequiresApi(Build.VERSION_CODES.N)
-class CoffeeTile : TileService() {
+class CoffeeTile : TileService(), ServiceStatusObserver {
     override fun onClick() {
         Log.d(TAG, "onClick()")
         ForegroundService.changeState(this, ForegroundService.Companion.STATE.TOGGLE, false)
@@ -20,12 +18,14 @@ class CoffeeTile : TileService() {
     override fun onStartListening() {
         Log.d(TAG, "onStartListening()")
         setTileState()
+        (application as CoffeeApplication).observers.add(this)
         super.onStartListening()
     }
 
     override fun onStopListening() {
         Log.d(TAG, "onStopListening()")
         setTileState()
+        (application as CoffeeApplication).observers.remove(this)
         super.onStopListening()
     }
 
@@ -60,12 +60,31 @@ class CoffeeTile : TileService() {
         super.onRebind(intent)
     }
 
+    override fun onServiceStatusUpdate(status: ServiceStatus) {
+        setTileState()
+    }
+
     private fun setTileState() {
-        val isRunning = (application as CoffeeApplication).isRunning
-        Log.d(TAG, "setTileState(): running = $isRunning")
+        val currentStatus = (application as CoffeeApplication).lastStatusUpdate
+        Log.d(TAG, "setTileState(): running = $currentStatus")
         val tile = qsTile ?: return
+
+        val (tileState, tileSubtitle) = when (currentStatus) {
+            is ServiceStatus.Stopped -> Pair(STATE_INACTIVE, "")
+            is ServiceStatus.Running -> {
+                if (currentStatus.remainingSeconds == null) {
+                    Pair(STATE_ACTIVE, "")
+                } else {
+                    Pair(STATE_ACTIVE, currentStatus.remainingSeconds.toFormattedTime())
+                }
+            }
+        }
+
         tile.apply {
-            state = if (isRunning) STATE_ACTIVE else STATE_INACTIVE
+            state = tileState
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                subtitle = tileSubtitle
+            }
             updateTile()
         }
     }
@@ -73,10 +92,5 @@ class CoffeeTile : TileService() {
     @RequiresApi(Build.VERSION_CODES.N)
     companion object {
         private val TAG = CoffeeTile::class.java.simpleName
-
-        fun requestTileStateUpdate(context: Context) {
-            Log.d(TAG, "requestTileStateUpdate()")
-            requestListeningState(context, ComponentName(context, CoffeeTile::class.java))
-        }
     }
 }

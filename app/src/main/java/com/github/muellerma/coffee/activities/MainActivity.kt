@@ -10,14 +10,12 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.view.isVisible
-import com.github.muellerma.coffee.ForegroundService
-import com.github.muellerma.coffee.R
+import com.github.muellerma.coffee.*
 import com.github.muellerma.coffee.databinding.ActivityMainBinding
-import com.github.muellerma.coffee.hasPermissions
-import com.github.muellerma.coffee.showToast
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ServiceStatusObserver {
+    private lateinit var application: CoffeeApplication
     private lateinit var binding: ActivityMainBinding
     private val notificationPermission = registerForActivityResult(
         ActivityResultContracts.RequestPermission(),
@@ -28,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate()")
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        application = getApplication() as CoffeeApplication
         setContentView(binding.root)
 
         supportActionBar?.hide()
@@ -72,6 +71,27 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onResume()")
         super.onResume()
         requestNotificationPermissionIfRequired()
+        application.observers.add(this)
+        onServiceStatusUpdate(application.lastStatusUpdate)
+    }
+
+    override fun onPause() {
+        Log.d(TAG, "onPause()")
+        super.onPause()
+        application.observers.remove(this)
+    }
+
+    override fun onServiceStatusUpdate(status: ServiceStatus) {
+        binding.status.text = when (status) {
+            is ServiceStatus.Stopped -> getString(R.string.turned_off)
+            is ServiceStatus.Running -> {
+                if (status.remainingSeconds == null) {
+                    getString(R.string.turned_on)
+                } else {
+                    getString(R.string.turned_on_remaining, status.remainingSeconds.toFormattedTime())
+                }
+            }
+        }
     }
 
     private fun requestNotificationPermissionIfRequired() {

@@ -24,15 +24,15 @@
                 tools:ignore="ContentDescription" />
 
         <TextView
-                android:id="@+id/app_name"
+                android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:gravity="center"
-                android:text="@string/app_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                tools:text="Running: 4:49 remaining"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
         <TextView
                 android:id="@+id/hint1"

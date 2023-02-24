@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Kawa</string>
-    <string name="turned_on">Włączono Kawę</string>
-    <string name="turned_off">Wyłączono Kawę</string>
     <string name="toggle_coffee">Przełącz Kawę</string>
     <!-- MainActivity -->
     <string name="hint_1">Ta aplikacja dodaje kafelek w panelu szybkich ustawień (w miejscu, gdzie znajdują się przełączniki dla Wi-Fi, Bluetooth itp.), który umożliwia ciągłe pobudzanie ekranu bez zmieniania ustawień urządzenia.</string>

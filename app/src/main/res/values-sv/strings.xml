@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Kaffe</string>
-    <string name="turned_on">Kaffe påslagen</string>
-    <string name="turned_off">Kaffe avslagen</string>
     <string name="toggle_coffee">Växla Kaffe</string>
     <!-- MainActivity -->
     <string name="hint_1">Denna applikation ger en bricka i snabbinställningarna (platsen som håller växlarna för t.ex. Wi-Fi och Bluetooth) som låter dig hålla skärmen vaken utan att behöva ändra enhetsinställningarna.</string>

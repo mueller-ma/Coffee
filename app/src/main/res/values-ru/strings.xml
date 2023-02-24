@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
-    <string name="turned_on">Coffee включен</string>
-    <string name="turned_off">Coffee отключен</string>
     <string name="toggle_coffee">Переключить Coffee</string>
     <!-- MainActivity -->
     <string name="hint_1">Это приложение предоставляет плитку в быстрых настройках (место, где находятся переключатели, например, Wi-Fi и Bluetooth), которая позволяет поддерживать дисплей в спящем режиме без необходимости изменения настроек устройства.</string>

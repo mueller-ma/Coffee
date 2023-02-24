@@ -3,15 +3,40 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
-    <string name="toggle_coffee">Ativar/Desativar Coffee</string>
+    <string name="app_name">Café</string>
+    <string name="turned_on">Café ligado</string>
+    <string name="turned_off">Café desligado</string>
+    <string name="toggle_coffee">Ativar/Desativar Café</string>
     <!-- MainActivity -->
-    <string name="hint_1">Este aplicativo fornece um bloco nas configurações rápidas (o menu com os interruptores de, por exemplo, Wi-Fi e Bluetooth) que permite que você mantenha a tela ativa sem ter que alterar as configurações do dispositivo.</string>
-    <string name="hint_2">O Coffee pode ser interrompido tocando no bloco ou na notificação ou desligando a tela manualmente.</string>
+    <string name="hint_1">Esta aplicação fornece um bloco nas definições rápidas (o menu com os blocos de, por exemplo, Wi-Fi e Bluetooth) que permite que manter o ecrã ativo sem ter que alterar as configurações do dispositivo.</string>
+    <string name="hint_2">O Café pode ser interrompido ao tocar no bloco ou na notificação ou a desligar o ecrã manualmente.</string>
     <string name="add_toggle_to_home">Adicionar botão à tela inicial</string>
-    <string name="add_toggle_to_home_success">Fixado na tela inicial</string>
-    <string name="add_toggle_to_home_no_success">Erro ao fixar na tela inicial</string>
+    <string name="add_toggle_to_home_success">Fixado no ecrã inicial</string>
+    <string name="add_toggle_to_home_no_success">Erro ao fixar no ecrã inicial</string>
+    <string name="notification_permission">A permissão para mostrar notificações é obrigatória</string>
+    <string name="grant">Permitir</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Café irá manter o ecrã ligado</string>
     <string name="tap_to_turn_off">Toque para desligar</string>
+    <string name="allow_dimming_enable">Ativar redução do brilho</string>
+    <string name="allow_dimming_disable">Desativar redução do brilho</string>
+    <string name="timeout_next">Próximo tempo limite</string>
     <!-- Settings -->
+    <string name="settings">Definições</string>
+    <string name="timeout">Desligar Café após</string>
+    <string name="timeout_infinity">Sem tempo limite</string>
+    <string name="timeout_5_minutes">5 minutos</string>
+    <string name="timeout_15_minutes">10 minutos</string>
+    <string name="timeout_30_minutes">30 minutos</string>
+    <string name="timeout_60_minutes">1 hora</string>
+    <string name="timeout_120_minutes">2 horas</string>
+    <string name="allow_dimming_title">Permitir redução do brilho</string>
+    <string name="allow_dimming_summary">O brilho do ecrã será reduzido baseado no tempo limite definido pelo sistema</string>
+    <string name="alternate_mode_title">Modo alternativo</string>
+    <string name="alternate_mode_summary">Ative o modo alternativo se o Café não for capaz manter o ecrã ligado; outras funcionalidades podem não funcionar. O modo alternativo temporariamente aumentará o tempo limite para o ecrã definido pelo sistema.</string>
+    <string name="alternate_mode_permissions">Modo alternativo requer esta permissão</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Café não conseguiu definir o tempo limite anterior</string>
     <!-- About menu -->
+    <string name="about">Sobre Café</string>
+    <string name="error_no_browser_found">Nenhum navegador encontrado</string>
 </resources>

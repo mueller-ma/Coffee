@@ -3,8 +3,42 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Káva</string>
+    <string name="turned_on">Zapnuto</string>
+    <string name="turned_on_remaining">Zapnuto: %s zbývá</string>
+    <string name="turned_off">Vypnuto</string>
+    <string name="toggle_coffee">Přepnout kávu</string>
     <!-- MainActivity -->
+    <string name="hint_1">Tato aplikace poskytuje dlaždici v rychlém nastavení (místo, kde je umístěno přepínače např. Wi-Fi a Bluetooth), které umožňují udržet obrazovku vzhůru bez nutnosti měnit nastavení zařízení.</string>
+    <string name="hint_2">Kávu lze zastavit kliknutím na dlaždici nebo oznámením nebo při manuálním vypnutí obrazovky.</string>
+    <string name="add_toggle_to_home">Přidat přepínání na domovskou obrazovku</string>
+    <string name="add_toggle_to_home_success">Připnuto na domov</string>
+    <string name="add_toggle_to_home_no_success">Chyba připnutí domů</string>
+    <string name="notification_permission">Je vyžadováno oprávnění k zobrazení oznámení</string>
+    <string name="grant">Udělit</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Káva bude zapnuta</string>
+    <string name="notification_title_timeout">Káva bude udržovat displej na: %s</string>
+    <string name="tap_to_turn_off">Klepnutím vypnete</string>
+    <string name="allow_dimming_enable">Povolit stmívání</string>
+    <string name="allow_dimming_disable">Zakázat stmívání</string>
+    <string name="timeout_next">Příští časový limit</string>
     <!-- Settings -->
+    <string name="settings">Nastavení</string>
+    <string name="timeout">Zastavit kávu po</string>
+    <string name="timeout_infinity">Žádný časový limit</string>
+    <string name="timeout_5_minutes">5 minut</string>
+    <string name="timeout_15_minutes">15 minut</string>
+    <string name="timeout_30_minutes">30 minut</string>
+    <string name="timeout_60_minutes">1 hodina</string>
+    <string name="timeout_120_minutes">2 hodiny</string>
+    <string name="allow_dimming_title">Povolit stmívání obrazovky</string>
+    <string name="allow_dimming_summary">Obrazovka bude ztlumena podle časového limitu systémové obrazovky</string>
+    <string name="alternate_mode_title">Alternativní režim</string>
+    <string name="alternate_mode_summary">Zapnout alternativní režim pouze v případě, že Coffee neudržuje obrazovku; ostatní funkce nemusí fungovat. Alternativní režim dočasně zvýší časový limit systémové obrazovky.</string>
+    <string name="alternate_mode_permissions">Alternativní režim vyžaduje toto oprávnění</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Káva nemohla nastavit předchozí časový limit</string>
     <!-- About menu -->
+    <string name="about">O kávě</string>
+    <string name="error_no_browser_found">Nebyl nalezen žádný prohlížeč</string>
 </resources>

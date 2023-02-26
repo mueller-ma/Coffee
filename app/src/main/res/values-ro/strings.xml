@@ -4,8 +4,41 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Cafea</string>
+    <string name="turned_on">Activat</string>
+    <string name="turned_on_remaining">Pornit pe: %s rămase</string>
+    <string name="turned_off">Oprit</string>
+    <string name="toggle_coffee">Comută cafeaua</string>
     <!-- MainActivity -->
+    <string name="hint_1">Această aplicație oferă o iconiță în setările rapide (locul care conține comutatoarele de ex. Wi-Fi și Bluetooth) care vă permit să mențineți ecranul treaz fără să modificați setările dispozitivului.</string>
+    <string name="hint_2">Cafea poate fi oprită făcând clic pe dală sau pe notificare sau atunci când ecranul este oprit manual.</string>
+    <string name="add_toggle_to_home">Adăugați comutator pe ecranul de pornire</string>
+    <string name="add_toggle_to_home_success">Fixat acasă</string>
+    <string name="add_toggle_to_home_no_success">Eroare la fixarea la domiciliu</string>
+    <string name="notification_permission">Permisiunea de a afișa notificări este necesară</string>
+    <string name="grant">Acordă</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Cafea va păstra afișajul pe</string>
+    <string name="notification_title_timeout">Cafea va păstra afișajul pe: %s</string>
+    <string name="tap_to_turn_off">Atingeți pentru a opri</string>
+    <string name="allow_dimming_enable">Activare estompare</string>
+    <string name="allow_dimming_disable">Dezactivează estomparea</string>
+    <string name="timeout_next">Următoarea pauză</string>
     <!-- Settings -->
+    <string name="settings">Setări</string>
+    <string name="timeout">Oprește cafeaua după</string>
+    <string name="timeout_infinity">Fără timeout</string>
+    <string name="timeout_5_minutes">5 minute</string>
+    <string name="timeout_15_minutes">15 minute</string>
+    <string name="timeout_30_minutes">30 de minute</string>
+    <string name="timeout_60_minutes">1 oră</string>
+    <string name="timeout_120_minutes">2 ore</string>
+    <string name="allow_dimming_title">Permite reducerea luminozității ecranului</string>
+    <string name="allow_dimming_summary">Ecranul va fi estompat în funcție de timpul de expirare a ecranului de sistem</string>
+    <string name="alternate_mode_title">Mod alternativ</string>
+    <string name="alternate_mode_summary">Activaţi modul alternativ numai dacă Coffee nu ţine ecranul pornit; este posibil ca alte caracteristici să nu funcţioneze. Modul alternativ va crește temporar timpul de expirare a ecranului de sistem.</string>
+    <string name="alternate_mode_permissions">Modul alternativ necesită această permisiune</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Cafea nu a putut seta perioada de pauză anterioară</string>
     <!-- About menu -->
+    <string name="about">Despre cafea</string>
+    <string name="error_no_browser_found">Nici un browser găsit</string>
 </resources>

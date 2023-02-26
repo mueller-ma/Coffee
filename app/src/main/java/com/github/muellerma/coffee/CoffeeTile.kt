@@ -18,14 +18,14 @@ class CoffeeTile : TileService(), ServiceStatusObserver {
     override fun onStartListening() {
         Log.d(TAG, "onStartListening()")
         setTileState()
-        (application as CoffeeApplication).observers.add(this)
+        coffeeApp().observers.add(this)
         super.onStartListening()
     }
 
     override fun onStopListening() {
         Log.d(TAG, "onStopListening()")
         setTileState()
-        (application as CoffeeApplication).observers.remove(this)
+        coffeeApp().observers.remove(this)
         super.onStopListening()
     }
 
@@ -65,7 +65,7 @@ class CoffeeTile : TileService(), ServiceStatusObserver {
     }
 
     private fun setTileState() {
-        val currentStatus = (application as CoffeeApplication).lastStatusUpdate
+        val currentStatus = coffeeApp().lastStatusUpdate
         Log.d(TAG, "setTileState(): running = $currentStatus")
         val tile = qsTile ?: return
 

@@ -22,10 +22,7 @@
 
     <!-- Notification -->
     <string name="notification_title_no_timeout">Coffee will keep the display on</string>
-    <plurals name="notification_title_timeout">
-        <item quantity="one">Coffee will keep the display on for %d minute</item>
-        <item quantity="other">Coffee will keep the display on for %d minutes</item>
-    </plurals>
+    <string name="notification_title_timeout">Coffee will keep the display on: %s</string>
     <string name="tap_to_turn_off">Tap to turn off</string>
     <string name="allow_dimming_enable">Enable dimming</string>
     <string name="allow_dimming_disable">Disable dimming</string>

@@ -14,7 +14,7 @@ import kotlinx.coroutines.*
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 
-class ForegroundService : Service() {
+class ForegroundService : Service(), ServiceStatusObserver {
     private var wakeLock: PowerManager.WakeLock? = null
     private var timeoutJob: Job? = null
     private var screenStateListener = ScreenStateChangedReceiver()
@@ -41,10 +41,14 @@ class ForegroundService : Service() {
             }
         }
 
+        coffeeApp().apply {
+            notifyObservers(ServiceStatus.Running(null))
+            observers.add(this@ForegroundService)
+        }
+
         startWakeLockOrAlternateMode()
         startTimeoutJob()
 
-        (application as CoffeeApplication).notifyObservers(ServiceStatus.Running(null))
         if (!isScreenStateListenerRegistered) {
             val intentFilter = IntentFilter().apply {
                 addAction(Intent.ACTION_SCREEN_OFF)
@@ -75,8 +79,6 @@ class ForegroundService : Service() {
                 nm.createNotificationChannel(this)
             }
         }
-
-        (application as CoffeeApplication).notifyObservers(ServiceStatus.Running(null))
 
         val prefs = Prefs(this)
         prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsChangeListener)
@@ -134,10 +136,9 @@ class ForegroundService : Service() {
         }
         timeoutJob = CoroutineScope(Dispatchers.Main + Job()).launch {
             Log.d(TAG, "Schedule timeout for $timeout minutes")
-            val application = application as CoffeeApplication
             (timeout.minutes.inWholeSeconds downTo 0).forEach { remainingSeconds ->
                 Log.d(TAG, "Remaining seconds = $remainingSeconds")
-                application.notifyObservers(
+                coffeeApp().notifyObservers(
                     ServiceStatus.Running(remainingSeconds)
                 )
                 delay(1.seconds)
@@ -153,8 +154,7 @@ class ForegroundService : Service() {
             .setTicker(title)
             .setSmallIcon(R.drawable.ic_twotone_free_breakfast_24)
             .setOngoing(true)
-            .setShowWhen(true)
-            .setWhen(System.currentTimeMillis())
+            .setShowWhen(false)
             .setColor(ContextCompat.getColor(applicationContext, R.color.coffee_brown))
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
             .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
@@ -165,11 +165,15 @@ class ForegroundService : Service() {
             action = ACTION_STOP
         }
 
-        val timeout = prefs.timeout
-        val title = if (timeout == 0) {
-            getString(R.string.notification_title_no_timeout)
-        } else {
-            applicationContext.resources.getQuantityString(R.plurals.notification_title_timeout, timeout, timeout)
+        val title = when (val status = coffeeApp().lastStatusUpdate) {
+            is ServiceStatus.Stopped -> getString(R.string.turned_off)
+            is ServiceStatus.Running -> {
+                if (status.remainingSeconds == null) {
+                    getString(R.string.notification_title_no_timeout)
+                } else {
+                    getString(R.string.notification_title_timeout, status.remainingSeconds.toFormattedTime())
+                }
+            }
         }
 
         return getBaseNotification(title)
@@ -234,7 +238,15 @@ class ForegroundService : Service() {
             unregisterReceiver(screenStateListener)
             isScreenStateListenerRegistered = false
         }
-        (application as CoffeeApplication).notifyObservers(ServiceStatus.Stopped)
+        coffeeApp().apply {
+            observers.remove(this@ForegroundService)
+            notifyObservers(ServiceStatus.Stopped)
+        }
+    }
+
+    override fun onServiceStatusUpdate(status: ServiceStatus) {
+        val nm = getSystemService<NotificationManager>()!!
+        nm.notify(NOTIFICATION_ID, getNotification(Prefs(applicationContext)))
     }
 
     override fun onBind(p0: Intent?): IBinder? = null
@@ -256,9 +268,6 @@ class ForegroundService : Service() {
             stopWakeLockOrAlternateMode()
             startWakeLockOrAlternateMode()
             startTimeoutJob()
-
-            val nm = getSystemService<NotificationManager>()!!
-            nm.notify(NOTIFICATION_ID, getNotification(Prefs(applicationContext)))
         }
 
     }

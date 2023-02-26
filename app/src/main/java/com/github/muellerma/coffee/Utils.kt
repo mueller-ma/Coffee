@@ -1,6 +1,8 @@
 package com.github.muellerma.coffee
 
+import android.app.Activity
 import android.app.PendingIntent
+import android.app.Service
 import android.content.ActivityNotFoundException
 import android.content.ContentResolver
 import android.content.Context
@@ -99,3 +101,6 @@ fun Long.toFormattedTime(): String {
         String.format("%02d:%02d:%02d", hours, minutes, seconds)
     }
 }
+
+fun Activity.coffeeApp() = application as CoffeeApplication
+fun Service.coffeeApp() = application as CoffeeApplication

@@ -15,10 +15,6 @@
     <string name="grant">Yetki ver</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Coffee ekranı açık tutacaktır</string>
-    <plurals name="notification_title_timeout">
-        <item quantity="one">Coffee ekranı %d süre açık tutacak</item>
-        <item quantity="other">Kahve ekranı %d dakika açık tutacak</item>
-    </plurals>
     <string name="tap_to_turn_off">Kapatmak için dokunun</string>
     <string name="allow_dimming_enable">Karartmayı etkinleştir</string>
     <string name="allow_dimming_disable">Karartmayı devre dışı bırak</string>

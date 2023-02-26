@@ -4,6 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Kaffe</string>
+    <string name="turned_on">Aktiverad</string>
+    <string name="turned_on_remaining">Aktiverad på: %s kvar</string>
+    <string name="turned_off">Stäng av</string>
     <string name="toggle_coffee">Växla Kaffe</string>
     <!-- MainActivity -->
     <string name="hint_1">Denna applikation ger en bricka i snabbinställningarna (platsen som håller växlarna för t.ex. Wi-Fi och Bluetooth) som låter dig hålla skärmen vaken utan att behöva ändra enhetsinställningarna.</string>
@@ -11,8 +14,31 @@
     <string name="add_toggle_to_home">Lägg till växeln på startskärmen</string>
     <string name="add_toggle_to_home_success">Fäst på hem</string>
     <string name="add_toggle_to_home_no_success">Fel vid fästning på hem</string>
+    <string name="notification_permission">Behörighet att visa aviseringar krävs</string>
+    <string name="grant">Bevilja</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Kaffe kommer att hålla displayen på</string>
+    <string name="notification_title_timeout">Kaffe kommer att hålla displayen på: %s</string>
     <string name="tap_to_turn_off">Tryck för att slå av</string>
+    <string name="allow_dimming_enable">Aktivera ljusreglering</string>
+    <string name="allow_dimming_disable">Inaktivera ljusreglering</string>
+    <string name="timeout_next">Nästa timeout</string>
     <!-- Settings -->
+    <string name="settings">Inställningar</string>
+    <string name="timeout">Stoppa kaffe efter</string>
+    <string name="timeout_infinity">Ingen timeout</string>
+    <string name="timeout_5_minutes">5 minuter</string>
+    <string name="timeout_15_minutes">15 minuter</string>
+    <string name="timeout_30_minutes">30 minuter</string>
+    <string name="timeout_60_minutes">1 timme</string>
+    <string name="timeout_120_minutes">2 timmar</string>
+    <string name="allow_dimming_title">Tillåt ljusreglering på skärmen</string>
+    <string name="allow_dimming_summary">Skärmen kommer att sänkas baserat på systemskärmens tidsgräns</string>
+    <string name="alternate_mode_title">Alternativt läge</string>
+    <string name="alternate_mode_summary">Slå på alternativt läge endast om kaffe inte håller skärmen på; andra funktioner kanske inte fungerar. Det alternativa läget kommer tillfälligt att öka systemets skärm-timeout.</string>
+    <string name="alternate_mode_permissions">Alternativt läge kräver detta tillstånd</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Kaffe kunde inte ställa in föregående timeout</string>
     <!-- About menu -->
+    <string name="about">Om kaffe</string>
+    <string name="error_no_browser_found">Ingen webbläsare hittades</string>
 </resources>

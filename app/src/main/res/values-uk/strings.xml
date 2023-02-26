@@ -18,12 +18,6 @@
     <string name="grant">Дозволити</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Coffee не дасть дисплею згаснути</string>
-    <plurals name="notification_title_timeout">
-        <item quantity="one">Coffee триматиме дисплей увімкненим протягом %d хвилини</item>
-        <item quantity="few">Coffee триматиме дисплей увімкненим протягом %d хвилин</item>
-        <item quantity="many">Coffee триматиме дисплей увімкненим протягом %d хвилин</item>
-        <item quantity="other">Coffee триматиме дисплей увімкненим протягом %d хвилин</item>
-    </plurals>
     <string name="tap_to_turn_off">Натисніть, щоб вимкнути</string>
     <string name="allow_dimming_enable">Увімкнути затемнення</string>
     <string name="allow_dimming_disable">Вимкнути затемнення</string>

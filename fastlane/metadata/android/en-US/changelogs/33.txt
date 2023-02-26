@@ -1,0 +1,2 @@
+* Show remaining time in quick tile, notification and app
+* Update translations

@@ -4,6 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Caffè</string>
+    <string name="turned_on">Attivato</string>
+    <string name="turned_on_remaining">Attivato: %s rimanenti</string>
+    <string name="turned_off">Disattivato</string>
     <string name="toggle_coffee">Attiva/Disattiva Caffè</string>
     <!-- MainActivity -->
     <string name="hint_1">L’app può essere aggiunta nelle impostazioni rapide (ad esempio, il posto dove si trovano le icone dell\'Wi-Fi, Bluetooth, Modalità aerea) e consentirà di avere lo schermo sempre attivo senza dover modificare le impostazioni del dispositivo.</string>
@@ -15,6 +18,7 @@
     <string name="grant">Consenti</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Caffè manterrà lo schermo attivo</string>
+    <string name="notification_title_timeout">Il caffè manterrà il display su: %s</string>
     <string name="tap_to_turn_off">Tocca per spegnere</string>
     <string name="allow_dimming_enable">Abilita oscuramento</string>
     <string name="allow_dimming_disable">Disabilita oscuramento</string>

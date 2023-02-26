@@ -1,9 +1,9 @@
 Coffe giver dig mulighed for at holde skærmen vågen uden at skulle ændre enhedens indstillinger. Det kan aktiveres forskellige steder:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+* En flise i de hurtige indstillinger, det sted, der holder de skifter til f.eks. Wi-Fi og Bluetooth. Kræver Android 7 eller højere.
+* En knap i selve appen
+* En genvej på startskærmen. Det kan oprettes i appen, hvis din launcher understøtter det.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Kaffe kan indstilles som assisteret app (Enhedsindstillinger => Apps => Standard apps => Assist app) og ændrer dens tilstand, når assistenten kaldes.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Kaffe kan ikke arbejde på grund af en alt for aggressiv batteri saver, der gennemføres af nogle OEM'er (herunder Poco, Samsung og Xiaomi).
+I så fald skal du aktivere "Alternativ tilstand" i indstillingerne.

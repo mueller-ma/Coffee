@@ -4,6 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Kaffee</string>
+    <string name="turned_on">Eingeschaltet</string>
+    <string name="turned_on_remaining">Eingeschaltet: %s verbleibend</string>
+    <string name="turned_off">Ausgeschaltet</string>
     <string name="toggle_coffee">Kaffee umschalten</string>
     <!-- MainActivity -->
     <string name="hint_1">Diese App stellt in den Schnelleinstellungen (der Ort, an dem die Schalter für z.B. WLAN und Bluetooth sind) eine Kachel zur Verfügung, welche es erlaubt, den Bildschirm eingeschaltet zu lassen, ohne die Geräteeinstellungen zu ändern</string>

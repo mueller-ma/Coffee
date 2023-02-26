@@ -1,9 +1,9 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+Café permite que você mantenha a tela ligada sem precisar alterar as configurações do dispositivo. Pode ser alternado em vários lugares:
+* Um botão nas configurações rápidas, o local que mantém os atalhos por exemplo, Wi-Fi e Bluetooth. Requer Android 7 ou superior.
+* Um botão no próprio aplicativo
+* Um atalho na sua tela inicial. Ele pode ser criado no app se seu launcher o suporta.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+O café pode ser definido como aplicativo assistivo (Configurações do dispositivo => Aplicativos => Aplicativos padrão => App de assistência) e altera seu estado quando a assistência é chamada.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+O café pode não funcionar devido a um economizador de bateria excessivamente agressivo que é implementado por alguns OEMs (incluindo Poco, Samsung e Xiaomi).
+Nesse caso, por favor, ative "Modo alternativo" nas configurações.

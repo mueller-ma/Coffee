@@ -1,1 +1,1 @@
-Keep display awake
+Manter a tela ativa

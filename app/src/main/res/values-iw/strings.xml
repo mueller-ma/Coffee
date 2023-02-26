@@ -6,5 +6,7 @@
     <!-- MainActivity -->
     <!-- Notification -->
     <!-- Settings -->
+    <string name="settings">הגדרות</string>
     <!-- About menu -->
+    <string name="error_no_browser_found">לא נמצא דפדפן</string>
 </resources>

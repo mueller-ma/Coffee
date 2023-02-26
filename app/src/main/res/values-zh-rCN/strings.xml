@@ -4,6 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">咖啡 Coffee</string>
+    <string name="turned_on">已打开</string>
+    <string name="turned_on_remaining">已转到: %s</string>
+    <string name="turned_off">关闭</string>
     <string name="toggle_coffee">开关咖啡Coffee</string>
     <!-- MainActivity -->
     <string name="hint_1">此应用在快捷设置（放置着 Wi-Fi 和蓝牙等开关的地方）中提供了一个磁块，使您可以保持屏幕常亮，而无需更改设备设置</string>
@@ -15,6 +18,7 @@
     <string name="grant">授权</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
+    <string name="notification_title_timeout">咖啡将保持显示于： %s</string>
     <string name="tap_to_turn_off">点击关闭</string>
     <string name="allow_dimming_enable">允许屏幕变暗</string>
     <string name="allow_dimming_disable">不允许屏幕变暗</string>

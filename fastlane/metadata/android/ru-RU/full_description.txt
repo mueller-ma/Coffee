@@ -3,7 +3,7 @@
 * Кнопка в самом приложении
 * Ярлык на главном экране. Он может быть создан в приложении, если ваш лаунчер поддерживает его.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Coffee можно задать как помощь приложению (Device settings => Приложения => По умолчанию приложения => Помощник приложения) и изменить это состояние при вызове помощи.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Кофе может не работать из-за чрезмерно агрессивного энергосбережения, который реализован некоторыми производителями (включая Poco, Samsung и Xiaomi).
+В этом случае включите "Альтернативный режим" в настройках.

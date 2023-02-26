@@ -1,9 +1,9 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+Caffè consente di mantenere il display acceso senza dover modificare le impostazioni del dispositivo. Può essere attivata in diversi modi:
+* Nelle impostazioni rapide, con un pulsante, come per il Wi-Fi o il Bluetooth. Richiede Android 7 o versioni successive.
+* Un pulsante nell'applicazione stessa
+* Un collegamento sulla schermata principale. Può essere creato nell'applicazione, se il launcher lo supporta.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Caffè può essere impostato come app di assistenza (Impostazioni dispositivo => App => App predefinite => App di assistenza) e cambia lo stato quando viene chiamata l'assistenza.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Caffè potrebbe non funzionare a causa di un risparmio di batteria troppo aggressivo implementato da alcuni OEM (tra cui Poco, Samsung e Xiaomi).
+In questo caso abilita la "Modalità alternativa" nelle impostazioni.

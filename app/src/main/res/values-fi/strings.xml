@@ -3,8 +3,42 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Kahvi</string>
+    <string name="turned_on">Käytössä</string>
+    <string name="turned_on_remaining">Hyväksyt: %s jäljellä</string>
+    <string name="turned_off">Pois päältä</string>
+    <string name="toggle_coffee">Vaihda Kahvia</string>
     <!-- MainActivity -->
+    <string name="hint_1">Tämä sovellus tarjoaa ruudun pika-asetuksissa (paikka, jossa on asetukset esim. Wi-Fi ja Bluetooth), joiden avulla voit pitää näytön hereillä tarvitsematta muuttaa laitteen asetuksia.</string>
+    <string name="hint_2">Kahvi voidaan pysäyttää klikkaamalla laattaa tai ilmoitusta tai kun näyttö on pois päältä manuaalisesti.</string>
+    <string name="add_toggle_to_home">Lisää asetus aloitusnäyttöön</string>
+    <string name="add_toggle_to_home_success">Kiinnitetty kotiin</string>
+    <string name="add_toggle_to_home_no_success">Virhe kiinnitettäessä kotiin</string>
+    <string name="notification_permission">Oikeus näyttää ilmoitukset vaaditaan</string>
+    <string name="grant">Myönnä</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Kahvi pitää näytön päällä</string>
+    <string name="notification_title_timeout">Kahvi pitää näytön päällä: %s</string>
+    <string name="tap_to_turn_off">Poista käytöstä napauttamalla</string>
+    <string name="allow_dimming_enable">Ota himmennys käyttöön</string>
+    <string name="allow_dimming_disable">Poista himmennys käytöstä</string>
+    <string name="timeout_next">Seuraava aikakatkaisu</string>
     <!-- Settings -->
+    <string name="settings">Asetukset</string>
+    <string name="timeout">Pysäytä kahvi jälkeen</string>
+    <string name="timeout_infinity">Ei aikakatkaisu</string>
+    <string name="timeout_5_minutes">5 minuuttia</string>
+    <string name="timeout_15_minutes">15 minuuttia</string>
+    <string name="timeout_30_minutes">30 minuuttia</string>
+    <string name="timeout_60_minutes">1 tunti</string>
+    <string name="timeout_120_minutes">2 tuntia</string>
+    <string name="allow_dimming_title">Salli näytön himmennys</string>
+    <string name="allow_dimming_summary">Näytön himmennys perustuu järjestelmän näytön aikakatkaisuun</string>
+    <string name="alternate_mode_title">Vaihtoehtoinen tila</string>
+    <string name="alternate_mode_summary">Ota vaihtoehtoinen tila käyttöön vain, jos kahvi ei säilytä näyttöä; muut ominaisuudet eivät välttämättä toimi. Vaihtoehtoinen tila nostaa tilapäisesti järjestelmän näytön aikakatkaisun.</string>
+    <string name="alternate_mode_permissions">Vaihtoehtoinen tila vaatii tämän käyttöoikeuden</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Kahvi ei onnistunut asettamaan edellistä aikakatkaisua</string>
     <!-- About menu -->
+    <string name="about">Tietoja Kahvista</string>
+    <string name="error_no_browser_found">Selainta ei löytynyt</string>
 </resources>

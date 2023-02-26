@@ -4,8 +4,6 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
-    <string name="turned_on">Coffee açıldı</string>
-    <string name="turned_off">Coffee kapatıldı</string>
     <string name="toggle_coffee">Coffee\'yi Aç/Kapat</string>
     <!-- MainActivity -->
     <string name="hint_1">Bu uygulama hızlı ayarlarda (Örneğin, Wi-Fi ve Bluetooth için geçişleri tutan yer) cihaz ayarlarını değiştirmek zorunda kalmadan ekranı uyanık tutmanıza izin veren bir kutucuk sağlar.</string>
@@ -13,6 +11,8 @@
     <string name="add_toggle_to_home">Ana ekrana geçiş ekle</string>
     <string name="add_toggle_to_home_success">Ana ekrana sabitlenmiş</string>
     <string name="add_toggle_to_home_no_success">Ana ekrana sabitleme hatası</string>
+    <string name="notification_permission">Bildirimleri göstermek için izin gerekli</string>
+    <string name="grant">Yetki ver</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Coffee ekranı açık tutacaktır</string>
     <string name="tap_to_turn_off">Kapatmak için dokunun</string>

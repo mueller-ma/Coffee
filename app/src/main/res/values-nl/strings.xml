@@ -4,8 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Koffie</string>
-    <string name="turned_on">Zet Koffie aan</string>
-    <string name="turned_off">Zet Koffie uit</string>
+    <string name="turned_on">Ingeschakeld</string>
+    <string name="turned_on_remaining">Ingeschakeld op: %s resterend</string>
+    <string name="turned_off">Uitgeschakeld</string>
     <string name="toggle_coffee">Zet Koffie aan/uit</string>
     <!-- MainActivity -->
     <string name="hint_1">Deze app biedt een tegel voor de snelle instellingen (het menu met schakelaars voor o.a. wifi en bluetooth) om het scherm ingeschakeld te houden zonder daarvoor in de instellingenapp te hoeven duiken.</string>
@@ -13,8 +14,31 @@
     <string name="add_toggle_to_home">Voeg schuifje toe aan home scherm</string>
     <string name="add_toggle_to_home_success">Vastgemaakt aan home</string>
     <string name="add_toggle_to_home_no_success">Error bij vastmaken aan home</string>
+    <string name="notification_permission">Toestemming om meldingen weer te geven is vereist</string>
+    <string name="grant">Toestaan</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Koffie zal het scherm aan houden</string>
+    <string name="notification_title_timeout">Koffie zal het scherm op %s houden</string>
     <string name="tap_to_turn_off">Druk om uit te schakelen</string>
+    <string name="allow_dimming_enable">Dimmen inschakelen</string>
+    <string name="allow_dimming_disable">Dimmen uitschakelen</string>
+    <string name="timeout_next">Volgende time-out</string>
     <!-- Settings -->
+    <string name="settings">Instellingen</string>
+    <string name="timeout">Koffie stoppen na</string>
+    <string name="timeout_infinity">Geen time-out</string>
+    <string name="timeout_5_minutes">5 minuten</string>
+    <string name="timeout_15_minutes">15 minuten</string>
+    <string name="timeout_30_minutes">30 minuten</string>
+    <string name="timeout_60_minutes">1 uur</string>
+    <string name="timeout_120_minutes">2 uur</string>
+    <string name="allow_dimming_title">Schermdimmen toestaan</string>
+    <string name="allow_dimming_summary">Scherm zal dimd worden gebaseerd op de systeem scherm timeout</string>
+    <string name="alternate_mode_title">Alternatieve modus</string>
+    <string name="alternate_mode_summary">Schakel alternatieve modus alleen in als Coffee het scherm niet aanhoudt; andere functies werken mogelijk niet. De alternatieve modus zal tijdelijk de scherm time-out verhogen.</string>
+    <string name="alternate_mode_permissions">Alternatieve modus vereist deze toestemming</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Koffie kon de vorige time-out niet instellen</string>
     <!-- About menu -->
+    <string name="about">Over Koffie</string>
+    <string name="error_no_browser_found">Geen browser gevonden</string>
 </resources>

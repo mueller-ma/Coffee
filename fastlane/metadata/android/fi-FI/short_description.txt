@@ -1,1 +1,1 @@
-Keep display awake
+Pidä näyttö hereillä

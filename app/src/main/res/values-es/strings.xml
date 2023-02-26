@@ -4,8 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Café</string>
-    <string name="turned_on">Se ha activado Café</string>
-    <string name="turned_off">Se ha desactivado Café</string>
+    <string name="turned_on">Encendido</string>
+    <string name="turned_on_remaining">Activado en: %s restantes</string>
+    <string name="turned_off">Desactivado</string>
     <string name="toggle_coffee">Activar o desactivar Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Esta aplicación ofrece un mosaico en los ajustes rápidos (el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth) que le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo</string>
@@ -17,10 +18,7 @@
     <string name="grant">Permitir</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Café mantendrá encendida la pantalla</string>
-    <plurals name="notification_title_timeout">
-        <item quantity="one">Café mantendrá la pantalla encendida durante %d minuto</item>
-        <item quantity="other">Café mantendrá la pantalla encendida durante %d minutos</item>
-    </plurals>
+    <string name="notification_title_timeout">Coffee mantendrá la pantalla en: %s</string>
     <string name="tap_to_turn_off">Pulse para desactivar</string>
     <string name="allow_dimming_enable">Activar atenuación</string>
     <string name="allow_dimming_disable">Desactivar atenuación</string>

@@ -4,8 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Kaffee</string>
-    <string name="turned_on">Kaffee eingeschaltet</string>
-    <string name="turned_off">Kaffee ausgeschaltet</string>
+    <string name="turned_on">Eingeschaltet</string>
+    <string name="turned_on_remaining">Eingeschaltet: %s verbleibend</string>
+    <string name="turned_off">Ausgeschaltet</string>
     <string name="toggle_coffee">Kaffee umschalten</string>
     <!-- MainActivity -->
     <string name="hint_1">Diese App stellt in den Schnelleinstellungen (der Ort, an dem die Schalter für z.B. WLAN und Bluetooth sind) eine Kachel zur Verfügung, welche es erlaubt, den Bildschirm eingeschaltet zu lassen, ohne die Geräteeinstellungen zu ändern</string>
@@ -17,10 +18,7 @@
     <string name="grant">Erlauben</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Kaffee lässt den Bildschirm eingeschaltet</string>
-    <plurals name="notification_title_timeout">
-        <item quantity="one">Kaffee lässt den Bildschirm eingeschaltet für %d Minute</item>
-        <item quantity="other">Kaffee lässt den Bildschirm eingeschaltet für %d Minuten</item>
-    </plurals>
+    <string name="notification_title_timeout">Kaffee lässt den Bildschirm eingeschaltet: %s</string>
     <string name="tap_to_turn_off">Tippen zum Ausschalten</string>
     <string name="allow_dimming_enable">Dimmen aktivieren</string>
     <string name="allow_dimming_disable">Dimmen deaktivieren</string>

@@ -4,8 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Kawa</string>
-    <string name="turned_on">Włączono Kawę</string>
-    <string name="turned_off">Wyłączono Kawę</string>
+    <string name="turned_on">Włączony</string>
+    <string name="turned_on_remaining">Włączono: pozostało %s</string>
+    <string name="turned_off">Wyłączony</string>
     <string name="toggle_coffee">Przełącz Kawę</string>
     <!-- MainActivity -->
     <string name="hint_1">Ta aplikacja dodaje kafelek w panelu szybkich ustawień (w miejscu, gdzie znajdują się przełączniki dla Wi-Fi, Bluetooth itp.), który umożliwia ciągłe pobudzanie ekranu bez zmieniania ustawień urządzenia.</string>
@@ -13,18 +14,31 @@
     <string name="add_toggle_to_home">Dodaj przełącznik do ekranu głównego</string>
     <string name="add_toggle_to_home_success">Przypięto do ekranu głównego</string>
     <string name="add_toggle_to_home_no_success">Błąd przypinania</string>
+    <string name="notification_permission">Wymagane jest pozwolenie na wyświetlanie powiadomień</string>
+    <string name="grant">Przyznanie</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Kawa zapobiegnie wygaszeniu ekranu</string>
+    <string name="notification_title_timeout">Kawa utrzyma wyświetlacz na: %s</string>
     <string name="tap_to_turn_off">Naciśnij, aby wyłączyć</string>
     <string name="allow_dimming_enable">Włącz przyciemnianie</string>
     <string name="allow_dimming_disable">Wyłącz przyciemnianie</string>
+    <string name="timeout_next">Następny limit czasu</string>
     <!-- Settings -->
+    <string name="settings">Ustawienia</string>
     <string name="timeout">Zatrzymaj działanie aplikacji po</string>
+    <string name="timeout_infinity">Brak limitu czasu</string>
     <string name="timeout_5_minutes">5 minutach</string>
+    <string name="timeout_15_minutes">15 minutach</string>
+    <string name="timeout_30_minutes">30 minutach</string>
     <string name="timeout_60_minutes">1 godzinie</string>
     <string name="timeout_120_minutes">2 godzinach</string>
     <string name="allow_dimming_title">Zezwól na przyciemnianie ekranu</string>
     <string name="allow_dimming_summary">Ekran zostanie przyciemniony na podstawie czasu wygaszania ekranu ustawionego w systemie</string>
+    <string name="alternate_mode_title">Tryb alternatywny</string>
     <string name="alternate_mode_summary">Włącz tryb alternatywny tylko wtedy, gdy aplikacja nie pozostawia ekranu włączonym; inne funkcje mogą nie działać. Tryb alternatywny tymczasowo zwiększy czas wygaszania ekranu w systemie.</string>
+    <string name="alternate_mode_permissions">Tryb alternatywny wymaga tego uprawnienia</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Kawa nie mogła ustawić poprzedniego limitu czasu</string>
     <!-- About menu -->
+    <string name="about">O kawie</string>
+    <string name="error_no_browser_found">Nie znaleziono przeglądarki</string>
 </resources>

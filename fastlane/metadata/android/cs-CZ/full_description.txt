@@ -1,9 +1,9 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+Káva umožňuje udržet obrazovku vzhůru, aniž byste museli měnit nastavení zařízení. Lze ji přepínat na různých místech:
+* Dlaždice v rychlém nastavení, místo, které drží přepínače např. pro Wi-Fi a Bluetooth. Vyžaduje Android 7 nebo vyšší.
+* Tlačítko v samotné aplikaci
+* Zkratka na domovské obrazovce. Může být vytvořena v aplikaci, pokud ji váš spouštěč podporuje.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Káva může být nastavena jako asistenční aplikace (Nastavení zařízení => Aplikace => Výchozí aplikace => Asistenční aplikace) a změní stav pomoci, pokud je volána.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Káva nemusí fungovat kvůli příliš agresivnímu spořiči baterií, který je implementován některými výrobci originálního vybavení (včetně Poco, Samsung a Siaomi).
+V takovém případě povolte v nastavení "Alternativní režim".

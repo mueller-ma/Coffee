@@ -1,9 +1,9 @@
 Koffie zorgt ervoor dat jouw scherm aan blijft zonder dat de apparaatinstellingen veranderd hoeven te worden. Het kan aangezet worden op verschillende plekken:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Dit vereist Android 7 of hoger.
+* Een tegel in de snelle instellingen, de plek waar de schakelaar wordt vastgehouden voor bijvoorbeeld Wi-Fi en Bluetooth. Dit vereist Android 7 of hoger.
 * Een knop in de app zelf
 * Een snelkoppeling op jouw home scherm. Het kan in de app gemaakt worden, mits jouw laucher dit ondersteunt.
 
 Koffie kan worden ingesteld als ondersteunende app (Apparaatinstellingen => Apps => Standaard apps => Ondersteunende app) en veranderd zijn status wanneer dit benodigd is.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Koffie werkt mogelijk niet vanwege een te agressieve batterijbesparing die is geïmplementeerd door sommige OEM's (waaronder Poco, Samsung en Xiaomi).
+Schakel in dat geval "Alternatieve modus" in bij de instellingen.

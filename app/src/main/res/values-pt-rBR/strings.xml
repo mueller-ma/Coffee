@@ -4,8 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
-    <string name="turned_on">Café ligado</string>
-    <string name="turned_off">Café desligado</string>
+    <string name="turned_on">Ativado em</string>
+    <string name="turned_on_remaining">Ativado em: %s restante</string>
+    <string name="turned_off">Desativado</string>
     <string name="toggle_coffee">Lig./Deslig. Café</string>
     <!-- MainActivity -->
     <string name="hint_1">Este aplicativo fornece um botão nas configurações rápidas (onde ficam os botões para o Wi-Fi e o Bluetooth, por exemplo) que permite que você deixe a tela ligada sem precisar alterar as configurações do dispositivo.</string>
@@ -17,6 +18,7 @@
     <string name="grant">Conceder</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Café manterá a tela ligada</string>
+    <string name="notification_title_timeout">Café manterá a exibição: %s</string>
     <string name="tap_to_turn_off">Toque para desativar</string>
     <string name="allow_dimming_enable">Ativar redução do brilho</string>
     <string name="allow_dimming_disable">Desativar redução do brilho</string>

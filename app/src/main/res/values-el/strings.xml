@@ -3,8 +3,42 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Καφές</string>
+    <string name="turned_on">Ενεργοποιήθηκε</string>
+    <string name="turned_on_remaining">Ενεργοποίησε στις: %s απομένουν</string>
+    <string name="turned_off">Απενεργοποίηση</string>
+    <string name="toggle_coffee">Εναλλαγή Καφέ</string>
     <!-- MainActivity -->
+    <string name="hint_1">Αυτή η εφαρμογή παρέχει ένα πλακίδιο στις γρήγορες ρυθμίσεις (το μέρος που κρατά τις εναλλαγές για π.χ. Wi-Fi και Bluetooth) που σας επιτρέπει να διατηρήσετε την οθόνη ενεργή χωρίς να χρειάζεται να αλλάξετε τις ρυθμίσεις της συσκευής.</string>
+    <string name="hint_2">Ο καφές μπορεί να σταματήσει κάνοντας κλικ στο πλακίδιο ή στην ειδοποίηση ή όταν η οθόνη είναι απενεργοποιημένη χειροκίνητα.</string>
+    <string name="add_toggle_to_home">Προσθήκη εναλλαγής στην αρχική οθόνη</string>
+    <string name="add_toggle_to_home_success">Καρφιτσωμένο στο σπίτι</string>
+    <string name="add_toggle_to_home_no_success">Σφάλμα καρφιτσώματος στην αρχική</string>
+    <string name="notification_permission">Απαιτείται άδεια για εμφάνιση ειδοποιήσεων</string>
+    <string name="grant">Παραχώρηση</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Ο καφές θα κρατήσει την οθόνη ενεργή</string>
+    <string name="notification_title_timeout">Ο καφές θα κρατήσει την οθόνη στο: %s</string>
+    <string name="tap_to_turn_off">Πατήστε για απενεργοποίηση</string>
+    <string name="allow_dimming_enable">Ενεργοποίηση dimming</string>
+    <string name="allow_dimming_disable">Απενεργοποίηση dimming</string>
+    <string name="timeout_next">Επόμενο χρονικό όριο</string>
     <!-- Settings -->
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="timeout">Σταματήστε τον καφέ μετά</string>
+    <string name="timeout_infinity">Χωρίς χρονικό όριο</string>
+    <string name="timeout_5_minutes">5 λεπτά</string>
+    <string name="timeout_15_minutes">15 λεπτά</string>
+    <string name="timeout_30_minutes">30 λεπτά</string>
+    <string name="timeout_60_minutes">1 ώρα</string>
+    <string name="timeout_120_minutes">2 ώρες</string>
+    <string name="allow_dimming_title">Να επιτρέπεται η μείωση φωτεινότητας οθόνης</string>
+    <string name="allow_dimming_summary">Η οθόνη θα γίνει αμυδρή με βάση το χρονικό όριο της οθόνης συστήματος</string>
+    <string name="alternate_mode_title">Εναλλακτική λειτουργία</string>
+    <string name="alternate_mode_summary">Ενεργοποιήστε την εναλλακτική λειτουργία μόνο αν ο καφές δεν κρατάει την οθόνη; άλλες λειτουργίες μπορεί να μην λειτουργούν. Η εναλλακτική λειτουργία θα αυξήσει προσωρινά το χρονικό όριο οθόνης του συστήματος.</string>
+    <string name="alternate_mode_permissions">Η λειτουργία εναλλακτικής λειτουργίας απαιτεί αυτό το δικαίωμα</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Ο καφές δεν μπόρεσε να ορίσει το προηγούμενο χρονικό όριο</string>
     <!-- About menu -->
+    <string name="about">Σχετικά Με Καφές</string>
+    <string name="error_no_browser_found">Δεν βρέθηκε πρόγραμμα περιήγησης</string>
 </resources>

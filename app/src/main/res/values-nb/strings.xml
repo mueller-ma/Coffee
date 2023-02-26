@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Translation instructions can be found in the Readme -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
+    <!-- Feel free to actually translate the title -->
+    <string name="app_name">Kaffe</string>
+    <string name="turned_on">Skrudd på</string>
+    <string name="turned_on_remaining">Slått på: %s gjenstår</string>
+    <string name="turned_off">Skrudd av</string>
+    <string name="toggle_coffee">Veksle Kaffe</string>
+    <!-- MainActivity -->
+    <string name="hint_1">Denne appen gir en flis i hurtiginnstillingene (stedet som holder vektene for eksempel Wi-Fi og Bluetooth) som lar deg holde skjermen våken uten å endre enhetens innstillinger.</string>
+    <string name="hint_2">Kaffe kan stanses ved å klikke på flisen, varslene eller når skjermen er slått av manuelt.</string>
+    <string name="add_toggle_to_home">Legg til veksling til startskjerm</string>
+    <string name="add_toggle_to_home_success">Festet til hjemme</string>
+    <string name="add_toggle_to_home_no_success">Feil ved knytting til hjemme</string>
+    <string name="notification_permission">Tillatelse til å vise varslinger er påkrevd</string>
+    <string name="grant">Tillat</string>
+    <!-- Notification -->
+    <string name="notification_title_no_timeout">Kaffe vil holde skjermen på</string>
+    <string name="notification_title_timeout">Kaffe vil beholde skjermen på: %s</string>
+    <string name="tap_to_turn_off">Trykk for å skru av</string>
+    <string name="allow_dimming_enable">Aktiver dimming</string>
+    <string name="allow_dimming_disable">Deaktiver dimming</string>
+    <string name="timeout_next">Neste tidsavbrudd</string>
+    <!-- Settings -->
+    <string name="settings">Innstillinger</string>
+    <string name="timeout">Stopp Kaffe etter</string>
+    <string name="timeout_infinity">Ingen tidsavbrudd</string>
+    <string name="timeout_5_minutes">5 minutter</string>
+    <string name="timeout_15_minutes">15 minutter</string>
+    <string name="timeout_30_minutes">30 minutter</string>
+    <string name="timeout_60_minutes">1 time</string>
+    <string name="timeout_120_minutes">2 timer</string>
+    <string name="allow_dimming_title">Tillat skjermdimming</string>
+    <string name="allow_dimming_summary">Skjermen vil bli dimmet basert på systemets tidsavbrudd</string>
+    <string name="alternate_mode_title">Alternativ modus</string>
+    <string name="alternate_mode_summary">Slå på alternativ modus bare hvis Kaffe ikke holder skjermen på; det kan hende at andre funksjoner ikke fungerer. Alternativt vil øke systemets skjermtid midlertidig.</string>
+    <string name="alternate_mode_permissions">Alternativ modus krever denne tillatelsen</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Kaffe kunne ikke angi forrige tidsavbrudd</string>
+    <!-- About menu -->
+    <string name="about">Om Kaffe</string>
+    <string name="error_no_browser_found">Ingen nettleser funnet</string>
+</resources>

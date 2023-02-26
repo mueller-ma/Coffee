@@ -1,9 +1,9 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+Ο καφές σας επιτρέπει να διατηρήσετε την οθόνη ενεργή χωρίς να χρειάζεται να αλλάξετε τις ρυθμίσεις της συσκευής. Μπορεί να toggled σε διάφορα σημεία:
+* Ένα πλακίδιο στις γρήγορες ρυθμίσεις, το μέρος που συγκρατεί τις εναλλαγές για π.χ. Wi-Fi και Bluetooth. Απαιτεί Android 7 ή νεότερη έκδοση.
+* Ένα κουμπί στην ίδια την εφαρμογή
+* Μια συντόμευση στην αρχική σας οθόνη. Μπορεί να δημιουργηθεί στην εφαρμογή, αν το υποστηρίξει ο εκκινητής.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Ο καφές μπορεί να οριστεί ως βοηθητική εφαρμογή (Ρυθμίσεις συσκευής => Εφαρμογές => Προεπιλεγμένες εφαρμογές => Βοηθήστε την εφαρμογή) και αλλάζει την κατάσταση όταν καλείται βοήθεια.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
-In that case please enable "Alternate mode" in the settings.
+Ο καφές μπορεί να μην λειτουργεί λόγω μιας υπερβολικά επιθετικής εξοικονόμησης μπαταρίας που εφαρμόζεται από κάποια OEMs (συμπεριλαμβανομένων των Poco, Samsung και Xiaomi).
+Σε αυτή την περίπτωση, παρακαλώ ενεργοποιήστε την "Εναλλακτική λειτουργία" στις ρυθμίσεις.

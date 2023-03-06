@@ -5,13 +5,27 @@ import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 
-class Prefs(context: Context) {
+class Prefs(private val context: Context) {
     var sharedPrefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         private set
 
     var timeout: Int
         get() = sharedPrefs.getString("timeout", "0")?.toInt() ?: 0
         set(value) = sharedPrefs.edit { putString("timeout", value.toString()) }
+
+    val nextTimeout: Int
+        get() {
+            val allTimeouts = context.resources.getStringArray(R.array.timeout_values)
+            val currentIndex = allTimeouts.indexOf(timeout.toString())
+            val nextIndex = (currentIndex + 1).mod(allTimeouts.size)
+            return allTimeouts[nextIndex].toIntOrNull() ?: 0
+        }
+
+    val firstTimeout: Int
+        get() {
+            val allTimeouts = context.resources.getStringArray(R.array.timeout_values)
+            return allTimeouts[1].toIntOrNull() ?: 0
+        }
 
     var allowDimming: Boolean
         get() = sharedPrefs.getBoolean("allow_dimming", false)

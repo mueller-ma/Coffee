@@ -23,6 +23,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
+        val prefs = Prefs(applicationContext)
         when (intent?.action) {
             ACTION_STOP -> {
                 Log.d(TAG, "Received stop action")
@@ -31,13 +32,11 @@ class ForegroundService : Service(), ServiceStatusObserver {
             }
             ACTION_CHANGE_PREF_TIMEOUT -> {
                 Log.d(TAG, "Change timeout")
-                Prefs(applicationContext).timeout =
-                    intent.getStringExtra(EXTRA_CHANGE_PREF_VALUE)?.toIntOrNull() ?: 0
+                prefs.timeout = prefs.nextTimeout
             }
             ACTION_CHANGE_PREF_ALLOW_DIMMING -> {
                 Log.d(TAG, "Change allow dimming")
-                Prefs(applicationContext).allowDimming =
-                    intent.getBooleanExtra(EXTRA_CHANGE_PREF_VALUE, false)
+                prefs.allowDimming = !prefs.allowDimming
             }
         }
 
@@ -177,23 +176,16 @@ class ForegroundService : Service(), ServiceStatusObserver {
         return getBaseNotification(title)
             .setContentText(getString(R.string.tap_to_turn_off))
             .setContentIntent(getPendingIntentForService(stopIntent, PendingIntent_Immutable, 0))
-            .addAction(getTimeoutAction(prefs))
+            .addAction(getTimeoutAction())
             .addAction(getDimmingAction(prefs))
             .setPublicVersion(getBaseNotification(title).build())
             .build()
     }
 
-    private fun getTimeoutAction(prefs: Prefs): NotificationCompat.Action {
+    private fun getTimeoutAction(): NotificationCompat.Action {
         Log.d(TAG, "getTimeoutAction()")
         val intent = Intent(this, ForegroundService::class.java).apply {
             action = ACTION_CHANGE_PREF_TIMEOUT
-
-            val allTimeouts = applicationContext.resources.getStringArray(R.array.timeout_values)
-            val currentIndex = allTimeouts.indexOf(prefs.timeout.toString())
-            val nextIndex = (currentIndex + 1).mod(allTimeouts.size)
-            val nextTimeout = allTimeouts[nextIndex]
-
-            putExtra(EXTRA_CHANGE_PREF_VALUE, nextTimeout)
         }
         return NotificationCompat.Action(
             R.drawable.ic_baseline_access_time_24,
@@ -205,7 +197,6 @@ class ForegroundService : Service(), ServiceStatusObserver {
     private fun getDimmingAction(prefs: Prefs): NotificationCompat.Action {
         val intent = Intent(this, ForegroundService::class.java).apply {
             action = ACTION_CHANGE_PREF_ALLOW_DIMMING
-            putExtra(EXTRA_CHANGE_PREF_VALUE, !prefs.allowDimming)
         }
         val title = if (prefs.allowDimming) R.string.allow_dimming_disable else R.string.allow_dimming_enable
         return NotificationCompat.Action(
@@ -278,9 +269,8 @@ class ForegroundService : Service(), ServiceStatusObserver {
     companion object {
         private val TAG = ForegroundService::class.java.simpleName
         private const val ACTION_STOP = "stop_action"
-        private const val ACTION_CHANGE_PREF_TIMEOUT = "change_pref_timeout"
+        const val ACTION_CHANGE_PREF_TIMEOUT = "change_pref_timeout"
         private const val ACTION_CHANGE_PREF_ALLOW_DIMMING = "change_pref_dimming"
-        private const val EXTRA_CHANGE_PREF_VALUE = "change_pref_value"
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 
@@ -313,5 +303,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
             STOP,
             TOGGLE
         }
+
+
     }
 }

@@ -41,10 +41,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
             }
         }
 
-        coffeeApp().apply {
-            observers.add(this@ForegroundService)
-            notifyObservers(ServiceStatus.Running(null))
-        }
+        coffeeApp().observers.add(this@ForegroundService)
 
         startWakeLockOrAlternateMode()
         startTimeoutJob()
@@ -132,6 +129,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
         val timeout = prefs.timeout
         if (timeout == 0) {
             Log.d(TAG, "No timeout set")
+            coffeeApp().notifyObservers(ServiceStatus.Running(null))
             return
         }
         timeoutJob = CoroutineScope(Dispatchers.Main + Job()).launch {

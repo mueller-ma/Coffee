@@ -42,8 +42,8 @@ class ForegroundService : Service(), ServiceStatusObserver {
         }
 
         coffeeApp().apply {
-            notifyObservers(ServiceStatus.Running(null))
             observers.add(this@ForegroundService)
+            notifyObservers(ServiceStatus.Running(null))
         }
 
         startWakeLockOrAlternateMode()
@@ -83,7 +83,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
         val prefs = Prefs(this)
         prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsChangeListener)
 
-        startForeground(NOTIFICATION_ID, getNotification(prefs))
+        startForeground(NOTIFICATION_ID, getBaseNotification(getString(R.string.app_name)).build())
     }
 
     @SuppressLint("WakelockTimeout")
@@ -160,13 +160,13 @@ class ForegroundService : Service(), ServiceStatusObserver {
             .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
     }
 
-    private fun getNotification(prefs: Prefs): Notification {
+    private fun getRunningNotification(prefs: Prefs): Notification? {
         val stopIntent = Intent(this, ForegroundService::class.java).apply {
             action = ACTION_STOP
         }
 
         val title = when (val status = coffeeApp().lastStatusUpdate) {
-            is ServiceStatus.Stopped -> getString(R.string.turned_off)
+            is ServiceStatus.Stopped -> return null
             is ServiceStatus.Running -> {
                 if (status.remainingSeconds == null) {
                     getString(R.string.notification_title_no_timeout)
@@ -246,7 +246,12 @@ class ForegroundService : Service(), ServiceStatusObserver {
 
     override fun onServiceStatusUpdate(status: ServiceStatus) {
         val nm = getSystemService<NotificationManager>()!!
-        nm.notify(NOTIFICATION_ID, getNotification(Prefs(applicationContext)))
+        val notification = getRunningNotification(Prefs(applicationContext))
+        if (notification == null) {
+            nm.cancel(NOTIFICATION_ID)
+        } else {
+            nm.notify(NOTIFICATION_ID, notification)
+        }
     }
 
     override fun onBind(p0: Intent?): IBinder? = null

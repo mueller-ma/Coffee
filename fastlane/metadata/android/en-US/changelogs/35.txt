@@ -1,0 +1,1 @@
+Add quick tile to change timeout. You will have to re-add the existing tile.

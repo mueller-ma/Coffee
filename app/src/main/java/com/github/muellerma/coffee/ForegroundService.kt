@@ -275,7 +275,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 
         fun changeState(context: Context, newState: STATE, showToast: Boolean) {
-            Log.d(TAG, "startOrStop($newState)")
+            Log.d(TAG, "changeState($newState)")
             val start = when (newState) {
                 STATE.START -> true
                 STATE.STOP -> false
@@ -303,7 +303,5 @@ class ForegroundService : Service(), ServiceStatusObserver {
             STOP,
             TOGGLE
         }
-
-
     }
 }

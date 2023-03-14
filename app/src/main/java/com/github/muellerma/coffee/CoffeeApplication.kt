@@ -6,6 +6,7 @@ import androidx.preference.PreferenceManager
 import com.github.muellerma.coffee.tiles.TimeoutTile
 import com.github.muellerma.coffee.tiles.ToggleTile
 import com.google.android.material.color.DynamicColors
+import kotlin.time.Duration
 
 class CoffeeApplication : Application() {
     var observers = mutableListOf<ServiceStatusObserver>()
@@ -36,8 +37,8 @@ interface ServiceStatusObserver {
 }
 
 sealed class ServiceStatus {
-    class Running(val remainingSeconds: Long?) : ServiceStatus() {
-        override fun toString() = "${Running::class.java.simpleName}($remainingSeconds)"
+    class Running(val remaining: Duration?) : ServiceStatus() {
+        override fun toString() = "${Running::class.java.simpleName}(${remaining?.inWholeSeconds})"
     }
     object Stopped : ServiceStatus() {
         override fun toString(): String = Stopped::class.java.simpleName

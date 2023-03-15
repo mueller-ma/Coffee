@@ -1,0 +1,43 @@
+name: Deploy APK on GitHub
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: 11
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1.0.6
+
+      - name: Build APK
+        run: bash gradlew app:assembleRelease
+
+      - uses: r0adkll/sign-android-release@v1.0.4
+        name: Sign APK
+        id: sign_app
+        with:
+          releaseDirectory: app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: "key0"
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - uses: svenstaro/upload-release-action@v2
+        name: Upload APK
+        with:
+          file: ${{steps.sign_app.outputs.signedReleaseFile}}
+          asset_name: coffee.apk
+          tag: ${{ github.ref }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}

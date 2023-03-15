@@ -11,7 +11,7 @@ This Android app allows you to keep the display awake without having to change t
 
 Coffee can be set as assist app (Device settings => `Apps` => `Default apps` => `Assist app`) and changes it's state when assist is called.
 
-[<img src="assets/get-it-on-fdroid.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/de/packages/com.github.muellerma.coffee/)
+[<img alt="Get it on F-Droid" height="80" src="https://raw.githubusercontent.com/mueller-ma/android-common/main/assets/get-it-on-fdroid.png"/>](https://f-droid.org/de/packages/com.github.muellerma.coffee/)[<img alt="Download from GitHub" height="80" src="https://raw.githubusercontent.com/mueller-ma/android-common/main/assets/direct-apk-download.png"/>](https://github.com/mueller-ma/Coffee/releases)
 
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Screenshot" width=200px>
 

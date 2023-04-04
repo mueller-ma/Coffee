@@ -32,10 +32,10 @@ abstract class AbstractTile : TileService() {
         val (tileState, tileSubtitle) = when (currentStatus) {
             is ServiceStatus.Stopped -> Pair(Tile.STATE_INACTIVE, "")
             is ServiceStatus.Running -> {
-                if (currentStatus.remainingSeconds == null) {
+                if (currentStatus.remaining == null) {
                     Pair(Tile.STATE_ACTIVE, "")
                 } else {
-                    Pair(Tile.STATE_ACTIVE, currentStatus.remainingSeconds.toFormattedTime())
+                    Pair(Tile.STATE_ACTIVE, currentStatus.remaining.toFormattedTime())
                 }
             }
         }

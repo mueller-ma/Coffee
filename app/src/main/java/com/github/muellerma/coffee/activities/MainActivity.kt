@@ -85,10 +85,10 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
         binding.status.text = when (status) {
             is ServiceStatus.Stopped -> getString(R.string.turned_off)
             is ServiceStatus.Running -> {
-                if (status.remainingSeconds == null) {
+                if (status.remaining == null) {
                     getString(R.string.turned_on)
                 } else {
-                    getString(R.string.turned_on_remaining, status.remainingSeconds.toFormattedTime())
+                    getString(R.string.turned_on_remaining, status.remaining.toFormattedTime())
                 }
             }
         }

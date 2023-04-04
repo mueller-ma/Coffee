@@ -136,7 +136,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
             (timeout.minutes.inWholeSeconds downTo 0).forEach { remainingSeconds ->
                 Log.d(TAG, "Remaining seconds = $remainingSeconds")
                 coffeeApp().notifyObservers(
-                    ServiceStatus.Running(remainingSeconds)
+                    ServiceStatus.Running(remainingSeconds.seconds)
                 )
                 delay(1.seconds)
             }
@@ -165,10 +165,13 @@ class ForegroundService : Service(), ServiceStatusObserver {
         val title = when (val status = coffeeApp().lastStatusUpdate) {
             is ServiceStatus.Stopped -> return null
             is ServiceStatus.Running -> {
-                if (status.remainingSeconds == null) {
+                if (status.remaining == null) {
                     getString(R.string.notification_title_no_timeout)
                 } else {
-                    getString(R.string.notification_title_timeout, status.remainingSeconds.toFormattedTime())
+                    getString(
+                        R.string.notification_title_timeout,
+                        status.remaining.toFormattedTime()
+                    )
                 }
             }
         }

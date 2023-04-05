@@ -56,7 +56,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
     }
 
     override fun onCreate() {
-        Log.d(TAG, "onCreate")
+        Log.d(TAG, "onCreate()")
         super.onCreate()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

@@ -12,6 +12,12 @@ import com.github.muellerma.coffee.toFormattedTime
 
 @RequiresApi(Build.VERSION_CODES.N)
 abstract class AbstractTile : TileService() {
+    override fun onCreate() {
+        Log.d(TAG, "onCreate()")
+        super.onCreate()
+        setTileState()
+    }
+
     override fun onStartListening() {
         Log.d(TAG, "onStartListening()")
         setTileState()

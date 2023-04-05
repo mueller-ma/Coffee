@@ -75,6 +75,17 @@
                 android:textColor="?colorOnBackground" />
 
         <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_tile"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/add_tile"
+                android:textColor="?colorOnBackground" />
+
+        <com.google.android.material.button.MaterialButton
                 android:id="@+id/settings"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent"

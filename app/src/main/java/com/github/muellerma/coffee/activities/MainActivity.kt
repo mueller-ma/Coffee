@@ -1,18 +1,25 @@
 package com.github.muellerma.coffee.activities
 
+import android.app.StatusBarManager
+import android.content.ComponentName
 import android.content.Intent
+import android.graphics.drawable.Icon
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.getSystemService
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
+import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.github.muellerma.coffee.*
 import com.github.muellerma.coffee.databinding.ActivityMainBinding
+import com.github.muellerma.coffee.tiles.ToggleTile
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.util.concurrent.Executor
 
 class MainActivity : AppCompatActivity(), ServiceStatusObserver {
     private lateinit var application: CoffeeApplication
@@ -64,6 +71,22 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
                     startActivity(this)
                 }
             }
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            binding.addTile.apply {
+                setOnClickListener {
+                    val statusBarManager = getSystemService<StatusBarManager>() ?: return@setOnClickListener
+                    statusBarManager.requestAddTileService(
+                        ComponentName(this@MainActivity, ToggleTile::class.java),
+                        getString(R.string.app_name),
+                        Icon.createWithResource(this@MainActivity, R.drawable.ic_twotone_free_breakfast_24),
+                        Executor { Log.d(TAG, "Executor") }
+                    ) { resultCode -> Log.e(TAG, "Error adding tile $resultCode") }
+                }
+            }
+        } else {
+            binding.addTile.isGone = true
         }
     }
 

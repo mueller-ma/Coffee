@@ -12,6 +12,7 @@
     <string name="hint_1">Esta aplicación ofrece un mosaico en los ajustes rápidos (el lugar donde se encuentran los interruptores para, por ejemplo, Wifi y Bluetooth) que le permite mantener la pantalla encendida sin tener que cambiar la configuración del dispositivo</string>
     <string name="hint_2">Puede detener Café pulsando el mosaico, la notificación o apagando la pantalla manualmente.</string>
     <string name="add_toggle_to_home">Agregar interruptor a la pantalla de inicio</string>
+    <string name="add_tile">Añadir mosaico</string>
     <string name="add_toggle_to_home_success">Anclado a la pantalla de inicio</string>
     <string name="add_toggle_to_home_no_success">Error al anclar a la pantalla de inicio</string>
     <string name="notification_permission">Se requiere permiso para mostrar notificaciones</string>

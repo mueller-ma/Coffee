@@ -20,7 +20,11 @@ class ToggleTile : AbstractTile() {
 
         fun requestTileStateUpdate(context: Context) {
             Log.d(TAG, "requestTileStateUpdate()")
-            requestListeningState(context, ComponentName(context, ToggleTile::class.java))
+            try {
+                requestListeningState(context, ComponentName(context, ToggleTile::class.java))
+            } catch (e: Exception) {
+                Log.e(TAG, "Error when calling requestListeningState()", e)
+            }
         }
     }
 

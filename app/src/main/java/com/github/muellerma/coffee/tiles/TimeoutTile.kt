@@ -34,7 +34,11 @@ class TimeoutTile : AbstractTile() {
 
         fun requestTileStateUpdate(context: Context) {
             Log.d(TAG, "requestTileStateUpdate()")
-            requestListeningState(context, ComponentName(context, TimeoutTile::class.java))
+            try {
+                requestListeningState(context, ComponentName(context, TimeoutTile::class.java))
+            } catch (e: Exception) {
+                Log.e(TAG, "Error when calling requestListeningState()", e)
+            }
         }
     }
 

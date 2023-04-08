@@ -12,6 +12,7 @@
     <string name="hint_1">Diese App stellt in den Schnelleinstellungen (der Ort, an dem die Schalter für z.B. WLAN und Bluetooth sind) eine Kachel zur Verfügung, welche es erlaubt, den Bildschirm eingeschaltet zu lassen, ohne die Geräteeinstellungen zu ändern</string>
     <string name="hint_2">Kaffee kann durch Tippen auf die Kachel oder die Benachrichtigung oder durch das manuelle Ausschalten des Bildschirms gestoppt werden</string>
     <string name="add_toggle_to_home">Zum Startbildschirm hinzufügen</string>
+    <string name="add_tile">Kachel hinzufügen</string>
     <string name="add_toggle_to_home_success">An Startbildschirm angepinnt</string>
     <string name="add_toggle_to_home_no_success">Fehler beim Anpinnen an Startbildschirm</string>
     <string name="notification_permission">Berechtigung zum Anzeigen von Benachrichtigungen ist erforderlich</string>

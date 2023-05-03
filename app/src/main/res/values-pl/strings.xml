@@ -12,6 +12,7 @@
     <string name="hint_1">Ta aplikacja dodaje kafelek w panelu szybkich ustawień (w miejscu, gdzie znajdują się przełączniki dla Wi-Fi, Bluetooth itp.), który umożliwia ciągłe pobudzanie ekranu bez zmieniania ustawień urządzenia.</string>
     <string name="hint_2">Kawę można zatrzymać naciskając na kafelek lub powiadomienie oraz ręcznie wyłączając ekran.</string>
     <string name="add_toggle_to_home">Dodaj przełącznik do ekranu głównego</string>
+    <string name="add_tile">Dodaj kafelek</string>
     <string name="add_toggle_to_home_success">Przypięto do ekranu głównego</string>
     <string name="add_toggle_to_home_no_success">Błąd przypinania</string>
     <string name="notification_permission">Wymagane jest pozwolenie na wyświetlanie powiadomień</string>

@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '34 19 * * 6'
 
-permissions: []
+permissions: {}
 
 jobs:
   build:

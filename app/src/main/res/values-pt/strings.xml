@@ -36,6 +36,7 @@
     <string name="allow_dimming_title">Permitir redução do brilho</string>
     <string name="allow_dimming_summary">O brilho do ecrã será reduzido baseado no tempo limite definido pelo sistema</string>
     <string name="alternate_mode_title">Modo alternativo</string>
+    <string name="alternate_mode_summary">Ligue o modo alternativo só se o Coffee não mantém o ecrã ligado; outras funcionalidades podem deixar de funcionar. O modo alternativo irá aumentar o tempo limite do sistema temporariamente.</string>
     <string name="alternate_mode_permissions">Modo alternativo requer esta permissão</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee não conseguiu definir o tempo limite anterior</string>
     <!-- About menu -->

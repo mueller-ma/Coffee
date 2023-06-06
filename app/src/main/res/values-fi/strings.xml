@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Salli näytön himmennys</string>
     <string name="allow_dimming_summary">Näytön himmennys perustuu järjestelmän näytön aikakatkaisuun</string>
     <string name="alternate_mode_title">Vaihtoehtoinen tila</string>
-    <string name="alternate_mode_summary">Ota vaihtoehtoinen tila käyttöön vain, jos kahvi ei säilytä näyttöä; muut ominaisuudet eivät välttämättä toimi. Vaihtoehtoinen tila nostaa tilapäisesti järjestelmän näytön aikakatkaisun.</string>
     <string name="alternate_mode_permissions">Vaihtoehtoinen tila vaatii tämän käyttöoikeuden</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Kahvi ei onnistunut asettamaan edellistä aikakatkaisua</string>
     <!-- About menu -->

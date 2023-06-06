@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">允许屏幕变暗</string>
     <string name="allow_dimming_summary">屏幕将会根据系统的屏幕超时时间来变暗</string>
     <string name="alternate_mode_title">备用模式</string>
-    <string name="alternate_mode_summary">仅在咖啡Coffee无法保持屏幕常亮时才需要启用备用模式；在此模式下，其他功能可能无法正常工作。备用模式通过暂时增加屏幕超时时间来保持屏幕常亮。</string>
     <string name="alternate_mode_permissions">备用模式需要此权限</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee 咖啡无法设置之前的超时时间</string>
     <!-- About menu -->

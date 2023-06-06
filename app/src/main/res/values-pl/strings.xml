@@ -36,7 +36,6 @@
     <string name="allow_dimming_title">Zezwól na przyciemnianie ekranu</string>
     <string name="allow_dimming_summary">Ekran zostanie przyciemniony na podstawie czasu wygaszania ekranu ustawionego w systemie</string>
     <string name="alternate_mode_title">Tryb alternatywny</string>
-    <string name="alternate_mode_summary">Włącz tryb alternatywny tylko wtedy, gdy aplikacja nie pozostawia ekranu włączonym; inne funkcje mogą nie działać. Tryb alternatywny tymczasowo zwiększy czas wygaszania ekranu w systemie.</string>
     <string name="alternate_mode_permissions">Tryb alternatywny wymaga tego uprawnienia</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Kawa nie mogła ustawić poprzedniego limitu czasu</string>
     <!-- About menu -->

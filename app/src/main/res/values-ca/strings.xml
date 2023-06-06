@@ -36,6 +36,7 @@
     <string name="allow_dimming_title">Permet enfosquiment de pantalla</string>
     <string name="allow_dimming_summary">La pantalla s\'enfosquirà d\'acord amb la configuració de sistema</string>
     <string name="alternate_mode_title">Alternar mode</string>
+    <string name="alternate_mode_summary">Activa el mode altern només si Cafè no manté la pantalla encesa; altres funcionalitats poden no funcionar. El mode altern incrementarà temporalment el temps d\'espera de la pantalla.</string>
     <string name="alternate_mode_permissions">El mode altern requereix aquest permís</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Cafè no ha pogut restablir el temps d\'espera anterior</string>
     <!-- About menu -->

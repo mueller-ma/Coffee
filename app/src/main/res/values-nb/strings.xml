@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Tillat skjermdimming</string>
     <string name="allow_dimming_summary">Skjermen vil bli dimmet basert på systemets tidsavbrudd</string>
     <string name="alternate_mode_title">Alternativ modus</string>
-    <string name="alternate_mode_summary">Slå på alternativ modus bare hvis Kaffe ikke holder skjermen på; det kan hende at andre funksjoner ikke fungerer. Alternativt vil øke systemets skjermtid midlertidig.</string>
     <string name="alternate_mode_permissions">Alternativ modus krever denne tillatelsen</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Kaffe kunne ikke angi forrige tidsavbrudd</string>
     <!-- About menu -->

@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Tillåt ljusreglering på skärmen</string>
     <string name="allow_dimming_summary">Skärmen kommer att sänkas baserat på systemskärmens tidsgräns</string>
     <string name="alternate_mode_title">Alternativt läge</string>
-    <string name="alternate_mode_summary">Slå på alternativt läge endast om kaffe inte håller skärmen på; andra funktioner kanske inte fungerar. Det alternativa läget kommer tillfälligt att öka systemets skärm-timeout.</string>
     <string name="alternate_mode_permissions">Alternativt läge kräver detta tillstånd</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Kaffe kunde inte ställa in föregående timeout</string>
     <!-- About menu -->

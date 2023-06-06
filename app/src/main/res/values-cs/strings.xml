@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Povolit stmívání obrazovky</string>
     <string name="allow_dimming_summary">Obrazovka bude ztlumena podle časového limitu systémové obrazovky</string>
     <string name="alternate_mode_title">Alternativní režim</string>
-    <string name="alternate_mode_summary">Zapnout alternativní režim pouze v případě, že Coffee neudržuje obrazovku; ostatní funkce nemusí fungovat. Alternativní režim dočasně zvýší časový limit systémové obrazovky.</string>
     <string name="alternate_mode_permissions">Alternativní režim vyžaduje toto oprávnění</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Káva nemohla nastavit předchozí časový limit</string>
     <!-- About menu -->

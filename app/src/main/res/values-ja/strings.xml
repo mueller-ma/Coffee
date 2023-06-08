@@ -4,9 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">コーヒー</string>
-    <string name="turned_on">オンになりました</string>
-    <string name="turned_on_remaining">ターンオン: 残り %s</string>
-    <string name="turned_off">オフにしました</string>
+    <string name="turned_on">有効</string>
+    <string name="turned_on_remaining">有効: 残り %s</string>
+    <string name="turned_off">無効</string>
     <string name="toggle_coffee">コーヒーを切り替え</string>
     <!-- MainActivity -->
     <string name="hint_1">このアプリはクイック設定（Wi-FiやBluetoothなどの切り替えボタンがある場所）に端末の設定を変えることなくディスプレイの自動消灯を一時的に無効化できるタイルを追加します。</string>
@@ -19,7 +19,7 @@
     <string name="grant">許可</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">ディスプレイが消灯しないようにしています</string>
-    <string name="notification_title_timeout">コーヒーはディスプレイを %sに保持します</string>
+    <string name="notification_title_timeout">%s の間ディスプレイが消灯しないようにしています</string>
     <string name="tap_to_turn_off">タップしてオフにする</string>
     <string name="allow_dimming_enable">調光を有効にする</string>
     <string name="allow_dimming_disable">調光を無効にする</string>

@@ -12,6 +12,7 @@
     <string name="hint_1">このアプリはクイック設定（Wi-FiやBluetoothなどの切り替えボタンがある場所）に端末の設定を変えることなくディスプレイの自動消灯を一時的に無効化できるタイルを追加します。</string>
     <string name="hint_2">コーヒーはタイルをもう一度押す、通知をタップする、手動で画面をオフにするなどで止められます。</string>
     <string name="add_toggle_to_home">ホーム画面にショートカットを追加</string>
+    <string name="add_tile">タイルを追加</string>
     <string name="add_toggle_to_home_success">ホーム画面に追加しました</string>
     <string name="add_toggle_to_home_no_success">ホーム画面に追加できませんでした</string>
     <string name="notification_permission">通知を表示する権限が必要です</string>
@@ -35,6 +36,7 @@
     <string name="allow_dimming_title">画面の調光を許可</string>
     <string name="allow_dimming_summary">画面がシステムの自動消灯の時間に基づいて暗くなることを許可します。</string>
     <string name="alternate_mode_title">代替モード</string>
+    <string name="alternate_mode_summary">コーヒーが機能していない場合のみ代替モードをオンにしてください。代替モードでは一部の機能が使えなくなります。代替モードは一時的にシステムの自動消灯設定を変更することにより画面の消灯を防止します。</string>
     <string name="alternate_mode_permissions">代替モードにはこの権限が必要です</string>
     <string name="alternate_mode_unable_to_set_old_timeout">コーヒーは自動消灯の設定を元に戻すことができませんでした</string>
     <!-- About menu -->

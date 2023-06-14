@@ -12,6 +12,7 @@
     <string name="hint_1">Ця програма надає плитку у швидких налаштуваннях (місце, де знаходяться перемикачі, наприклад, для Wi-Fi та Bluetooth), яка дозволяє тримати дисплей увімкненим без необхідності змінювати налаштування пристрою.</string>
     <string name="hint_2">Coffee можна зупинити, натиснувши на плитку або повідомлення, або при ручному вимиканні екрану.</string>
     <string name="add_toggle_to_home">Додати на головний екран</string>
+    <string name="add_tile">Додати плитку</string>
     <string name="add_toggle_to_home_success">Додано на головний екран</string>
     <string name="add_toggle_to_home_no_success">Помилка додавання на головний екран</string>
     <string name="notification_permission">Потрібен дозвіл на показ повідомлень</string>

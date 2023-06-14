@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Schermdimmen toestaan</string>
     <string name="allow_dimming_summary">Scherm zal dimd worden gebaseerd op de systeem scherm timeout</string>
     <string name="alternate_mode_title">Alternatieve modus</string>
-    <string name="alternate_mode_summary">Schakel alternatieve modus alleen in als Coffee het scherm niet aanhoudt; andere functies werken mogelijk niet. De alternatieve modus zal tijdelijk de scherm time-out verhogen.</string>
     <string name="alternate_mode_permissions">Alternatieve modus vereist deze toestemming</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Koffie kon de vorige time-out niet instellen</string>
     <!-- About menu -->

@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Tillad skærmdæmpning</string>
     <string name="allow_dimming_summary">Skærmen vil blive dæmpet baseret på systemskærmens timeout</string>
     <string name="alternate_mode_title">Alternativ tilstand</string>
-    <string name="alternate_mode_summary">Aktivér kun alternativ tilstand hvis Kaffe ikke holder skærmen på; andre funktioner virker måske ikke. Den alternative tilstand vil midlertidigt øge systemets skærm timeout.</string>
     <string name="alternate_mode_permissions">Alternativ tilstand kræver denne tilladelse</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Kaffe kunne ikke indstille forrige timeout</string>
     <!-- About menu -->

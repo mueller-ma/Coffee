@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Consenti oscuramento dello schermo</string>
     <string name="allow_dimming_summary">Lo schermo verrà oscurato in base alle impostazioni del sistema</string>
     <string name="alternate_mode_title">Modalità alternativa</string>
-    <string name="alternate_mode_summary">Attivare la \"Modalità alternativa\" solo se Caffè non dovesse tenere lo schermo acceso; le altre funzioni potrebbero non funzionare. La modalità alternativa aumenta temporaneamente il timeout nelle impostazioni del sistema.</string>
     <string name="alternate_mode_permissions">La \"Modalità alternativa\" richiede questa autorizzazione</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Caffè non è riuscito a impostare il timeout precedente</string>
     <!-- About menu -->

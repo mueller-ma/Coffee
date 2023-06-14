@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Να επιτρέπεται η μείωση φωτεινότητας οθόνης</string>
     <string name="allow_dimming_summary">Η οθόνη θα γίνει αμυδρή με βάση το χρονικό όριο της οθόνης συστήματος</string>
     <string name="alternate_mode_title">Εναλλακτική λειτουργία</string>
-    <string name="alternate_mode_summary">Ενεργοποιήστε την εναλλακτική λειτουργία μόνο αν ο καφές δεν κρατάει την οθόνη; άλλες λειτουργίες μπορεί να μην λειτουργούν. Η εναλλακτική λειτουργία θα αυξήσει προσωρινά το χρονικό όριο οθόνης του συστήματος.</string>
     <string name="alternate_mode_permissions">Η λειτουργία εναλλακτικής λειτουργίας απαιτεί αυτό το δικαίωμα</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Ο καφές δεν μπόρεσε να ορίσει το προηγούμενο χρονικό όριο</string>
     <!-- About menu -->

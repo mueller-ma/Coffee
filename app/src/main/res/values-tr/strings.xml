@@ -31,7 +31,6 @@
     <string name="allow_dimming_title">Ekran karartmaya izin ver</string>
     <string name="allow_dimming_summary">Ekran, sistem ekran zaman aşımına bağlı olarak karartılacaktır</string>
     <string name="alternate_mode_title">Alternatif mod</string>
-    <string name="alternate_mode_summary">Alternatif modu yalnızca Coffee ekranı açık tutmuyorsa açın; diğer özellikler çalışmayabilir. Alternatif mod, sistem ekranı zaman aşımını geçici olarak artıracaktır.</string>
     <string name="alternate_mode_permissions">Alternatif mod bu izni gerektirir</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee önceki zaman aşımını ayarlayamadı</string>
     <!-- About menu -->

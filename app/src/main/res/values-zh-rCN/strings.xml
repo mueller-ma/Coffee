@@ -5,20 +5,21 @@
     <!-- Feel free to actually translate the title -->
     <string name="app_name">咖啡 Coffee</string>
     <string name="turned_on">已打开</string>
-    <string name="turned_on_remaining">已转到: %s</string>
-    <string name="turned_off">关闭</string>
-    <string name="toggle_coffee">开关咖啡Coffee</string>
+    <string name="turned_on_remaining">已开启：剩余 %s</string>
+    <string name="turned_off">已关闭</string>
+    <string name="toggle_coffee">开关咖啡 Coffee</string>
     <!-- MainActivity -->
     <string name="hint_1">此应用在快捷设置（放置着 Wi-Fi 和蓝牙等开关的地方）中提供了一个磁块，使您可以保持屏幕常亮，而无需更改设备设置</string>
     <string name="hint_2">可以通过点击磁块、通知或手动关闭屏幕来停用咖啡 Coffee</string>
     <string name="add_toggle_to_home">添加开关到主屏幕</string>
+    <string name="add_tile">添加磁贴</string>
     <string name="add_toggle_to_home_success">已固定到主页</string>
     <string name="add_toggle_to_home_no_success">固定到主屏幕时出错</string>
     <string name="notification_permission">需要显示通知权限</string>
     <string name="grant">授权</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
-    <string name="notification_title_timeout">咖啡将保持显示于： %s</string>
+    <string name="notification_title_timeout">咖啡 Coffee 将保持屏幕亮起：%s</string>
     <string name="tap_to_turn_off">点击关闭</string>
     <string name="allow_dimming_enable">允许屏幕变暗</string>
     <string name="allow_dimming_disable">不允许屏幕变暗</string>
@@ -35,7 +36,7 @@
     <string name="allow_dimming_title">允许屏幕变暗</string>
     <string name="allow_dimming_summary">屏幕将会根据系统的屏幕超时时间来变暗</string>
     <string name="alternate_mode_title">备用模式</string>
-    <string name="alternate_mode_summary">仅在咖啡Coffee无法保持屏幕常亮时才需要启用备用模式；在此模式下，其他功能可能无法正常工作。备用模式通过暂时增加屏幕超时时间来保持屏幕常亮。</string>
+    <string name="alternate_mode_summary">仅在咖啡 Coffee 无法保持屏幕常亮时才需要启用备用模式；在此模式下，其他功能可能无法正常工作。备用模式通过暂时增加屏幕超时时间来保持屏幕常亮。</string>
     <string name="alternate_mode_permissions">备用模式需要此权限</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee 咖啡无法设置之前的超时时间</string>
     <!-- About menu -->

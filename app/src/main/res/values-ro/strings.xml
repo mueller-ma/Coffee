@@ -35,7 +35,6 @@
     <string name="allow_dimming_title">Permite reducerea luminozității ecranului</string>
     <string name="allow_dimming_summary">Ecranul va fi estompat în funcție de timpul de expirare a ecranului de sistem</string>
     <string name="alternate_mode_title">Mod alternativ</string>
-    <string name="alternate_mode_summary">Activaţi modul alternativ numai dacă Coffee nu ţine ecranul pornit; este posibil ca alte caracteristici să nu funcţioneze. Modul alternativ va crește temporar timpul de expirare a ecranului de sistem.</string>
     <string name="alternate_mode_permissions">Modul alternativ necesită această permisiune</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Cafea nu a putut seta perioada de pauză anterioară</string>
     <!-- About menu -->

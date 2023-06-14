@@ -35,6 +35,6 @@ class Prefs(private val context: Context) {
         get() = sharedPrefs.getBoolean("alternate_mode", false)
 
     var alternateModeOldTimeout: Int
-        get() = sharedPrefs.getInt("alternate_mode_old_timeout", 0)
+        get() = sharedPrefs.getInt("alternate_mode_old_timeout", -1)
         set(value) = sharedPrefs.edit { putInt("alternate_mode_old_timeout", value) }
 }

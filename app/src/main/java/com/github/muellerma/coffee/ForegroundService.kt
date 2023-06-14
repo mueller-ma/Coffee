@@ -87,7 +87,10 @@ class ForegroundService : Service(), ServiceStatusObserver {
         val prefs = Prefs(this)
 
         if (prefs.useAlternateMode) {
-            prefs.alternateModeOldTimeout = contentResolver.getSystemScreenTimeout()
+            val oldTimeout = contentResolver.getSystemScreenTimeout()
+            if (oldTimeout != Int.MAX_VALUE) {
+                prefs.alternateModeOldTimeout = oldTimeout
+            }
             val success = contentResolver.setSystemScreenTimeout(Int.MAX_VALUE)
             if (!success) {
                 openSystemScreenTimeoutPermissions()
@@ -115,9 +118,12 @@ class ForegroundService : Service(), ServiceStatusObserver {
         wakeLock.safeRelease()
         val prefs = Prefs(this)
         if (prefs.useAlternateMode) {
-            val success = contentResolver.setSystemScreenTimeout(prefs.alternateModeOldTimeout)
-            if (!success) {
-                showToast(R.string.alternate_mode_unable_to_set_old_timeout)
+            val oldTimeout = prefs.alternateModeOldTimeout
+            if (oldTimeout != -1 && oldTimeout != Int.MAX_VALUE) {
+                val success = contentResolver.setSystemScreenTimeout(oldTimeout)
+                if (!success) {
+                    showToast(R.string.alternate_mode_unable_to_set_old_timeout)
+                }
             }
         }
     }

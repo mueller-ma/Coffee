@@ -7,7 +7,7 @@
     <string name="turned_on">已打开</string>
     <string name="turned_on_remaining">已开启：剩余 %s</string>
     <string name="turned_off">已关闭</string>
-    <string name="toggle_coffee">开关咖啡Coffee</string>
+    <string name="toggle_coffee">开关咖啡 Coffee</string>
     <!-- MainActivity -->
     <string name="hint_1">此应用在快捷设置（放置着 Wi-Fi 和蓝牙等开关的地方）中提供了一个磁块，使您可以保持屏幕常亮，而无需更改设备设置</string>
     <string name="hint_2">可以通过点击磁块、通知或手动关闭屏幕来停用咖啡 Coffee</string>

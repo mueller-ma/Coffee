@@ -12,6 +12,7 @@
     <string name="hint_1">Cette application fournit une tuile dans les widgets (l\'endroit où se trouvent les notifications, p. ex. Wi-Fi et Bluetooth) qui vous permet de garder l\'affichage allumé sans avoir à modifier les paramètres de l\'appareil.</string>
     <string name="hint_2">Café peut être arrêté en cliquant sur le widget ou sur la notification ou encore lorsque l\'écran est éteint manuellement.</string>
     <string name="add_toggle_to_home">Ajouter un raccourci à l\'écran d\'accueil</string>
+    <string name="add_tile">Ajouter une vignette</string>
     <string name="add_toggle_to_home_success">Ajouté à l\'écran d\'accueil</string>
     <string name="add_toggle_to_home_no_success">Erreur lors de l\'ajout à l\'écran d\'accueil</string>
     <string name="notification_permission">Permission d\'afficher les notifications est requise</string>
@@ -35,6 +36,7 @@
     <string name="allow_dimming_title">Autoriser l\'assombrissement de l\'écran</string>
     <string name="allow_dimming_summary">L\'écran sera assombri en fonction du délai d\'attente de l\'écran du système</string>
     <string name="alternate_mode_title">Mode alternatif</string>
+    <string name="alternate_mode_summary">N\'activez le mode alternatif que si Café ne garde pas l\'écran allumé ; les autres fonctions peuvent ne pas fonctionner. Le mode alternatif augmente temporairement le délai de fermeture de l\'écran.</string>
     <string name="alternate_mode_permissions">Le mode alternatif requiert cette autorisation</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Café n\'a pas pu définir le délai d\'attente précédent</string>
     <!-- About menu -->

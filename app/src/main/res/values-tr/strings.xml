@@ -4,17 +4,22 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Coffee</string>
+    <string name="turned_on">Açık</string>
+    <string name="turned_on_remaining">Açık: %s kaldı</string>
+    <string name="turned_off">Kapalı</string>
     <string name="toggle_coffee">Coffee\'yi Aç/Kapat</string>
     <!-- MainActivity -->
     <string name="hint_1">Bu uygulama hızlı ayarlarda (Örneğin, Wi-Fi ve Bluetooth için geçişleri tutan yer) cihaz ayarlarını değiştirmek zorunda kalmadan ekranı uyanık tutmanıza izin veren bir kutucuk sağlar.</string>
     <string name="hint_2">Coffee, kutucuğa veya bildirime tıklanarak veya ekran el ile olarak kapatıldığında durdurulabilir.</string>
     <string name="add_toggle_to_home">Ana ekrana geçiş ekle</string>
+    <string name="add_tile">Başlık ekle</string>
     <string name="add_toggle_to_home_success">Ana ekrana sabitlenmiş</string>
     <string name="add_toggle_to_home_no_success">Ana ekrana sabitleme hatası</string>
     <string name="notification_permission">Bildirimleri göstermek için izin gerekli</string>
-    <string name="grant">Yetki ver</string>
+    <string name="grant">İzin ver</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Coffee ekranı açık tutacaktır</string>
+    <string name="notification_title_timeout">Coffee ekranı açık tutacaktır: %s</string>
     <string name="tap_to_turn_off">Kapatmak için dokunun</string>
     <string name="allow_dimming_enable">Karartmayı etkinleştir</string>
     <string name="allow_dimming_disable">Karartmayı devre dışı bırak</string>
@@ -31,9 +36,10 @@
     <string name="allow_dimming_title">Ekran karartmaya izin ver</string>
     <string name="allow_dimming_summary">Ekran, sistem ekran zaman aşımına bağlı olarak karartılacaktır</string>
     <string name="alternate_mode_title">Alternatif mod</string>
+    <string name="alternate_mode_summary">Alternatif modu yalnızca Coffee ekranı açık tutmuyorsa açın; diğer özellikler çalışmayabilir. Alternatif mod, sistem ekranı zaman aşımını geçici olarak artıracaktır.</string>
     <string name="alternate_mode_permissions">Alternatif mod bu izni gerektirir</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee önceki zaman aşımını ayarlayamadı</string>
     <!-- About menu -->
     <string name="about">Coffee Hakkında</string>
-    <string name="error_no_browser_found">Web tarayıcısı bulunamadı</string>
+    <string name="error_no_browser_found">Tarayıcı bulunamadı</string>
 </resources>

@@ -12,6 +12,7 @@
     <string name="hint_1">Ez az alkalmazás egy olyan csempét biztosít a gyorsbeállításokban (a hely, ahol például a Wi-Fi és a Bluetooth kapcsolók vannak), amely lehetővé teszi, hogy a kijelzőt ébren tartsa anélkül, hogy a készülék beállításait meg kellene változtatnia.</string>
     <string name="hint_2">A Coffee leállítható a csempére vagy az értesítésre kattintva, illetve a képernyő kézi kikapcsolásával.</string>
     <string name="add_toggle_to_home">Kapcsoló hozzáadása a kezdőképernyőhöz</string>
+    <string name="add_tile">Csempe hozzáadása</string>
     <string name="add_toggle_to_home_success">Kitűzve a kezdőképernyőre</string>
     <string name="add_toggle_to_home_no_success">Hiba a kezdőképernyőre kitűzésekor</string>
     <string name="notification_permission">Az értesítések megjelenítéséhez való engedély szükséges</string>
@@ -35,6 +36,7 @@
     <string name="allow_dimming_title">Képernyő halványításának engedélyezése</string>
     <string name="allow_dimming_summary">A képernyő el lesz halványítva a rendszer képernyő időkorlátja alapján</string>
     <string name="alternate_mode_title">Alternatív mód</string>
+    <string name="alternate_mode_summary">Csak akkor kapcsolja be a alternatív üzemmódot, ha a Coffee nem tartja bekapcsolva a képernyőt; más funkciók esetleg nem működnek. Az alternatív üzemmód átmenetileg megnöveli a rendszer képernyőjének időkorlátját.</string>
     <string name="alternate_mode_permissions">Az alternatív mód megköveteli ezt az engedélyt</string>
     <string name="alternate_mode_unable_to_set_old_timeout">A Coffee nem tudta beállítani az előző időkorlátot</string>
     <!-- About menu -->

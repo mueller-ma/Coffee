@@ -1,7 +1,14 @@
 *.iml
 .gradle
 /local.properties
-/.idea
+/.idea/assetWizardSettings.xml
+/.idea/caches
+/.idea/deploymentTargetDropDown.xml
+/.idea/libraries
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/navEditor.xml
+/.idea/workspace.xml
 .DS_Store
 /build
 /captures

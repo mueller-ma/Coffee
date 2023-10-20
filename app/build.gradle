@@ -3,13 +3,13 @@ apply plugin: "kotlin-android"
 apply plugin: "com.mikepenz.aboutlibraries.plugin"
 
 android {
-    compileSdkVersion 33
+    compileSdk 34
     buildToolsVersion "34.0.0"
 
     defaultConfig {
         applicationId "com.github.muellerma.coffee"
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 39
         versionName "2.19"
     }

@@ -265,7 +265,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
     }
 
     private inner class PrefChangeListener : SharedPreferences.OnSharedPreferenceChangeListener {
-        override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
+        override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
             Log.d(TAG, "Pref '$key' has been changed")
 
             stopWakeLockOrAlternateMode()

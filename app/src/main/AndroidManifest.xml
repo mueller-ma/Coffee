@@ -9,6 +9,7 @@
             tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
     <application
             android:name=".CoffeeApplication"
@@ -85,6 +86,7 @@
 
         <service
                 android:name=".ForegroundService"
+                android:foregroundServiceType="dataSync"
                 android:enabled="true"
                 android:exported="false" />
 

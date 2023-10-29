@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.github.muellerma.coffee"
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdkVersion 33
         versionCode 40
         versionName "2.20"
     }

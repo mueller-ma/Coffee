@@ -50,6 +50,12 @@ android {
     }
 }
 
+// Make app reproducible by removing timestamp.
+// https://github.com/mikepenz/AboutLibraries/issues/784#issuecomment-1205501876
+aboutLibraries {
+    excludeFields = [ "generated" ]
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:1.12.0"

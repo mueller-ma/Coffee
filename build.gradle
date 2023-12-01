@@ -2,7 +2,7 @@
 buildscript {
     ext.kotlin_version = "1.9.21"
     ext.kotlin_coroutines_version = "1.7.3"
-    ext.about_libraries_version="10.8.3"
+    ext.about_libraries_version="10.9.2-wasm1"
 
     repositories {
         google()

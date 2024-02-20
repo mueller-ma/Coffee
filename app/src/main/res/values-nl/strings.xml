@@ -12,6 +12,7 @@
     <string name="hint_1">Deze app biedt een tegel voor de snelle instellingen (het menu met schakelaars voor o.a. wifi en bluetooth) om het scherm ingeschakeld te houden zonder daarvoor in de instellingenapp te hoeven duiken.</string>
     <string name="hint_2">Koffie kan worden gestopt door te drukken op de tegel of melding, of door het scherm handmatig uit te schakelen.</string>
     <string name="add_toggle_to_home">Voeg schuifje toe aan home scherm</string>
+    <string name="add_tile">Tegel toevoegen</string>
     <string name="add_toggle_to_home_success">Vastgemaakt aan home</string>
     <string name="add_toggle_to_home_no_success">Error bij vastmaken aan home</string>
     <string name="notification_permission">Toestemming om meldingen weer te geven is vereist</string>
@@ -32,9 +33,10 @@
     <string name="timeout_30_minutes">30 minuten</string>
     <string name="timeout_60_minutes">1 uur</string>
     <string name="timeout_120_minutes">2 uur</string>
-    <string name="allow_dimming_title">Schermdimmen toestaan</string>
-    <string name="allow_dimming_summary">Scherm zal dimd worden gebaseerd op de systeem scherm timeout</string>
+    <string name="allow_dimming_title">Dimmen toestaan</string>
+    <string name="allow_dimming_summary">Scherm zal gedimd worden op basis van de systeemvergrendeltijd.</string>
     <string name="alternate_mode_title">Alternatieve modus</string>
+    <string name="alternate_mode_summary">Schakel alternatieve modus alleen in als Koffie het scherm niet aan laat staan; andere functies werken mogelijk niet. De alternatieve modus zal de vergrendeltijd tijdelijk verhogen.</string>
     <string name="alternate_mode_permissions">Alternatieve modus vereist deze toestemming</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Koffie kon de vorige time-out niet instellen</string>
     <!-- About menu -->

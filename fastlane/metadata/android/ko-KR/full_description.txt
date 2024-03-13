@@ -1,9 +1,9 @@
 Coffee는 기기 설정을 바꾸지 않고 디스플레이가 켜져 있게 유지할 수 있습니다. Coffee는 여러 곳에서 전환이 가능합니다.
 * 빠른 설정창 내 타일, Wi-Fi나 블루투스 등의 전환 버튼들이 있는 곳 안드로이드 7 이상이 필요합니다.
 * 앱 내의 버튼
-* 홈 스크린에 있는 바로가기. It can be created in the app, if your launcher supports it.
+* 홈 스크린에 있는 바로가기. 사용하고 있는 런처가 지원한다면, 앱 내에서 생성할 수 있습니다.
 
-Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
+Coffee는 어시스턴트 앱으로 설정(기기 설정 => 애플리케이션 => 기본 앱 선택 => 디지털 어시스턴트 앱) 된 후 어시스턴트 호출 시 전환할 수 있습니다.
 
-Coffee may not work because of an overly aggressive battery saver that is implemented by some OEMs (including Poco, Samsung and Xiaomi).
+Coffee는 몇몇 제조사들이 구현한 과도하게 공격적인 배터리 절전 기능으로 인해 작동하지 않을 수도 있습니다. (포코, 삼성, 샤오미 등)
 In that case please enable "Alternate mode" in the settings.

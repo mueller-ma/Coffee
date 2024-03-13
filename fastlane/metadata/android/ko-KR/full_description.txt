@@ -1,7 +1,7 @@
-Coffee allows you to keep the display awake without having to change the device settings. It can be toggled at various places:
-* A tile in the quick settings, the place that holds the toggles for e.g. Wi-Fi and Bluetooth. Requires Android 7 or higher.
-* A button in the app itself
-* A shortcut on your home screen. It can be created in the app, if your launcher supports it.
+Coffee는 기기 설정을 바꾸지 않고 디스플레이가 켜져 있게 유지할 수 있습니다. Coffee는 여러 곳에서 전환이 가능합니다.
+* 빠른 설정창 내 타일, Wi-Fi나 블루투스 등의 전환 버튼들이 있는 곳 안드로이드 7 이상이 필요합니다.
+* 앱 내의 버튼
+* 홈 스크린에 있는 바로가기. It can be created in the app, if your launcher supports it.
 
 Coffee can be set as assist app (Device settings => Apps => Default apps => Assist app) and changes it's state when assist is called.
 

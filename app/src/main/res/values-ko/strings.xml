@@ -3,7 +3,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Coffee</string>
+    <string name="turned_on">활성화됨</string>
+    <string name="turned_on_remaining">활성화됨: %s 남음</string>
+    <string name="turned_off">비활성화됨</string>
+    <string name="toggle_coffee">Coffee 전환하기</string>
     <!-- MainActivity -->
+    <string name="hint_1">이 앱은 빠른 설정창(전환 버튼들이 있는곳, 예를 들어 Wi-Fi나 블루투스 버튼들)에 기기의 설정을 바꾸지 않고 화면이 계속 켜져있게 해주는 타일을 제공합니다.</string>
+    <string name="hint_2">타일이나 알림을 클릭하거나, 화면을 수동으로 꺼서 Coffee를 비횔성화할 수 있습니다.</string>
+    <string name="add_toggle_to_home">홈스크린에 전환 버튼 추가하기</string>
+    <string name="add_tile">타일 추가하기</string>
+    <string name="add_toggle_to_home_success">홈에 고정함</string>
     <!-- Notification -->
     <!-- Settings -->
     <!-- About menu -->

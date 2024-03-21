@@ -12,6 +12,7 @@
     <string name="hint_1">Это приложение предоставляет плитку в быстрых настройках (место, где находятся переключатели, например, Wi-Fi и Bluetooth), которая позволяет поддерживать дисплей в спящем режиме без необходимости изменения настроек устройства.</string>
     <string name="hint_2">Кофе можно остановить, нажав на плитку или уведомление или когда экран выключен вручную.</string>
     <string name="add_toggle_to_home">Добавить на домашний экран</string>
+    <string name="add_tile">Добавить плитку</string>
     <string name="add_toggle_to_home_success">Прикреплено к дому</string>
     <string name="add_toggle_to_home_no_success">Ошибка привязки к дому</string>
     <string name="notification_permission">Требуется разрешение на отображение уведомлений</string>

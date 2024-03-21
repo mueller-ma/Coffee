@@ -3,8 +3,43 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Coffee</string>
+    <string name="turned_on">활성화됨</string>
+    <string name="turned_on_remaining">활성화됨: %s 남음</string>
+    <string name="turned_off">비활성화됨</string>
+    <string name="toggle_coffee">Coffee 전환하기</string>
     <!-- MainActivity -->
+    <string name="hint_1">이 앱은 빠른 설정창(전환 버튼들이 있는곳, 예를 들어 Wi-Fi나 블루투스 버튼들)에 기기의 설정을 바꾸지 않고 화면이 계속 켜져있게 해주는 타일을 제공합니다.</string>
+    <string name="hint_2">타일이나 알림을 클릭하거나, 화면을 수동으로 꺼서 Coffee를 비횔성화할 수 있습니다.</string>
+    <string name="add_toggle_to_home">홈스크린에 전환 버튼 추가하기</string>
+    <string name="add_tile">타일 추가하기</string>
+    <string name="add_toggle_to_home_success">홈에 고정함</string>
+    <string name="add_toggle_to_home_no_success">홈에 고정하는데 실패함</string>
+    <string name="notification_permission">알림을 표시할 권한이 필요합니다</string>
+    <string name="grant">허용</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Coffee가 디스플레이가 켜져 있게 유지합니다</string>
+    <string name="notification_title_timeout">Coffee가 디스플레이가 켜져 있게 유지합니다: %s</string>
+    <string name="tap_to_turn_off">탭하여 끄기</string>
+    <string name="allow_dimming_enable">디밍 활성화</string>
+    <string name="allow_dimming_disable">디밍 비활성화</string>
+    <string name="timeout_next">다음 타임아웃</string>
     <!-- Settings -->
+    <string name="settings">설정</string>
+    <string name="timeout">다음 시간 후 Coffee 중단하기</string>
+    <string name="timeout_infinity">타임아웃 없음</string>
+    <string name="timeout_5_minutes">5분</string>
+    <string name="timeout_15_minutes">15분</string>
+    <string name="timeout_30_minutes">30분</string>
+    <string name="timeout_60_minutes">1시간</string>
+    <string name="timeout_120_minutes">2시간</string>
+    <string name="allow_dimming_title">스크린 디밍 허용하기</string>
+    <string name="allow_dimming_summary">시스템의 스크린 타임아웃 설정에 따라 스크린이 디밍됩니다</string>
+    <string name="alternate_mode_title">대체 모드</string>
+    <string name="alternate_mode_summary">Coffee를 활성화했음에도 화면이 꺼질 때만 대체 모드를 활성화해주세요. 다른 기능들이 작동하지 않을 수 있습니다. 대체 모드는 일시적으로 시스템 스크린 타임아웃을 증가시킵니다.</string>
+    <string name="alternate_mode_permissions">대체 모드는 이 권한이 필요합니다</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Coffee가 이전 타임아웃을 설정하지 못했습니다</string>
     <!-- About menu -->
+    <string name="about">Coffee 정보</string>
+    <string name="error_no_browser_found">브라우저를 찾을 수 없음</string>
 </resources>

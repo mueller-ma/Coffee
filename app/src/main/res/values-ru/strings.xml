@@ -36,6 +36,7 @@
     <string name="allow_dimming_title">Разрешить затемнение экрана</string>
     <string name="allow_dimming_summary">Экран будет затемнен в зависимости от таймаута системного экрана</string>
     <string name="alternate_mode_title">Альтернативный режим</string>
+    <string name="alternate_mode_summary">Включайте альтернативный режим, только если Coffee не держит экран включенным; другие функции могут не работать. Альтернативный режим временно увеличит время ожидания экрана системы.</string>
     <string name="alternate_mode_permissions">Для работы в альтернативном режиме требуется следующее разрешение</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee не удалось установить предыдущий таймаут</string>
     <!-- About menu -->

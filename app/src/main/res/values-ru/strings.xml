@@ -3,31 +3,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
-    <string name="app_name">Coffee</string>
+    <string name="app_name">Кофе</string>
     <string name="turned_on">Включено</string>
-    <string name="turned_on_remaining">Включено: %s</string>
-    <string name="turned_off">Выключен</string>
+    <string name="turned_on_remaining">Включено: %s осталось</string>
+    <string name="turned_off">Выключено</string>
     <string name="toggle_coffee">Переключить Coffee</string>
     <!-- MainActivity -->
-    <string name="hint_1">Это приложение предоставляет плитку в быстрых настройках (место, где находятся переключатели, например, Wi-Fi и Bluetooth), которая позволяет поддерживать дисплей в спящем режиме без необходимости изменения настроек устройства.</string>
-    <string name="hint_2">Кофе можно остановить, нажав на плитку или уведомление или когда экран выключен вручную.</string>
-    <string name="add_toggle_to_home">Добавить на домашний экран</string>
+    <string name="hint_1">Это приложение предоставляет плитку в быстрых настройках (место, где находятся переключатели, например, Wi-Fi и Bluetooth), которая позволяет вам не отключать дисплей без необходимости изменять настройки устройства.</string>
+    <string name="hint_2">Кофе можно остановить, нажав на плитку или уведомление, или когда экран выключен вручную.</string>
+    <string name="add_toggle_to_home">Добавить переключатель на домашний экран</string>
     <string name="add_tile">Добавить плитку</string>
-    <string name="add_toggle_to_home_success">Прикреплено к дому</string>
-    <string name="add_toggle_to_home_no_success">Ошибка привязки к дому</string>
+    <string name="add_toggle_to_home_success">Прикреплено к домашнему экрану</string>
+    <string name="add_toggle_to_home_no_success">Ошибка привязки к домашнему экрану</string>
     <string name="notification_permission">Требуется разрешение на отображение уведомлений</string>
     <string name="grant">Предоставить</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Дисплей будет отображаться в кофе</string>
-    <string name="notification_title_timeout">Кофе сохранит дисплей на: %s</string>
-    <string name="tap_to_turn_off">Нажмите, чтобы выключить</string>
+    <string name="notification_title_timeout">Кофе будет держать дисплей включенным: %s</string>
+    <string name="tap_to_turn_off">Коснитесь, чтобы выключить</string>
     <string name="allow_dimming_enable">Включить затемнение</string>
     <string name="allow_dimming_disable">Отключить затемнение</string>
     <string name="timeout_next">Следующий таймаут</string>
     <!-- Settings -->
     <string name="settings">Настройки</string>
     <string name="timeout">Остановить кофе через</string>
-    <string name="timeout_infinity">Нет таймаута</string>
+    <string name="timeout_infinity">Без таймаута</string>
     <string name="timeout_5_minutes">5 минут</string>
     <string name="timeout_15_minutes">15 минут</string>
     <string name="timeout_30_minutes">30 минут</string>

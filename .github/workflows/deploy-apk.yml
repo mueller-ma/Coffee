@@ -36,6 +36,8 @@ jobs:
           alias: "key0"
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0"
 
       - uses: svenstaro/upload-release-action@v2
         name: Upload APK

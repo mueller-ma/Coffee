@@ -5,7 +5,7 @@
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Koffie</string>
     <string name="turned_on">Ingeschakeld</string>
-    <string name="turned_on_remaining">Ingeschakeld op: %s resterend</string>
+    <string name="turned_on_remaining">Ingeschakeld: %s resterend</string>
     <string name="turned_off">Uitgeschakeld</string>
     <string name="toggle_coffee">Zet Koffie aan/uit</string>
     <!-- MainActivity -->

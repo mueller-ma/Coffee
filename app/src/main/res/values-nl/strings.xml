@@ -5,7 +5,7 @@
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Koffie</string>
     <string name="turned_on">Ingeschakeld</string>
-    <string name="turned_on_remaining">Ingeschakeld op: %s resterend</string>
+    <string name="turned_on_remaining">Ingeschakeld: %s resterend</string>
     <string name="turned_off">Uitgeschakeld</string>
     <string name="toggle_coffee">Zet Koffie aan/uit</string>
     <!-- MainActivity -->
@@ -19,7 +19,7 @@
     <string name="grant">Toestaan</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">Koffie zal het scherm aan houden</string>
-    <string name="notification_title_timeout">Koffie zal het scherm op %s houden</string>
+    <string name="notification_title_timeout">Koffie zal het scherm %s aan houden</string>
     <string name="tap_to_turn_off">Druk om uit te schakelen</string>
     <string name="allow_dimming_enable">Dimmen inschakelen</string>
     <string name="allow_dimming_disable">Dimmen uitschakelen</string>

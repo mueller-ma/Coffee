@@ -10,8 +10,8 @@ android {
         applicationId "com.github.muellerma.coffee"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 43
-        versionName "2.23"
+        versionCode 44
+        versionName "2.24"
     }
     namespace = "com.github.muellerma.coffee"
 

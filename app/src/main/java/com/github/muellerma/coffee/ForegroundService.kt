@@ -1,8 +1,16 @@
 package com.github.muellerma.coffee
 
 import android.annotation.SuppressLint
-import android.app.*
-import android.content.*
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.app.Service
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
@@ -10,7 +18,12 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 
@@ -155,7 +168,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
         return NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle(title)
             .setTicker(title)
-            .setSmallIcon(R.drawable.ic_twotone_free_breakfast_24)
+            .setSmallIcon(R.drawable.ic_twotone_free_breakfast_24_accent)
             .setOngoing(true)
             .setShowWhen(false)
             .setColor(ContextCompat.getColor(applicationContext, R.color.coffee_brown))

@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
                     statusBarManager.requestAddTileService(
                         ComponentName(this@MainActivity, ToggleTile::class.java),
                         getString(R.string.app_name),
-                        Icon.createWithResource(this@MainActivity, R.drawable.ic_twotone_free_breakfast_24),
+                        Icon.createWithResource(this@MainActivity, R.drawable.ic_twotone_free_breakfast_24_accent),
                         Executor { Log.d(TAG, "Executor") }
                     ) { resultCode -> Log.e(TAG, "Error adding tile $resultCode") }
                 }

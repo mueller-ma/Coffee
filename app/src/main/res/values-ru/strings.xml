@@ -13,20 +13,20 @@
     <string name="hint_2">Кофе можно остановить, нажав на плитку или уведомление, или когда экран выключен вручную.</string>
     <string name="add_toggle_to_home">Добавить переключатель на домашний экран</string>
     <string name="add_tile">Добавить плитку</string>
-    <string name="add_toggle_to_home_success">Прикреплено к домашнему экрану</string>
-    <string name="add_toggle_to_home_no_success">Ошибка привязки к домашнему экрану</string>
+    <string name="add_toggle_to_home_success">Прикреплено</string>
+    <string name="add_toggle_to_home_no_success">Ошибка прикрепления</string>
     <string name="notification_permission">Требуется разрешение на отображение уведомлений</string>
     <string name="grant">Предоставить</string>
     <!-- Notification -->
-    <string name="notification_title_no_timeout">Дисплей будет отображаться в кофе</string>
-    <string name="notification_title_timeout">Кофе будет держать дисплей включенным: %s</string>
+    <string name="notification_title_no_timeout">Кофе будет держать дисплей включенным</string>
+    <string name="notification_title_timeout">Кофе сохранит дисплей включенным: %s</string>
     <string name="tap_to_turn_off">Коснитесь, чтобы выключить</string>
     <string name="allow_dimming_enable">Включить затемнение</string>
     <string name="allow_dimming_disable">Отключить затемнение</string>
     <string name="timeout_next">Следующий таймаут</string>
     <!-- Settings -->
     <string name="settings">Настройки</string>
-    <string name="timeout">Остановить кофе через</string>
+    <string name="timeout">Остановить Кофе через</string>
     <string name="timeout_infinity">Без таймаута</string>
     <string name="timeout_5_minutes">5 минут</string>
     <string name="timeout_15_minutes">15 минут</string>
@@ -34,9 +34,9 @@
     <string name="timeout_60_minutes">1 час</string>
     <string name="timeout_120_minutes">2 часа</string>
     <string name="allow_dimming_title">Разрешить затемнение экрана</string>
-    <string name="allow_dimming_summary">Экран будет затемнен в зависимости от таймаута системного экрана</string>
+    <string name="allow_dimming_summary">Экран будет затемнен в зависимости от системного таймаута экрана</string>
     <string name="alternate_mode_title">Альтернативный режим</string>
-    <string name="alternate_mode_summary">Включайте альтернативный режим, только если Coffee не держит экран включенным; другие функции могут не работать. Альтернативный режим временно увеличит время ожидания экрана системы.</string>
+    <string name="alternate_mode_summary">Включайте альтернативный режим, только если Coffee не держит экран включенным; другие функции могут не работать. Альтернативный режим временно увеличит системный таймаут экрана.</string>
     <string name="alternate_mode_permissions">Для работы в альтернативном режиме требуется следующее разрешение</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee не удалось установить предыдущий таймаут</string>
     <!-- About menu -->

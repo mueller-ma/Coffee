@@ -15,9 +15,16 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
-import com.github.muellerma.coffee.*
+import com.github.muellerma.coffee.CoffeeApplication
+import com.github.muellerma.coffee.ForegroundService
+import com.github.muellerma.coffee.R
+import com.github.muellerma.coffee.ServiceStatus
+import com.github.muellerma.coffee.ServiceStatusObserver
 import com.github.muellerma.coffee.databinding.ActivityMainBinding
-import com.github.muellerma.coffee.tiles.ToggleTile
+import com.github.muellerma.coffee.hasPermissions
+import com.github.muellerma.coffee.showToast
+import com.github.muellerma.coffee.tiles.TimeoutTile
+import com.github.muellerma.coffee.toFormattedTime
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.util.concurrent.Executor
 
@@ -38,14 +45,8 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
 
         supportActionBar?.hide()
 
-        binding.toggleCoffee.apply {
-            setOnClickListener {
-                ForegroundService.changeState(
-                    this@MainActivity,
-                    ForegroundService.Companion.STATE.TOGGLE,
-                    true
-                )
-            }
+        binding.toggleCoffee.setOnClickListener {
+            ForegroundService.toggleState(application)
         }
 
         binding.addToggleToHome.apply {
@@ -78,7 +79,7 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
                 setOnClickListener {
                     val statusBarManager = getSystemService<StatusBarManager>() ?: return@setOnClickListener
                     statusBarManager.requestAddTileService(
-                        ComponentName(this@MainActivity, ToggleTile::class.java),
+                        ComponentName(this@MainActivity, TimeoutTile::class.java),
                         getString(R.string.app_name),
                         Icon.createWithResource(this@MainActivity, R.drawable.ic_twotone_free_breakfast_24_accent),
                         Executor { Log.d(TAG, "Executor") }
@@ -109,7 +110,7 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
             is ServiceStatus.Stopped -> getString(R.string.turned_off)
             is ServiceStatus.Running -> {
                 if (status.remaining == null) {
-                    getString(R.string.turned_on)
+                    getString(R.string.turned_on_remaining, "∞")
                 } else {
                     getString(R.string.turned_on_remaining, status.remaining.toFormattedTime())
                 }

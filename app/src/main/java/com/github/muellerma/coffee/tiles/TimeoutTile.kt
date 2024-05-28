@@ -5,27 +5,17 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.github.muellerma.coffee.*
+import com.github.muellerma.coffee.ForegroundService
+import com.github.muellerma.coffee.ServiceStatus
+import com.github.muellerma.coffee.ServiceStatusObserver
+import com.github.muellerma.coffee.coffeeApp
 
 @RequiresApi(Build.VERSION_CODES.N)
 class TimeoutTile : AbstractTile() {
     override fun onClick() {
         Log.d(TAG, "onClick()")
-        val prefs = Prefs(applicationContext)
-        when {
-            coffeeApp().lastStatusUpdate is ServiceStatus.Stopped -> {
-                prefs.timeout = prefs.firstTimeout
-                ForegroundService.changeState(this, ForegroundService.Companion.STATE.START, false)
-            }
-            prefs.nextTimeout == 0 -> {
-                prefs.timeout = 0
-                ForegroundService.changeState(this, ForegroundService.Companion.STATE.STOP, false)
-            }
-            else -> {
-                prefs.timeout = prefs.nextTimeout
-            }
 
-        }
+        ForegroundService.toggleState(coffeeApp())
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

@@ -24,6 +24,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.time.Duration
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 
@@ -40,13 +41,15 @@ class ForegroundService : Service(), ServiceStatusObserver {
         when (intent?.action) {
             ACTION_STOP -> {
                 Log.d(TAG, "Received stop action")
-                changeState(this, STATE.STOP, false)
+                toggleState(this, STATE.STOP, false)
                 return START_STICKY
             }
+
             ACTION_CHANGE_PREF_TIMEOUT -> {
                 Log.d(TAG, "Change timeout")
                 prefs.timeout = prefs.nextTimeout
             }
+
             ACTION_CHANGE_PREF_ALLOW_DIMMING -> {
                 Log.d(TAG, "Change allow dimming")
                 prefs.allowDimming = !prefs.allowDimming
@@ -107,7 +110,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
             val success = contentResolver.setSystemScreenTimeout(Int.MAX_VALUE)
             if (!success) {
                 openSystemScreenTimeoutPermissions()
-                changeState(this, STATE.STOP, false)
+                toggleState(this, STATE.STOP, false)
             }
         } else {
             @Suppress("DEPRECATION")
@@ -160,7 +163,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
                 delay(1.seconds)
             }
             Log.d(TAG, "Timeout reached, stop coffee")
-            changeState(this@ForegroundService, STATE.STOP, true)
+            toggleState(this@ForegroundService, STATE.STOP, true)
         }
     }
 
@@ -243,15 +246,14 @@ class ForegroundService : Service(), ServiceStatusObserver {
         stopWakeLockOrAlternateMode()
         timeoutJob?.cancel(CancellationException("Coffee was stopped"))
         Prefs(applicationContext)
-            .sharedPrefs.
-            unregisterOnSharedPreferenceChangeListener(prefsChangeListener)
+            .sharedPrefs.unregisterOnSharedPreferenceChangeListener(prefsChangeListener)
         if (isScreenStateListenerRegistered) {
             unregisterReceiver(screenStateListener)
             isScreenStateListenerRegistered = false
         }
         coffeeApp().apply {
-            observers.remove(this@ForegroundService)
             notifyObservers(ServiceStatus.Stopped)
+            observers.remove(this@ForegroundService)
         }
     }
 
@@ -273,7 +275,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
                 return
             }
             Log.d(TAG, "Received screen off event: Stop service")
-            changeState(context, STATE.STOP, false)
+            toggleState(context, STATE.STOP, false)
         }
     }
 
@@ -296,7 +298,29 @@ class ForegroundService : Service(), ServiceStatusObserver {
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 
-        fun changeState(context: Context, newState: STATE, showToast: Boolean) {
+        fun toggleState(application: CoffeeApplication) {
+            val prefs = Prefs(application.applicationContext)
+            val status = application.lastStatusUpdate
+            val prefsTimeout = Duration.parse("${prefs.timeout}m")
+
+            prefs.timeout = when {
+                application.lastStatusUpdate is ServiceStatus.Stopped -> prefs.firstTimeout
+                prefs.nextTimeout == 0 -> 0
+                else -> prefs.nextTimeout
+            }
+
+            when (status) {
+                is ServiceStatus.Running -> status.remaining?.let { remaining ->
+                    if (remaining < (prefsTimeout - 1.seconds)) {
+                        toggleState(application.applicationContext, ForegroundService.Companion.STATE.STOP, false)
+                    }
+                } ?: toggleState(application.applicationContext, ForegroundService.Companion.STATE.STOP, false)
+
+                else -> toggleState(application.applicationContext, ForegroundService.Companion.STATE.START, false)
+            }
+        }
+
+        fun toggleState(context: Context, newState: STATE, showToast: Boolean) {
             Log.d(TAG, "changeState($newState)")
             val start = when (newState) {
                 STATE.START -> true

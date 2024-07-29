@@ -84,10 +84,8 @@ val PendingIntent_Mutable = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) 
 }
 
 fun PowerManager.WakeLock?.safeRelease() {
-    try {
-        this?.release()
-    } catch (e: RuntimeException) {
-        Log.d(TAG, "Couldn't release wakelock $this", e)
+    if (this?.isHeld == true) {
+        release()
     }
 }
 

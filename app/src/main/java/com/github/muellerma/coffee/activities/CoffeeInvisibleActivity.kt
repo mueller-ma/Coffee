@@ -11,7 +11,7 @@ class CoffeeInvisibleActivity : Activity() {
 
         if (intent?.action == ACTION_TOGGLE) {
             Log.d(TAG, "Received toggle")
-            ForegroundService.changeState(this, ForegroundService.Companion.STATE.TOGGLE, true)
+            ForegroundService.toggleState(this, ForegroundService.Companion.STATE.TOGGLE, true)
         }
 
         finishAndRemoveTask()

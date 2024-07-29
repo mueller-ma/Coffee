@@ -16,7 +16,7 @@ class InteractionSessionService : VoiceInteractionSessionService() {
 class InteractionSession(private val ctx: Context) : VoiceInteractionSession(ctx) {
     override fun onHandleAssist(state: AssistState) {
         Log.d(TAG, "onHandleAssist")
-        ForegroundService.changeState(ctx, ForegroundService.Companion.STATE.TOGGLE, true)
+        ForegroundService.toggleState(ctx, ForegroundService.Companion.STATE.TOGGLE, true)
         finish()
     }
 }

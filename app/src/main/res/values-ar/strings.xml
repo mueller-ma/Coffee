@@ -3,29 +3,30 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
-    <string name="app_name">قهوة</string>
+    <string name="app_name">Coffee</string>
     <string name="turned_on">تم تشغيل</string>
     <string name="turned_on_remaining">تم تشغيل: %s متبقي</string>
     <string name="turned_off">تم إيقاف التشغيل</string>
-    <string name="toggle_coffee">تبديل القهوة</string>
+    <string name="toggle_coffee">تبديل Coffee</string>
     <!-- MainActivity -->
-    <string name="hint_1">يوفر هذا التطبيق مربع في الإعدادات السريعة (المكان الذي يحتوي على مفاتيح التبديل مثلاً: شبكة Wi-Fi و Bluetooth) التي تسمح لك بإبقاء الشاشة مستيقظة دون الحاجة إلى تغيير إعدادات الجهاز.</string>
-    <string name="hint_2">يمكن إيقاف القهوة بالنقر على البلاط أو الإشعار أو عند إيقاف تشغيل الشاشة يدوياً.</string>
+    <string name="hint_1">يوفر هذا التطبيق بلاط في الإعدادات السريعة (المكان الذي يحتوي على مفاتيح التبديل مثلاً: شبكة Wi-Fi وBluetooth) التي تسمح لك بإبقاء الشاشة مستيقظة دون الحاجة إلى تغيير إعدادات الجهاز.</string>
+    <string name="hint_2">يمكن إيقاف Coffee بالنقر على البلاط أو الإشعار أو عند إيقاف تشغيل الشاشة يدوياً.</string>
     <string name="add_toggle_to_home">إضافة تبديل إلى الشاشة الرئيسية</string>
-    <string name="add_toggle_to_home_success">مثبت على المنزل</string>
-    <string name="add_toggle_to_home_no_success">خطأ في تثبيت الصفحة الرئيسية</string>
+    <string name="add_tile">إضافة بلاطة</string>
+    <string name="add_toggle_to_home_success">مثبت على الشاشة الرئيسية</string>
+    <string name="add_toggle_to_home_no_success">خطأ في تثبيت الشاشة الرئيسية</string>
     <string name="notification_permission">إذن إظهار الإشعارات مطلوب</string>
     <string name="grant">منح</string>
     <!-- Notification -->
-    <string name="notification_title_no_timeout">القهوة ستبقي الشاشة قيد التشغيل</string>
-    <string name="notification_title_timeout">سوف تبقي القهوة على الشاشة على: %s</string>
+    <string name="notification_title_no_timeout">Coffee ستيقي الشاشة قيد التشغيل</string>
+    <string name="notification_title_timeout">سوف يبقي Coffee قيد التشغيل على: %s</string>
     <string name="tap_to_turn_off">انقر لإيقاف التشغيل</string>
     <string name="allow_dimming_enable">تمكين التعتيم</string>
-    <string name="allow_dimming_disable">تعطيل التشويش</string>
+    <string name="allow_dimming_disable">تعطيل التعتيم</string>
     <string name="timeout_next">المهلة التالية</string>
     <!-- Settings -->
     <string name="settings">الإعدادات</string>
-    <string name="timeout">إيقاف القهوة بعد</string>
+    <string name="timeout">إيقاف Coffee بعد</string>
     <string name="timeout_infinity">لا مهلة</string>
     <string name="timeout_5_minutes">5 دقائق</string>
     <string name="timeout_15_minutes">15 دقيقة</string>
@@ -35,9 +36,10 @@
     <string name="allow_dimming_title">السماح بتقويم الشاشة</string>
     <string name="allow_dimming_summary">سيتم إزالة الشاشة على أساس مهلة شاشة النظام</string>
     <string name="alternate_mode_title">الوضع البديل</string>
+    <string name="alternate_mode_summary">قم بتشغيل الوضع البديل فقط إذا لم يبقي Coffee الشاشة قيد التشغيل؛ قد لا تعمل الميزات الأخرى. سيؤدي الوضع البديل إلى زيادة مهلة شاشة النظام مؤقتاً.</string>
     <string name="alternate_mode_permissions">الوضع البديل يتطلب هذا الإذن</string>
-    <string name="alternate_mode_unable_to_set_old_timeout">تعذر تعيين المهلة السابقة للقهوة</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">تعذر تعيين المهلة السابقة لـCoffee</string>
     <!-- About menu -->
-    <string name="about">حول القهوة</string>
+    <string name="about">حول Coffee</string>
     <string name="error_no_browser_found">لم يتم العثور على متصفح</string>
 </resources>

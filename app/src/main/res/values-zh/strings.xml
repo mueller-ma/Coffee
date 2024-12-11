@@ -3,7 +3,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">咖啡</string>
+    <string name="turned_on">開啓</string>
+    <string name="turned_on_remaining">已開啓：剩餘 %s</string>
+    <string name="turned_off">關閉</string>
+    <string name="toggle_coffee">開關</string>
     <!-- MainActivity -->
+    <string name="hint_1">此應用程式在快速設定中提供一個圖塊 (放置 Wi-Fi 和 藍牙 等切換鈕的地方)，讓您無須變更裝置設定就能讓熒幕保持喚醒狀態。</string>
+    <string name="hint_2">按一下圖塊或通知，或手動關閉螢幕時，即可停止咖啡。</string>
+    <string name="add_toggle_to_home">添加開關到主熒幕</string>
+    <string name="add_toggle_to_home_success">釘選至主熒幕</string>
     <!-- Notification -->
     <!-- Settings -->
     <!-- About menu -->

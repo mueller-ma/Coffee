@@ -12,6 +12,7 @@
     <string name="hint_1">此應用程式在快速設定中提供一個圖塊 (放置 Wi-Fi 和 藍牙 等切換鈕的地方)，讓您無須變更裝置設定就能讓熒幕保持喚醒狀態。</string>
     <string name="hint_2">按一下圖塊或通知，或手動關閉螢幕時，即可停止咖啡。</string>
     <string name="add_toggle_to_home">添加開關到主熒幕</string>
+    <string name="add_tile">新增設定方塊</string>
     <string name="add_toggle_to_home_success">釘選至主熒幕</string>
     <!-- Notification -->
     <!-- Settings -->

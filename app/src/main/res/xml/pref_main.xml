@@ -14,12 +14,14 @@
                 android:key="allow_dimming"
                 android:title="@string/allow_dimming_title"
                 android:summary="@string/allow_dimming_summary"
-                android:defaultValue="false" />
+                android:defaultValue="false"
+                android:widgetLayout="@layout/preference_material_switch" />
         <SwitchPreferenceCompat
                 android:key="alternate_mode"
                 android:title="@string/alternate_mode_title"
                 android:summary="@string/alternate_mode_summary"
-                android:defaultValue="false" />
+                android:defaultValue="false"
+                android:widgetLayout="@layout/preference_material_switch" />
     </PreferenceCategory>
     <PreferenceCategory>
         <Preference

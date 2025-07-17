@@ -1,9 +1,12 @@
 package com.github.muellerma.coffee.tiles
 
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import android.util.Log
+import androidx.annotation.CallSuper
 import androidx.annotation.RequiresApi
 import com.github.muellerma.coffee.R
 import com.github.muellerma.coffee.ServiceStatus
@@ -12,6 +15,15 @@ import com.github.muellerma.coffee.toFormattedTime
 
 @RequiresApi(Build.VERSION_CODES.N)
 abstract class AbstractTile : TileService() {
+    @CallSuper
+    override fun onClick() {
+        Log.d(TAG, "onClick()")
+        Handler(Looper.getMainLooper()).postDelayed({
+            Log.d(TAG, "Delaying tile state update for 1 second")
+            setTileState()
+        }, 500)
+    }
+
     override fun onCreate() {
         Log.d(TAG, "onCreate()")
         super.onCreate()

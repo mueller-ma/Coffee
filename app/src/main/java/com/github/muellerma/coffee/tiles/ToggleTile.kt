@@ -5,13 +5,16 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.github.muellerma.coffee.*
+import com.github.muellerma.coffee.ForegroundService
+import com.github.muellerma.coffee.ServiceStatus
+import com.github.muellerma.coffee.ServiceStatusObserver
 
 @RequiresApi(Build.VERSION_CODES.N)
 class ToggleTile : AbstractTile() {
     override fun onClick() {
         Log.d(TAG, "onClick()")
         ForegroundService.changeState(this, ForegroundService.Companion.STATE.TOGGLE, false)
+        super.onClick()
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

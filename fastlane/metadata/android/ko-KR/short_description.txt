@@ -1,1 +1,1 @@
-Keep display awake
+화면 켜짐 상태 유지

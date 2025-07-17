@@ -19,14 +19,14 @@
     <string name="grant">授权</string>
     <!-- Notification -->
     <string name="notification_title_no_timeout">咖啡Coffee将保持屏幕常亮</string>
-    <string name="notification_title_timeout">咖啡 Coffee 将保持屏幕亮起：%s</string>
+    <string name="notification_title_timeout">咖啡将保持屏幕常亮：%s</string>
     <string name="tap_to_turn_off">点击关闭</string>
     <string name="allow_dimming_enable">允许屏幕变暗</string>
     <string name="allow_dimming_disable">不允许屏幕变暗</string>
-    <string name="timeout_next">增加超时</string>
+    <string name="timeout_next">下一个时限</string>
     <!-- Settings -->
     <string name="settings">设置</string>
-    <string name="timeout">定时关闭咖啡 Coffee</string>
+    <string name="timeout">定时关闭咖啡</string>
     <string name="timeout_infinity">不限时</string>
     <string name="timeout_5_minutes">5 分钟</string>
     <string name="timeout_15_minutes">15 分钟</string>
@@ -36,7 +36,7 @@
     <string name="allow_dimming_title">允许屏幕变暗</string>
     <string name="allow_dimming_summary">屏幕将会根据系统的屏幕超时时间来变暗</string>
     <string name="alternate_mode_title">备用模式</string>
-    <string name="alternate_mode_summary">仅在咖啡 Coffee 无法保持屏幕常亮时才需要启用备用模式；在此模式下，其他功能可能无法正常工作。备用模式通过暂时增加屏幕超时时间来保持屏幕常亮。</string>
+    <string name="alternate_mode_summary">仅在咖啡无法保持屏幕常亮时才需要启用备用模式；在此模式下，其他功能可能无法正常工作。备用模式通过暂时增加屏幕超时时间来保持屏幕常亮。</string>
     <string name="alternate_mode_permissions">备用模式需要此权限</string>
     <string name="alternate_mode_unable_to_set_old_timeout">Coffee 咖啡无法设置之前的超时时间</string>
     <!-- About menu -->

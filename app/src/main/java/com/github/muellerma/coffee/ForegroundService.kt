@@ -11,6 +11,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.SharedPreferences
+import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
@@ -62,7 +63,11 @@ class ForegroundService : Service(), ServiceStatusObserver {
             val intentFilter = IntentFilter().apply {
                 addAction(Intent.ACTION_SCREEN_OFF)
             }
-            registerReceiver(screenStateListener, intentFilter)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                registerReceiver(screenStateListener, intentFilter, RECEIVER_EXPORTED)
+            } else {
+                registerReceiver(screenStateListener, intentFilter)
+            }
             isScreenStateListenerRegistered = true
         }
         return START_STICKY
@@ -92,7 +97,15 @@ class ForegroundService : Service(), ServiceStatusObserver {
         val prefs = Prefs(this)
         prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsChangeListener)
 
-        startForeground(NOTIFICATION_ID, getBaseNotification(getString(R.string.app_name)).build())
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            startForeground(
+                NOTIFICATION_ID,
+                getBaseNotification(getString(R.string.app_name)).build(),
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE
+            )
+        } else {
+            startForeground(NOTIFICATION_ID, getBaseNotification(getString(R.string.app_name)).build())
+        }
     }
 
     @SuppressLint("WakelockTimeout")

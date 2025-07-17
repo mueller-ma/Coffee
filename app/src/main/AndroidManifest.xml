@@ -9,7 +9,7 @@
             tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 
     <application
             android:name=".CoffeeApplication"
@@ -86,9 +86,12 @@
 
         <service
                 android:name=".ForegroundService"
-                android:foregroundServiceType="dataSync"
+                android:foregroundServiceType="specialUse"
                 android:enabled="true"
-                android:exported="false" />
+                android:exported="false">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                    android:value="Foreground service is required to keep wakelock."/>
+        </service>
 
         <service
                 android:name=".InteractionService"

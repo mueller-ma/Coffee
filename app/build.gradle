@@ -3,7 +3,7 @@ apply plugin: "kotlin-android"
 apply plugin: "com.mikepenz.aboutlibraries.plugin"
 
 android {
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.github.muellerma.coffee"
@@ -21,8 +21,6 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
         debug {
-            minifyEnabled true
-            shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             applicationIdSuffix ".debug"
         }
@@ -57,9 +55,9 @@ aboutLibraries {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "androidx.core:core-ktx:1.13.1"
-    implementation "androidx.appcompat:appcompat:1.7.0"
-    implementation "androidx.fragment:fragment-ktx:1.8.1"
+    implementation "androidx.core:core-ktx:1.16.0"
+    implementation "androidx.appcompat:appcompat:1.7.1"
+    implementation "androidx.fragment:fragment-ktx:1.8.8"
     implementation "com.google.android.material:material:1.12.0"
     implementation "androidx.preference:preference-ktx:1.2.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"

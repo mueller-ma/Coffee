@@ -190,6 +190,14 @@ class ForegroundService : Service(), ServiceStatusObserver {
     }
 
     private fun getRunningNotification(prefs: Prefs): Notification? {
+        // Check if we should use Android 16+ progress-centric notifications
+        if (Build.VERSION.SDK_INT >= 36
+            && prefs.useProgressNotifications 
+            && ProgressNotificationManager.isAvailable()) {
+            return getProgressNotification(prefs)
+        }
+        
+        // Fall back to classic notification style
         val stopIntent = Intent(this, ForegroundService::class.java).apply {
             action = ACTION_STOP
         }
@@ -215,6 +223,22 @@ class ForegroundService : Service(), ServiceStatusObserver {
             .addAction(getDimmingAction(prefs))
             .setPublicVersion(getBaseNotification(title).build())
             .build()
+    }
+
+    @androidx.annotation.RequiresApi(36)
+    private fun getProgressNotification(prefs: Prefs): Notification? {
+        val status = coffeeApp().lastStatusUpdate
+        if (status is ServiceStatus.Stopped) {
+            return null
+        }
+        
+        val remaining = (status as? ServiceStatus.Running)?.remaining
+        val progressManager = ProgressNotificationManager(this)
+        return progressManager.createProgressNotification(
+            remaining = remaining,
+            timeout = prefs.timeout,
+            prefs = prefs
+        )
     }
 
     private fun getTimeoutAction(): NotificationCompat.Action {
@@ -305,7 +329,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
         private val TAG = ForegroundService::class.java.simpleName
         private const val ACTION_STOP = "stop_action"
         const val ACTION_CHANGE_PREF_TIMEOUT = "change_pref_timeout"
-        private const val ACTION_CHANGE_PREF_ALLOW_DIMMING = "change_pref_dimming"
+        const val ACTION_CHANGE_PREF_ALLOW_DIMMING = "change_pref_dimming"
         const val NOTIFICATION_ID = 1
         const val NOTIFICATION_CHANNEL_ID = "foreground_service"
 

@@ -37,4 +37,7 @@ class Prefs(private val context: Context) {
     var alternateModeOldTimeout: Int
         get() = sharedPrefs.getInt("alternate_mode_old_timeout", -1)
         set(value) = sharedPrefs.edit { putInt("alternate_mode_old_timeout", value) }
+
+    val useProgressNotifications: Boolean
+        get() = sharedPrefs.getBoolean("use_progress_notifications", true)
 }

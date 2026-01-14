@@ -22,6 +22,12 @@
                 android:summary="@string/alternate_mode_summary"
                 android:defaultValue="false"
                 android:widgetLayout="@layout/preference_material_switch" />
+        <SwitchPreferenceCompat
+                android:key="use_progress_notifications"
+                android:title="@string/use_progress_notifications"
+                android:summary="@string/use_progress_notifications_summary"
+                android:defaultValue="true"
+                android:widgetLayout="@layout/preference_material_switch" />
     </PreferenceCategory>
     <PreferenceCategory>
         <Preference

@@ -67,6 +67,12 @@ class PreferenceActivity : AppCompatActivity() {
                 return@setOnPreferenceChangeListener true
             }
 
+            // Hide progress notifications preference on pre-Android 16 devices
+            val progressNotificationsPref = preferenceManager.findPreference<Preference>("use_progress_notifications")
+            if (Build.VERSION.SDK_INT < 36) {
+                progressNotificationsPref?.isVisible = false
+            }
+
             val aboutPref = getPreference("about")
             aboutPref.setOnPreferenceClickListener {
                 val fragment = LibsBuilder()

@@ -15,7 +15,12 @@
     <string name="add_tile">新增設定方塊</string>
     <string name="add_toggle_to_home_success">釘選至主熒幕</string>
     <string name="add_toggle_to_home_no_success">固定到主畫面時出錯</string>
+    <string name="notification_permission">需要顯示通知的權限</string>
+    <string name="grant">授與</string>
     <!-- Notification -->
+    <string name="notification_title_no_timeout">Coffee 會保持螢幕常亮</string>
+    <string name="notification_title_timeout">Coffee 會保持螢幕 %s 內常亮</string>
+    <string name="tap_to_turn_off">輕觸即可關閉</string>
     <!-- Settings -->
     <!-- About menu -->
 </resources>

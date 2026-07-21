@@ -4,8 +4,8 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <string name="app_name">咖啡</string>
-    <string name="turned_on">開啓</string>
-    <string name="turned_on_remaining">已開啓：剩餘 %s</string>
+    <string name="turned_on">開啟</string>
+    <string name="turned_on_remaining">已開啟：剩餘 %s</string>
     <string name="turned_off">關閉</string>
     <string name="toggle_coffee">開關</string>
     <!-- MainActivity -->
@@ -26,5 +26,19 @@
     <string name="timeout_next">增加超時</string>
     <!-- Settings -->
     <string name="settings">設定</string>
+    <string name="timeout_infinity">不限時間</string>
+    <string name="timeout_5_minutes">5 分鐘</string>
+    <string name="timeout_15_minutes">15 分鐘</string>
+    <string name="timeout_30_minutes">30 分鐘</string>
+    <string name="timeout_60_minutes">1 小時</string>
+    <string name="timeout_120_minutes">2 小時</string>
+    <string name="allow_dimming_title">允許螢幕變暗</string>
+    <string name="allow_dimming_summary">螢幕將根據系統螢幕逾時時間調暗</string>
+    <string name="alternate_mode_title">替代模式</string>
+    <string name="alternate_mode_summary">只有在 Coffee 無法保持螢幕常亮時才需要啟用替代模式；在此模式下，其他功能可能無法正常運作。替代模式透過暫時增加螢幕超時時間以保持螢幕常亮。</string>
+    <string name="alternate_mode_permissions">替代模式需要此權限</string>
+    <string name="alternate_mode_unable_to_set_old_timeout">Coffee 無法設定先前的超時時間</string>
     <!-- About menu -->
+    <string name="about">關於 Coffee</string>
+    <string name="error_no_browser_found">找不到瀏覽器</string>
 </resources>

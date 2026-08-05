@@ -1,5 +1,7 @@
 package com.github.muellerma.coffee.tiles
 
+import android.annotation.SuppressLint
+import android.app.PendingIntent
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
@@ -9,6 +11,7 @@ import android.util.Log
 import androidx.annotation.CallSuper
 import androidx.annotation.RequiresApi
 import com.github.muellerma.coffee.R
+import com.github.muellerma.coffee.activities.CoffeeInvisibleActivity
 import com.github.muellerma.coffee.ServiceStatus
 import com.github.muellerma.coffee.coffeeApp
 import com.github.muellerma.coffee.toFormattedTime
@@ -65,6 +68,23 @@ abstract class AbstractTile : TileService() {
                 subtitle = tileSubtitle
             }
             updateTile()
+        }
+    }
+
+    @SuppressLint("StartActivityAndCollapseDeprecated")
+    @Suppress("DEPRECATION")
+    protected fun launchToggleActivity() {
+        val intent = CoffeeInvisibleActivity.toggleIntent(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            val pendingIntent = PendingIntent.getActivity(
+                this,
+                0,
+                intent,
+                PendingIntent.FLAG_IMMUTABLE
+            )
+            startActivityAndCollapse(pendingIntent)
+        } else {
+            startActivityAndCollapse(intent)
         }
     }
 

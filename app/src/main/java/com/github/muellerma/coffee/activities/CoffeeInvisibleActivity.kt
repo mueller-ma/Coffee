@@ -1,6 +1,8 @@
 package com.github.muellerma.coffee.activities
 
 import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.github.muellerma.coffee.ForegroundService
@@ -20,5 +22,10 @@ class CoffeeInvisibleActivity : Activity() {
     companion object {
         private val TAG = CoffeeInvisibleActivity::class.java.simpleName
         const val ACTION_TOGGLE = "toggle"
+
+        fun toggleIntent(context: Context): Intent =
+            Intent(context, CoffeeInvisibleActivity::class.java)
+                .setAction(ACTION_TOGGLE)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     }
 }

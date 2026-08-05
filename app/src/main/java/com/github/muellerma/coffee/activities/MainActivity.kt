@@ -146,8 +146,7 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
     private fun getShortcutInfo(stableId: Boolean): ShortcutInfoCompat {
         Log.d(TAG, "getShortcutInfo($stableId)")
         val id = if (stableId) "toggle" else "toggle-${System.currentTimeMillis()}"
-        val intent = Intent(this, CoffeeInvisibleActivity::class.java)
-            .setAction(CoffeeInvisibleActivity.ACTION_TOGGLE)
+        val intent = CoffeeInvisibleActivity.toggleIntent(this)
         return ShortcutInfoCompat.Builder(this, id)
             .setIntent(intent)
             .setShortLabel(getString(R.string.app_name))

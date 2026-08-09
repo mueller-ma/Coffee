@@ -26,7 +26,6 @@
     <string name="timeout_next">Következő időkorlát</string>
     <!-- Settings -->
     <string name="settings">Beállítások</string>
-    <string name="timeout">Coffe kikapcsolása ennyi idő után</string>
     <string name="timeout_infinity">Nincs időkorlát</string>
     <string name="timeout_5_minutes">5 perc</string>
     <string name="timeout_15_minutes">15 perc</string>

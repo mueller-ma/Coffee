@@ -26,7 +26,6 @@
     <string name="timeout_next">Siguiente tiempo límite</string>
     <!-- Settings -->
     <string name="settings">Ajustes</string>
-    <string name="timeout">Detener Café después de</string>
     <string name="timeout_infinity">Sin tiempo límite</string>
     <string name="timeout_5_minutes">5 minutos</string>
     <string name="timeout_15_minutes">15 minutos</string>

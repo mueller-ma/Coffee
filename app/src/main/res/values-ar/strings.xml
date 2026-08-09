@@ -26,7 +26,6 @@
     <string name="timeout_next">المهلة التالية</string>
     <!-- Settings -->
     <string name="settings">الإعدادات</string>
-    <string name="timeout">إيقاف Coffee بعد</string>
     <string name="timeout_infinity">لا مهلة</string>
     <string name="timeout_5_minutes">5 دقائق</string>
     <string name="timeout_15_minutes">15 دقيقة</string>

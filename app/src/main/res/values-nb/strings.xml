@@ -25,7 +25,6 @@
     <string name="timeout_next">Neste tidsavbrudd</string>
     <!-- Settings -->
     <string name="settings">Innstillinger</string>
-    <string name="timeout">Stopp Kaffe etter</string>
     <string name="timeout_infinity">Ingen tidsavbrudd</string>
     <string name="timeout_5_minutes">5 minutter</string>
     <string name="timeout_15_minutes">15 minutter</string>

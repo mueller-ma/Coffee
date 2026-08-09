@@ -31,7 +31,7 @@
 
     <!-- Settings -->
     <string name="settings">Settings</string>
-    <string name="timeout">Stop Coffee after</string>
+    <string name="timeout">Stop Coffee automatically</string>
     <string name="timeout_infinity">No timeout</string>
     <string name="timeout_5_minutes">5 minutes</string>
     <string name="timeout_15_minutes">15 minutes</string>

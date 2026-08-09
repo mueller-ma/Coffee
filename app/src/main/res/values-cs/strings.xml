@@ -25,7 +25,6 @@
     <string name="timeout_next">Příští časový limit</string>
     <!-- Settings -->
     <string name="settings">Nastavení</string>
-    <string name="timeout">Zastavit kávu po</string>
     <string name="timeout_infinity">Žádný časový limit</string>
     <string name="timeout_5_minutes">5 minut</string>
     <string name="timeout_15_minutes">15 minut</string>

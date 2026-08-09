@@ -26,7 +26,6 @@
     <string name="timeout_next">Sonraki zaman aşımı</string>
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
-    <string name="timeout">Sonra Coffee\'yi durdur</string>
     <string name="timeout_infinity">Zaman aşımı yok</string>
     <string name="timeout_5_minutes">5 dakika</string>
     <string name="timeout_15_minutes">15 dakika</string>

@@ -19,7 +19,7 @@ class TimeoutTile : AbstractTile() {
         when {
             coffeeApp().lastStatusUpdate is ServiceStatus.Stopped -> {
                 prefs.timeout = prefs.firstTimeout
-                ForegroundService.changeState(this, ForegroundService.Companion.STATE.START, false)
+                launchToggleActivity()
             }
             prefs.nextTimeout == 0 -> {
                 prefs.timeout = 0

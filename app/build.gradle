@@ -45,6 +45,11 @@ android {
     androidResources {
         generateLocaleConfig true
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 // Make app reproducible by removing timestamp.
@@ -63,4 +68,6 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
     implementation "com.mikepenz:aboutlibraries:$about_libraries_version"
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.robolectric:robolectric:4.16.1"
 }

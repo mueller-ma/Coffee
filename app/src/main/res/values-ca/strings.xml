@@ -26,7 +26,6 @@
     <string name="timeout_next">Següent temps d\'espera</string>
     <!-- Settings -->
     <string name="settings">Configuració</string>
-    <string name="timeout">Apaga cafè després de</string>
     <string name="timeout_infinity">Sense temps d\'espera</string>
     <string name="timeout_5_minutes">5 minuts</string>
     <string name="timeout_15_minutes">15 minuts</string>

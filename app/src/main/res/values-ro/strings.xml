@@ -25,7 +25,6 @@
     <string name="timeout_next">Următoarea pauză</string>
     <!-- Settings -->
     <string name="settings">Setări</string>
-    <string name="timeout">Oprește cafeaua după</string>
     <string name="timeout_infinity">Fără timeout</string>
     <string name="timeout_5_minutes">5 minute</string>
     <string name="timeout_15_minutes">15 minute</string>

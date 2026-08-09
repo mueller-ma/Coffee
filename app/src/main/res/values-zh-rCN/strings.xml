@@ -26,7 +26,6 @@
     <string name="timeout_next">下一个时限</string>
     <!-- Settings -->
     <string name="settings">设置</string>
-    <string name="timeout">定时关闭咖啡</string>
     <string name="timeout_infinity">不限时</string>
     <string name="timeout_5_minutes">5 分钟</string>
     <string name="timeout_15_minutes">15 分钟</string>

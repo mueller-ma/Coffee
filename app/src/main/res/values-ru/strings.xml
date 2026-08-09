@@ -26,7 +26,6 @@
     <string name="timeout_next">Следующий таймаут</string>
     <!-- Settings -->
     <string name="settings">Настройки</string>
-    <string name="timeout">Остановить Кофе через</string>
     <string name="timeout_infinity">Без таймаута</string>
     <string name="timeout_5_minutes">5 минут</string>
     <string name="timeout_15_minutes">15 минут</string>

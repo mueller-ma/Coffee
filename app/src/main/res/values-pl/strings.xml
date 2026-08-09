@@ -26,7 +26,6 @@
     <string name="timeout_next">Następny limit czasu</string>
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
-    <string name="timeout">Zatrzymaj działanie aplikacji po</string>
     <string name="timeout_infinity">Brak limitu czasu</string>
     <string name="timeout_5_minutes">5 minutach</string>
     <string name="timeout_15_minutes">15 minutach</string>

@@ -25,7 +25,6 @@
     <string name="timeout_next">Prossimo pausa</string>
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
-    <string name="timeout">Ferma Caffè dopo</string>
     <string name="timeout_infinity">Nessuna pausa</string>
     <string name="timeout_5_minutes">5 minuti</string>
     <string name="timeout_15_minutes">15 minuti</string>

@@ -25,7 +25,6 @@
     <string name="timeout_next">Επόμενο χρονικό όριο</string>
     <!-- Settings -->
     <string name="settings">Ρυθμίσεις</string>
-    <string name="timeout">Σταματήστε τον καφέ μετά</string>
     <string name="timeout_infinity">Χωρίς χρονικό όριο</string>
     <string name="timeout_5_minutes">5 λεπτά</string>
     <string name="timeout_15_minutes">15 λεπτά</string>

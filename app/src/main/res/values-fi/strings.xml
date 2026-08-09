@@ -25,7 +25,6 @@
     <string name="timeout_next">Seuraava aikakatkaisu</string>
     <!-- Settings -->
     <string name="settings">Asetukset</string>
-    <string name="timeout">Pysäytä kahvi jälkeen</string>
     <string name="timeout_infinity">Ei aikakatkaisu</string>
     <string name="timeout_5_minutes">5 minuuttia</string>
     <string name="timeout_15_minutes">15 minuuttia</string>

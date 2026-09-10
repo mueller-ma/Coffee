@@ -26,6 +26,7 @@
     <string name="timeout_next">Nächster Timeout</string>
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
+    <string name="timeout">Kaffee automatisch stoppen</string>
     <string name="timeout_infinity">Kein Timeout</string>
     <string name="timeout_5_minutes">5 Minuten</string>
     <string name="timeout_15_minutes">15 Minuten</string>

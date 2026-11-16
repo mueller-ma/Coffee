@@ -26,6 +26,7 @@
     <string name="timeout_next">다음 타임아웃</string>
     <!-- Settings -->
     <string name="settings">설정</string>
+    <string name="timeout">Coffee 자동 정지</string>
     <string name="timeout_infinity">타임아웃 없음</string>
     <string name="timeout_5_minutes">5분</string>
     <string name="timeout_15_minutes">15분</string>

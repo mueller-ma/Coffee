@@ -9,7 +9,7 @@
   "addLabels": [
     "renovate"
   ],
-  "dependencyDashboardLabels": [
-    "renovate"
-  ]
+  "dependencyDashboard": {
+    "labels": ["renovate"]
+  }
 }

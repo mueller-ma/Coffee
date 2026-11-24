@@ -6,10 +6,11 @@ import androidx.preference.PreferenceManager
 import com.github.muellerma.coffee.tiles.TimeoutTile
 import com.github.muellerma.coffee.tiles.ToggleTile
 import com.google.android.material.color.DynamicColors
+import java.util.concurrent.CopyOnWriteArrayList
 import kotlin.time.Duration
 
 class CoffeeApplication : Application() {
-    var observers = mutableListOf<ServiceStatusObserver>()
+    var observers: MutableList<ServiceStatusObserver> = CopyOnWriteArrayList()
     var lastStatusUpdate: ServiceStatus = ServiceStatus.Stopped
         private set
 

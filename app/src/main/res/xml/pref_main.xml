@@ -17,6 +17,12 @@
                 android:defaultValue="false"
                 android:widgetLayout="@layout/preference_material_switch" />
         <SwitchPreferenceCompat
+                android:key="overlay_mode"
+                android:title="@string/overlay_mode_title"
+                android:summary="@string/overlay_mode_summary"
+                android:defaultValue="false"
+                android:widgetLayout="@layout/preference_material_switch" />
+        <SwitchPreferenceCompat
                 android:key="alternate_mode"
                 android:title="@string/alternate_mode_title"
                 android:summary="@string/alternate_mode_summary"

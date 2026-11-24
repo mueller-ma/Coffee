@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.annotation.CheckResult
 import androidx.annotation.StringRes
 import androidx.core.app.ActivityCompat
+import androidx.core.net.toUri
 import kotlin.time.Duration
 
 private const val TAG = "Utils"
@@ -53,6 +54,28 @@ fun Context.openSystemScreenTimeoutPermissions() {
             .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             .setData(Uri.parse("package:$packageName"))
     )
+}
+
+fun Context.canDrawOverlays(): Boolean = Settings.canDrawOverlays(this)
+
+fun Context.openOverlayPermissions() {
+    showToast(R.string.overlay_mode_permissions)
+    val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
+        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+        .setData("package:$packageName".toUri())
+    try {
+        startActivity(intent)
+    } catch (e: ActivityNotFoundException) {
+        Log.e(TAG, "Unable to open overlay permissions for package", e)
+        try {
+            startActivity(
+                Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
+                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            )
+        } catch (fallbackError: ActivityNotFoundException) {
+            Log.e(TAG, "Unable to open overlay permissions", fallbackError)
+        }
+    }
 }
 
 fun Context.hasPermissions(vararg permissions: String): Boolean {

@@ -86,6 +86,17 @@
                 android:textColor="?colorOnBackground" />
 
         <com.google.android.material.button.MaterialButton
+                android:id="@+id/grant_overlay_permission"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/grant_overlay_permission"
+                android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
                 android:id="@+id/settings"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent"

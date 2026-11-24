@@ -9,9 +9,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.SwitchPreferenceCompat
 import com.github.muellerma.coffee.R
+import com.github.muellerma.coffee.canDrawOverlays
 import com.github.muellerma.coffee.databinding.ActivityPreferenceBinding
 import com.github.muellerma.coffee.openInBrowser
+import com.github.muellerma.coffee.openOverlayPermissions
 import com.github.muellerma.coffee.openSystemScreenTimeoutPermissions
 import com.mikepenz.aboutlibraries.LibsBuilder
 import com.mikepenz.aboutlibraries.LibsConfiguration
@@ -51,7 +54,36 @@ class PreferenceActivity : AppCompatActivity() {
             addPreferencesFromResource(R.xml.pref_main)
 
             val allowDimmingPref = getPreference("allow_dimming")
-            val alternateModePref = getPreference("alternate_mode")
+            val overlayModePref = getPreference("overlay_mode") as SwitchPreferenceCompat
+            val alternateModePref = getPreference("alternate_mode") as SwitchPreferenceCompat
+
+            fun updateAllowDimmingState(
+                overlayEnabled: Boolean = overlayModePref.isChecked,
+                alternateEnabled: Boolean = alternateModePref.isChecked
+            ) {
+                allowDimmingPref.isEnabled = !overlayEnabled && !alternateEnabled
+            }
+
+            updateAllowDimmingState()
+
+            overlayModePref.setOnPreferenceChangeListener { pref, newValue ->
+                val context = pref.context
+                val enabled = newValue as Boolean
+
+                if (enabled && !context.canDrawOverlays()) {
+                    context.openOverlayPermissions()
+                }
+                if (enabled && alternateModePref.isChecked) {
+                    alternateModePref.isChecked = false
+                }
+
+                updateAllowDimmingState(
+                    overlayEnabled = enabled,
+                    alternateEnabled = if (enabled) false else alternateModePref.isChecked
+                )
+                true
+            }
+
             alternateModePref.setOnPreferenceChangeListener { pref, newValue ->
                 val context = pref.context
                 val enabled = newValue as Boolean
@@ -61,8 +93,14 @@ class PreferenceActivity : AppCompatActivity() {
                     !Settings.System.canWrite(context)) {
                         context.openSystemScreenTimeoutPermissions()
                 }
+                if (enabled && overlayModePref.isChecked) {
+                    overlayModePref.isChecked = false
+                }
 
-                allowDimmingPref.isEnabled = !enabled
+                updateAllowDimmingState(
+                    overlayEnabled = if (enabled) false else overlayModePref.isChecked,
+                    alternateEnabled = enabled
+                )
 
                 return@setOnPreferenceChangeListener true
             }

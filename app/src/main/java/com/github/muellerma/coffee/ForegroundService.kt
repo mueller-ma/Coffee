@@ -12,10 +12,15 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.content.SharedPreferences
 import android.content.pm.ServiceInfo
+import android.graphics.Color
+import android.graphics.PixelFormat
 import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
 import android.util.Log
+import android.view.Gravity
+import android.view.View
+import android.view.WindowManager
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
@@ -30,34 +35,22 @@ import kotlin.time.Duration.Companion.seconds
 
 class ForegroundService : Service(), ServiceStatusObserver {
     private var wakeLock: PowerManager.WakeLock? = null
+    private var overlayView: View? = null
     private var timeoutJob: Job? = null
     private var screenStateListener = ScreenStateChangedReceiver()
     private var prefsChangeListener = PrefChangeListener()
     private var isScreenStateListenerRegistered = false
+    private var isStarted = false
+    private var isAlternateModeActive = false
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
         val prefs = Prefs(applicationContext)
-        when (intent?.action) {
-            ACTION_STOP -> {
-                Log.d(TAG, "Received stop action")
-                changeState(this, STATE.STOP, false)
-                return START_STICKY
-            }
-            ACTION_CHANGE_PREF_TIMEOUT -> {
-                Log.d(TAG, "Change timeout")
-                prefs.timeout = prefs.nextTimeout
-            }
-            ACTION_CHANGE_PREF_ALLOW_DIMMING -> {
-                Log.d(TAG, "Change allow dimming")
-                prefs.allowDimming = !prefs.allowDimming
-            }
+        if (intent?.action == ACTION_STOP) {
+            Log.d(TAG, "Received stop action")
+            changeState(this, STATE.STOP, false)
+            return START_STICKY
         }
-
-        coffeeApp().observers.add(this@ForegroundService)
-
-        startWakeLockOrAlternateMode()
-        startTimeoutJob()
 
         if (!isScreenStateListenerRegistered) {
             val intentFilter = IntentFilter().apply {
@@ -70,6 +63,27 @@ class ForegroundService : Service(), ServiceStatusObserver {
             }
             isScreenStateListenerRegistered = true
         }
+
+        when (intent?.action) {
+            ACTION_CHANGE_PREF_TIMEOUT -> {
+                Log.d(TAG, "Change timeout")
+                prefs.timeout = prefs.nextTimeout
+                if (isStarted) {
+                    return START_STICKY
+                }
+            }
+            ACTION_CHANGE_PREF_ALLOW_DIMMING -> {
+                Log.d(TAG, "Change allow dimming")
+                prefs.allowDimming = !prefs.allowDimming
+                if (isStarted) {
+                    return START_STICKY
+                }
+            }
+        }
+
+        isStarted = true
+        startWakeLockOrAlternateMode()
+        startTimeoutJob()
         return START_STICKY
     }
 
@@ -96,6 +110,7 @@ class ForegroundService : Service(), ServiceStatusObserver {
 
         val prefs = Prefs(this)
         prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsChangeListener)
+        coffeeApp().observers.add(this@ForegroundService)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             startForeground(
@@ -108,42 +123,107 @@ class ForegroundService : Service(), ServiceStatusObserver {
         }
     }
 
-    @SuppressLint("WakelockTimeout")
     private fun startWakeLockOrAlternateMode() {
         val prefs = Prefs(this)
 
         if (prefs.useAlternateMode) {
+            stopOverlay()
+            wakeLock.safeRelease()
             val oldTimeout = contentResolver.getSystemScreenTimeout()
             if (oldTimeout != Int.MAX_VALUE) {
                 prefs.alternateModeOldTimeout = oldTimeout
             }
             val success = contentResolver.setSystemScreenTimeout(Int.MAX_VALUE)
-            if (!success) {
+            if (success) {
+                isAlternateModeActive = true
+            } else {
+                isAlternateModeActive = false
                 openSystemScreenTimeoutPermissions()
                 changeState(this, STATE.STOP, false)
             }
+        } else if (prefs.useOverlayMode && canDrawOverlays()) {
+            wakeLock.safeRelease()
+            if (!startOverlay()) {
+                acquireWakeLock(prefs.allowDimming)
+            }
+        } else {
+            stopOverlay()
+            acquireWakeLock(prefs.allowDimming)
+        }
+    }
+
+    @SuppressLint("WakelockTimeout")
+    private fun acquireWakeLock(allowDimming: Boolean) {
+        @Suppress("DEPRECATION")
+        val wakeLockLevel = if (allowDimming) {
+            PowerManager.SCREEN_DIM_WAKE_LOCK
+        } else {
+            PowerManager.SCREEN_BRIGHT_WAKE_LOCK
+        }
+        wakeLock.safeRelease()
+        wakeLock = getSystemService<PowerManager>()!!
+            .newWakeLock(
+                wakeLockLevel or PowerManager.ON_AFTER_RELEASE,
+                "Coffee::ForegroundService"
+            )
+        Log.d(TAG, "Acquire wakelock with level $wakeLockLevel")
+        wakeLock?.acquire()
+    }
+
+    private fun startOverlay(): Boolean {
+        stopOverlay()
+        val windowManager = getSystemService<WindowManager>() ?: return false
+        val windowType = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
         } else {
             @Suppress("DEPRECATION")
-            val wakeLockLevel = if (prefs.allowDimming) {
-                PowerManager.SCREEN_DIM_WAKE_LOCK
-            } else {
-                PowerManager.SCREEN_BRIGHT_WAKE_LOCK
-            }
-            wakeLock.safeRelease()
-            wakeLock = getSystemService<PowerManager>()!!
-                .newWakeLock(
-                    wakeLockLevel or PowerManager.ON_AFTER_RELEASE,
-                    "Coffee::ForegroundService"
-                )
-            Log.d(TAG, "Acquire wakelock with level $wakeLockLevel")
-            wakeLock?.acquire()
+            WindowManager.LayoutParams.TYPE_PHONE
+        }
+        val params = WindowManager.LayoutParams(
+            1,
+            1,
+            windowType,
+            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON or
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE or
+                WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+            PixelFormat.TRANSLUCENT
+        ).apply {
+            gravity = Gravity.TOP or Gravity.START
+            x = 0
+            y = 0
+        }
+        val view = View(this).apply {
+            setBackgroundColor(Color.TRANSPARENT)
+        }
+        return try {
+            windowManager.addView(view, params)
+            overlayView = view
+            Log.d(TAG, "Added keep-screen-on overlay")
+            true
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to add keep-screen-on overlay", e)
+            false
+        }
+    }
+
+    private fun stopOverlay() {
+        val view = overlayView ?: return
+        overlayView = null
+        try {
+            getSystemService<WindowManager>()?.removeViewImmediate(view)
+        } catch (e: Exception) {
+            Log.d(TAG, "Couldn't remove overlay view", e)
         }
     }
 
     private fun stopWakeLockOrAlternateMode() {
+        stopOverlay()
         wakeLock.safeRelease()
         val prefs = Prefs(this)
-        if (prefs.useAlternateMode) {
+        if (isAlternateModeActive || prefs.useAlternateMode) {
+            isAlternateModeActive = false
             val oldTimeout = prefs.alternateModeOldTimeout
             if (oldTimeout != -1 && oldTimeout != Int.MAX_VALUE) {
                 val success = contentResolver.setSystemScreenTimeout(oldTimeout)
@@ -212,7 +292,11 @@ class ForegroundService : Service(), ServiceStatusObserver {
             .setContentText(getString(R.string.tap_to_turn_off))
             .setContentIntent(getPendingIntentForService(stopIntent, PendingIntent_Immutable, 0))
             .addAction(getTimeoutAction())
-            .addAction(getDimmingAction(prefs))
+            .apply {
+                if (!prefs.useAlternateMode && !(prefs.useOverlayMode && canDrawOverlays())) {
+                    addAction(getDimmingAction(prefs))
+                }
+            }
             .setPublicVersion(getBaseNotification(title).build())
             .build()
     }
@@ -293,6 +377,14 @@ class ForegroundService : Service(), ServiceStatusObserver {
     private inner class PrefChangeListener : SharedPreferences.OnSharedPreferenceChangeListener {
         override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
             Log.d(TAG, "Pref '$key' has been changed")
+            if (key == "alternate_mode_old_timeout") {
+                return
+            }
+
+            if (key == "timeout") {
+                startTimeoutJob()
+                return
+            }
 
             stopWakeLockOrAlternateMode()
             startWakeLockOrAlternateMode()

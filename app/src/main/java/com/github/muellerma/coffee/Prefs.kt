@@ -31,6 +31,9 @@ class Prefs(private val context: Context) {
         get() = sharedPrefs.getBoolean("allow_dimming", false)
         set(value) = sharedPrefs.edit { putBoolean("allow_dimming", value) }
 
+    val useOverlayMode: Boolean
+        get() = sharedPrefs.getBoolean("overlay_mode", false)
+
     val useAlternateMode: Boolean
         get() = sharedPrefs.getBoolean("alternate_mode", false)
 

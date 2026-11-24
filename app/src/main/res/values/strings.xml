@@ -39,8 +39,14 @@
     <string name="timeout_60_minutes">1 hour</string>
     <string name="timeout_120_minutes">2 hours</string>
 
+    <string name="grant_overlay_permission">Grant overlay permission</string>
+
     <string name="allow_dimming_title">Allow screen dimming</string>
     <string name="allow_dimming_summary">Screen will be dimmed based on the system screen timeout</string>
+
+    <string name="overlay_mode_title">Overlay mode</string>
+    <string name="overlay_mode_summary">Keep the screen on using an invisible 1x1 overlay window (recommended for newer Android versions when wake locks are ignored).</string>
+    <string name="overlay_mode_permissions">Overlay mode requires permission to display over other apps</string>
 
     <string name="alternate_mode_title">Alternate mode</string>
     <string name="alternate_mode_summary">Turn on alternate mode only if Coffee doesn\'t keep the screen on; other features may not work. The alternate mode will temporarily increase the system screen timeout.</string>

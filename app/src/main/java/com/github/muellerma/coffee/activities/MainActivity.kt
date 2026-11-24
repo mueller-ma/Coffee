@@ -73,6 +73,10 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
             }
         }
 
+        binding.grantOverlayPermission.setOnClickListener {
+            openOverlayPermissions()
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             binding.addTile.apply {
                 setOnClickListener {
@@ -94,6 +98,9 @@ class MainActivity : AppCompatActivity(), ServiceStatusObserver {
         Log.d(TAG, "onResume()")
         super.onResume()
         requestNotificationPermissionIfRequired()
+        val prefs = Prefs(this)
+        binding.grantOverlayPermission.isVisible =
+            prefs.useOverlayMode && !prefs.useAlternateMode && !canDrawOverlays()
         application.observers.add(this)
         onServiceStatusUpdate(application.lastStatusUpdate)
     }
